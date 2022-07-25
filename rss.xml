@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CS奇妙</title>
+  <icon>https://blog.loveoi.net/icon.png</icon>
+  
+  <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
+  
+  <link href="https://blog.loveoi.net/"/>
+  <updated>2022-07-25T01:47:05.287Z</updated>
+  <id>https://blog.loveoi.net/</id>
+  
+  <author>
+    <name>only_matthew</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Course-Day-1</title>
+    <link href="https://blog.loveoi.net/OI/OI-Course/course-day-1/"/>
+    <id>https://blog.loveoi.net/OI/OI-Course/course-day-1/</id>
+    <published>2022-07-25T01:47:05.286Z</published>
+    <updated>2022-07-25T01:47:05.287Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天是课程的第一天，众所周知上课不做笔记等于没上。&lt;/p&gt;
+&lt;h1 id=&quot;时间复杂度&quot;&gt;&lt;a href=&quot;#时间复杂度&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Course-day-6-数据结构基石</title>
+    <link href="https://blog.loveoi.net/OI/OI-Course/course-day-6/"/>
+    <id>https://blog.loveoi.net/OI/OI-Course/course-day-6/</id>
+    <published>2022-07-24T08:49:36.000Z</published>
+    <updated>2022-07-25T10:16:30.570Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Note&quot;&gt;&lt;a href=&quot;#Note&quot; class=&quot;headerlink&quot; title=&quot;Note:&quot;&gt;&lt;/a&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/h1&gt;&lt;h2 id=&quot;vector的学习&quot;&gt;&lt;a href=&quot;#vector的学习&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wsl安装ohmyposh-ubuntu</title>
+    <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/"/>
+    <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/</id>
+    <published>2022-07-23T13:09:11.000Z</published>
+    <updated>2022-07-25T01:47:05.294Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;发现在wls中无法使用ohmyposh的主题，于是打算安装官网的linux教程配置，但是发现国内用homedrew和下载有亿点慢。所以使用了官网的手动安装教程：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用魔改ohmyposh配置</title>
+    <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/ohmyposh/"/>
+    <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/ohmyposh/</id>
+    <published>2022-07-23T13:04:41.000Z</published>
+    <updated>2022-07-25T01:47:05.292Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在把自带主题几乎都用了一次后，感觉还是自己魔改方便和适合我。&lt;/p&gt;
+&lt;p&gt;我把cert主题魔改了一下:&lt;/p&gt;
+&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>折腾ohmyposh</title>
+    <link href="https://blog.loveoi.net/Web/%E6%8A%98%E8%85%BEohmyposh/"/>
+    <id>https://blog.loveoi.net/Web/%E6%8A%98%E8%85%BEohmyposh/</id>
+    <published>2022-07-23T06:55:32.000Z</published>
+    <updated>2022-07-25T01:47:05.295Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一直觉得powershell和windows 终端不好看，今天就去美化了一下，我的最终效果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.oier.xin/img/image-20220723150848053.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web" scheme="https://blog.loveoi.net/categories/Web/"/>
+    
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-sakura</title>
+    <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo-sakura/"/>
+    <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo-sakura/</id>
+    <published>2022-07-21T13:17:23.000Z</published>
+    <updated>2022-07-25T01:47:05.289Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前两天回去折腾了一下wordpress，那个代码块和公式块给我整傻了，还是回来弄hexo算了，但是还是很重要我wordpress主题的樱花飘落特效，所以给hexo也折腾了一下，从网上找到了js（樱花图片是直接base64编码的，所以js有亿点长）：&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Courses-day-5-DP(动态规划)的初步学习-第一部分</title>
+    <link href="https://blog.loveoi.net/OI/OI-Course/courses-day-5-1/"/>
+    <id>https://blog.loveoi.net/OI/OI-Course/courses-day-5-1/</id>
+    <published>2022-07-21T04:23:26.000Z</published>
+    <updated>2022-07-25T10:16:15.295Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Today is the fifth day of the course.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Note&quot;&gt;&lt;a href=&quot;#Note&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>长知识了</title>
+    <link href="https://blog.loveoi.net/Share/%E9%95%BF%E7%9F%A5%E8%AF%86%E4%BA%86/"/>
+    <id>https://blog.loveoi.net/Share/%E9%95%BF%E7%9F%A5%E8%AF%86%E4%BA%86/</id>
+    <published>2022-07-19T14:39:35.000Z</published>
+    <updated>2022-07-25T01:47:05.296Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;真就长知识了！如果这次有人干了这个事，就会一直包揽和这个东西有关的活甚至这类活，还没报酬。&lt;/p&gt;
+&lt;iframe</summary>
+        
+      
+    
+    
+    
+    <category term="Share" scheme="https://blog.loveoi.net/categories/Share/"/>
+    
+    
+    <category term="Share" scheme="https://blog.loveoi.net/tags/Share/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>courese-day-3</title>
+    <link href="https://blog.loveoi.net/OI/OI-Course/course-day-3/"/>
+    <id>https://blog.loveoi.net/OI/OI-Course/course-day-3/</id>
+    <published>2022-07-18T17:59:38.000Z</published>
+    <updated>2022-07-25T01:47:05.287Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文实际上是我23日补写的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;排序(&lt;em&gt;sort&lt;/em&gt;)是有个非常有意思的算法，今天我们学习了：插入排序、冒泡排序，选择排序。以及可以在做题中使用的：归并排序和快速排序。所有基于比较的排序最低时间复</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Course-Day-2</title>
+    <link href="https://blog.loveoi.net/OI/OI-Course/course-day-2/"/>
+    <id>https://blog.loveoi.net/OI/OI-Course/course-day-2/</id>
+    <published>2022-07-16T04:22:45.000Z</published>
+    <updated>2022-07-25T01:47:05.287Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Today is the second day of the course.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Note：&quot;&gt;&lt;a href=&quot;#Note：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode-config</title>
+    <link href="https://blog.loveoi.net/OI/vscode-config/"/>
+    <id>https://blog.loveoi.net/OI/vscode-config/</id>
+    <published>2022-07-15T15:04:46.000Z</published>
+    <updated>2022-07-25T01:47:05.293Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文转自OI-Wiki&lt;br&gt;&lt;a href=&quot;https://oi-wiki.org/&quot;&gt;OI-WiKi&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;author: NachtgeistW, Ir1d, ouuan,</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="刷题记" scheme="https://blog.loveoi.net/tags/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
+    
+    <category term="转载" scheme="https://blog.loveoi.net/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo设置自定义字体粗细</title>
+    <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/"/>
+    <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/</id>
+    <published>2022-07-11T14:58:20.000Z</published>
+    <updated>2022-07-25T01:47:05.291Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;用F12搞了2天终于配置好了自定义字体，这时候就有人要问了，为什么不直接在Butterfly 里设置字体呢？那是因为我设置font-family后找不到我的font-family。只能用 !important</summary>
+        
+      
+    
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[模板]进制转换(10 to 2)</title>
+    <link href="https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/"/>
+    <id>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</id>
+    <published>2022-07-10T13:58:24.000Z</published>
+    <updated>2022-07-25T01:47:05.288Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;code:&lt;br&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI模板" scheme="https://blog.loveoi.net/categories/OI/OI%E6%A8%A1%E6%9D%BF/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="OI模板" scheme="https://blog.loveoi.net/tags/OI%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[刷题记]Luogu-B2140</title>
+    <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/"/>
+    <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/</id>
+    <published>2022-07-10T13:53:56.000Z</published>
+    <updated>2022-07-25T01:47:05.286Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;遇到了一个有意思的题目，有意思的点不在于题目本身，在于它的10进制转2进制。&lt;/p&gt;
+&lt;p&gt;题目传送门：&lt;a href=&quot;https://www.luogu.com.cn/problem/B2140&quot;&gt;B2140 二进制分类 - 洛谷 | 计算机科学教育新生态</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="刷题记" scheme="https://blog.loveoi.net/categories/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="刷题记" scheme="https://blog.loveoi.net/tags/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode配置firacode字体</title>
+    <link href="https://blog.loveoi.net/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/"/>
+    <id>https://blog.loveoi.net/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/</id>
+    <published>2022-07-10T13:15:22.000Z</published>
+    <updated>2022-07-25T01:47:05.293Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前一直不知道怎么在vsc配置firacode导致一直在用别的ide。是的，就是我们的CP Editor和code::blocks。&lt;/p&gt;
+&lt;p&gt;但是最近发现code::blocks不是很舒服，cp</summary>
+        
+      
+    
+    
+    
+    <category term="CS" scheme="https://blog.loveoi.net/categories/CS/"/>
+    
+    
+    <category term="CS" scheme="https://blog.loveoi.net/tags/CS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>挥之不去的身影</title>
+    <link href="https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/"/>
+    <id>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</id>
+    <published>2022-07-09T13:49:11.000Z</published>
+    <updated>2022-07-25T01:47:05.295Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;依稀记得，2020的11月，那是我第一次参加csp，也是2场都参加，试卷是什么样，中间尽力的那些波折？早已记不清了。唯有那个身影，那个眼神，在我的脑海里挥之不去，犹如昨日一般。&lt;/p&gt;
+&lt;p&gt;进入考场，找到位置，那时还是个懵懂少年的我四处张望，在离我的不远处，有一个位置，是</summary>
+        
+      
+    
+    
+    
+    <category term="自写" scheme="https://blog.loveoi.net/categories/%E8%87%AA%E5%86%99/"/>
+    
+    
+    <category term="自写" scheme="https://blog.loveoi.net/tags/%E8%87%AA%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我本可以忍受黑暗 如果我不曾见过光明</title>
+    <link href="https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/"/>
+    <id>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</id>
+    <published>2022-07-09T13:44:43.000Z</published>
+    <updated>2022-07-25T01:47:05.295Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我笑了，笑得很凄凉，脸上写满了后知后觉的懊悔。虽说我有着后路，可“我本可以忍受黑暗，如果我从未见过光明”。我曾见过4年级的小学生讨论学术，我曾见过5年级的小学生轻轻松松学着我学了1个学期的知识，我是多么的希望和他们一样啊。于是，我有了梦想，但从未真正付出行动，多少个应该好好</summary>
+        
+      
+    
+    
+    
+    <category term="自写" scheme="https://blog.loveoi.net/categories/%E8%87%AA%E5%86%99/"/>
+    
+    
+    <category term="自写" scheme="https://blog.loveoi.net/tags/%E8%87%AA%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自重之果当自食</title>
+    <link href="https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/"/>
+    <id>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</id>
+    <published>2022-07-05T14:05:03.000Z</published>
+    <updated>2022-07-25T01:47:05.296Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;mark class=&quot;hl-label red&quot;&gt;自种之果当自食&lt;/mark&gt; 
+&lt;p&gt;昔日不听母&lt;mark class=&quot;hl-label red&quot;&gt;良言&lt;/mark&gt; ，今日终食&lt;mark class=&quot;hl-label red&quot;&gt;昔日果&lt;/mark&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="自写" scheme="https://blog.loveoi.net/categories/%E8%87%AA%E5%86%99/"/>
+    
+    
+    <category term="自写" scheme="https://blog.loveoi.net/tags/%E8%87%AA%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>幡然醒悟</title>
+    <link href="https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/"/>
+    <id>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</id>
+    <published>2022-07-05T12:41:35.000Z</published>
+    <updated>2022-07-25T01:47:05.294Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;幡然醒悟&quot;&gt;&lt;a href=&quot;#幡然醒悟&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="自写" scheme="https://blog.loveoi.net/categories/%E8%87%AA%E5%86%99/"/>
+    
+    
+    <category term="自写" scheme="https://blog.loveoi.net/tags/%E8%87%AA%E5%86%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[折腾]折腾twikoo</title>
+    <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/"/>
+    <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</id>
+    <published>2022-06-29T14:56:11.000Z</published>
+    <updated>2022-07-25T01:47:05.295Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;虽然我已经配置好了valine和waline，但是折腾嘛，就是为了折腾，就去折腾了一下twikoo.&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+  </entry>
+  
+</feed>
