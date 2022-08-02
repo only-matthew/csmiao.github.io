@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>用vercel部署blog</title>
+      <link href="/%E6%8A%98%E8%85%BE/Web/vercel-blog/"/>
+      <url>/%E6%8A%98%E8%85%BE/Web/vercel-blog/</url>
+      
+        <content type="html"><![CDATA[<p>上次去某个日本注册商撸了几个域名，然后直呼：“啊！我这无处安放的域名！”就打算用vercel部署几个镜像站。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 折腾 </category>
+          
+          <category> Web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>course-day-9</title>
       <link href="/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/course-day-9/"/>
       <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/course-day-9/</url>
@@ -252,9 +281,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
@@ -490,9 +519,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
@@ -706,9 +735,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
@@ -735,9 +764,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
@@ -764,9 +793,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
@@ -793,9 +822,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
@@ -822,9 +851,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
@@ -1000,9 +1029,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
@@ -1029,9 +1058,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
@@ -1120,9 +1149,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
@@ -1149,9 +1178,9 @@
       
         <tags>
             
-            <tag> 折腾 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 折腾 </tag>
             
         </tags>
       
