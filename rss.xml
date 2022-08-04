@@ -40,9 +40,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -494,9 +494,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -770,7 +770,7 @@ O(n^{log_ba}) &amp;&amp; d&lt;log_{b}a\newline
     <link href="https://blog.loveoi.net/OI/OI-Course/course-day-4/"/>
     <id>https://blog.loveoi.net/OI/OI-Course/course-day-4/</id>
     <published>2022-07-18T17:59:35.000Z</published>
-    <updated>2022-07-29T16:14:35.740Z</updated>
+    <updated>2022-08-04T14:55:57.612Z</updated>
     
     
       
@@ -781,7 +781,7 @@ O(n^{log_ba}) &amp;&amp; d&lt;log_{b}a\newline
 &lt;p&gt;本文实际上是我于2022/7/29补写的&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;分治&quot;&gt;&lt;a href=&quot;#分治&quot; class=&quot;headerlink&quot; title=&quot;分治&quot;&gt;&lt;/a&gt;分治&lt;/h1&gt;&lt;h2 id=&quot;逆序对-洛谷P1908&quot;&gt;&lt;a href=&quot;#逆序对-洛谷P1908&quot; class=&quot;headerlink&quot; title=&quot;逆序对(洛谷P1908)&quot;&gt;&lt;/a&gt;逆序对(洛谷P1908)&lt;/h2&gt;&lt;p&gt;我们直接打暴力，枚举每一个树a[i],在a[1~n]直接寻找比a[i]小的数即可。&lt;/p&gt;
-&lt;p&gt;但是这样很明显不能通过本题，他的时间复杂度是&lt;script type=&quot;math/tex&quot;&gt;O(n^{2})&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;但是这样很明显不能通过本题，他的时间复杂度是$O(n^{2})$&lt;/p&gt;
 &lt;p&gt;我们可以用线段树维护权值数组来加速，但是今天的重点是分治。&lt;/p&gt;
 &lt;p&gt;我们可以观察到，对于逆序对&lt;em&gt;(x,y)&lt;/em&gt;,只有3种情况:&lt;/p&gt;
 &lt;ul&gt;
@@ -797,11 +797,11 @@ O(n^{log_ba}) &amp;&amp; d&lt;log_{b}a\newline
 &lt;/ul&gt;
 &lt;p&gt;即为在归并的过程中统计个数。&lt;/p&gt;
 &lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; a[&lt;span class=&quot;number&quot;&gt;500005&lt;/span&gt;], n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;%d&amp;quot;&lt;/span&gt;, &amp;amp;n);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i&amp;lt;n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;%d&amp;quot;&lt;/span&gt;, &amp;amp;a[i]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;long&lt;/span&gt; ans;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 统计 a[l, r) 区间内的逆序对的个数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; l, &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; r)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(l == r - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; mid = (l + r) / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;calc&lt;/span&gt;(l, mid);   &lt;span class=&quot;comment&quot;&gt;// 统计左边块内的逆序对个数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;calc&lt;/span&gt;(mid, r);   &lt;span class=&quot;comment&quot;&gt;// 统计右边块内的逆序对个数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 亲自统计跨块逆序对个数：x在左边，y在右边&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; x=l; x&amp;lt;mid; x++)        &lt;span class=&quot;comment&quot;&gt;// 枚举左边块的 x&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; y=mid; y&amp;lt;r; y++)    &lt;span class=&quot;comment&quot;&gt;// 枚举右边块的 y&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[x] &amp;gt; a[y]) ans++;  &lt;span class=&quot;comment&quot;&gt;// 发现一个跨块逆序对&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;calc&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, n);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;%lld\n&amp;quot;&lt;/span&gt;, ans);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;input&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;work&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;但是我们用&lt;em&gt;Master&lt;/em&gt;定理一算,嗯？还是&lt;script type=&quot;math/tex&quot;&gt;O(n^{2})&lt;/script&gt;啊！&lt;/p&gt;
+&lt;p&gt;但是我们用&lt;em&gt;Master&lt;/em&gt;定理一算,嗯？还是$O(n^{2})$啊！&lt;/p&gt;
 &lt;p&gt;实现一个函数 &lt;em&gt;calc(l, r)&lt;/em&gt;： &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;调用 &lt;em&gt;calc(l, mid)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;调用 &lt;em&gt;calc(mid, r) &lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;调用 &lt;em&gt;calc(mid, r)&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;将左边、右边的块排序&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;O(n)&lt;/em&gt; 亲自统计跨块的逆序对个数&lt;/li&gt;
 &lt;/ul&gt;
@@ -809,10 +809,58 @@ O(n^{log_ba}) &amp;&amp; d&lt;log_{b}a\newline
 &lt;p&gt;省了2个&lt;em&gt;sort&lt;/em&gt;，就降下来了时间复杂度:&lt;/p&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
 T(n) = 2T(n/2) +O(n) = O(nlog n)&lt;/script&gt;&lt;h2 id=&quot;快速幂&quot;&gt;&lt;a href=&quot;#快速幂&quot; class=&quot;headerlink&quot; title=&quot;快速幂&quot;&gt;&lt;/a&gt;快速幂&lt;/h2&gt;&lt;p&gt;因为取模可以在运算过程中取，所以我们可以不爆空间。&lt;/p&gt;
-&lt;p&gt;计算 xa mod p 时，分两种情况：&lt;/p&gt;
+&lt;p&gt;计算 $x_{a} mod p$ 时，分两种情况：&lt;/p&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
 若 2 | a，则答案为 (x^{a/2})2 mod p\\
-若 2 ∤ a，则答案为 (x^{⌊a/2⌋})2 · x modp&lt;/script&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;ll &lt;span class=&quot;title&quot;&gt;quickPow&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ll a, ll x, ll p)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x == &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a % p;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ll tmp = &lt;span class=&quot;built_in&quot;&gt;quickPow&lt;/span&gt;(a, x/&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x % &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; tmp * tmp % p;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; tmp * tmp % p * a % p;&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+若 2 ∤ a，则答案为 (x^{⌊a/2⌋})2 · x modp&lt;/script&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;ll &lt;span class=&quot;title&quot;&gt;quickPow&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ll a, ll x, ll p)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x == &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a % p;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ll tmp = &lt;span class=&quot;built_in&quot;&gt;quickPow&lt;/span&gt;(a, x/&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x % &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; tmp * tmp % p;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; tmp * tmp % p * a % p;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;二分&quot;&gt;&lt;a href=&quot;#二分&quot; class=&quot;headerlink&quot; title=&quot;二分&quot;&gt;&lt;/a&gt;二分&lt;/h1&gt;&lt;h2 id=&quot;平方根&quot;&gt;&lt;a href=&quot;#平方根&quot; class=&quot;headerlink&quot; title=&quot;平方根&quot;&gt;&lt;/a&gt;平方根&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;题目描述&lt;br&gt;求$\sqrt n$ 的整数部分。&lt;/p&gt;
+&lt;h2 id=&quot;输入格式&quot;&gt;&lt;a href=&quot;#输入格式&quot; class=&quot;headerlink&quot; title=&quot;输入格式&quot;&gt;&lt;/a&gt;输入格式&lt;/h2&gt;&lt;p&gt;仅一行，一个正整数，表示$n$。&lt;/p&gt;
+&lt;h2 id=&quot;输出格式&quot;&gt;&lt;a href=&quot;#输出格式&quot; class=&quot;headerlink&quot; title=&quot;输出格式&quot;&gt;&lt;/a&gt;输出格式&lt;/h2&gt;&lt;p&gt;仅一行，一个正整数，表示$\lfloor \sqrt n\rfloor $。&lt;/p&gt;
+&lt;h2 id=&quot;样例-1&quot;&gt;&lt;a href=&quot;#样例-1&quot; class=&quot;headerlink&quot; title=&quot;样例 #1&quot;&gt;&lt;/a&gt;样例 #1&lt;/h2&gt;&lt;h3 id=&quot;样例输入-1&quot;&gt;&lt;a href=&quot;#样例输入-1&quot; class=&quot;headerlink&quot; title=&quot;样例输入 #1&quot;&gt;&lt;/a&gt;样例输入 #1&lt;/h3&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;12345&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;样例输出-1&quot;&gt;&lt;a href=&quot;#样例输出-1&quot; class=&quot;headerlink&quot; title=&quot;样例输出 #1&quot;&gt;&lt;/a&gt;样例输出 #1&lt;/h3&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;111&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;提示&quot;&gt;&lt;a href=&quot;#提示&quot; class=&quot;headerlink&quot; title=&quot;提示&quot;&gt;&lt;/a&gt;提示&lt;/h2&gt;&lt;p&gt;对于$100\%$的数据，$n\lfloor 10^{18}\rfloor$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可以转换为求最大的&lt;em&gt;x&lt;/em&gt;使$x^{2}\leq n$&lt;/p&gt;
+&lt;h3 id=&quot;暴力&quot;&gt;&lt;a href=&quot;#暴力&quot; class=&quot;headerlink&quot; title=&quot;暴力&quot;&gt;&lt;/a&gt;暴力&lt;/h3&gt;&lt;p&gt;可以直接暴力&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(ll i=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;i*i&amp;lt;=n;i++);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;%lld&amp;quot;&lt;/span&gt;,x&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;但是&lt;em&gt;x&lt;/em&gt;达到了$1^{18}$级别，无法通过本题。&lt;/p&gt;
+&lt;h3 id=&quot;二分-1&quot;&gt;&lt;a href=&quot;#二分-1&quot; class=&quot;headerlink&quot; title=&quot;二分&quot;&gt;&lt;/a&gt;二分&lt;/h3&gt;&lt;p&gt;我们可以通过猜来解决问题。猜一个数&lt;em&gt;x&lt;/em&gt;如果$x^{2}$大于&lt;em&gt;n&lt;/em&gt;就说明我们猜大了，如果小于就说明猜小了。&lt;/p&gt;
+&lt;p&gt;在&lt;em&gt;1~1e9&lt;/em&gt;猜数即可:&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ll l = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, r = &lt;span class=&quot;number&quot;&gt;1000000000&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 在 [l, r] 范围内寻找答案&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// l, r 差距大于 5 的时候，执行二分&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(r - l &amp;gt; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ll mid = (l + r) / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 猜中点，判断答案与之的大小关系&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(mid * mid &amp;gt; n)   &lt;span class=&quot;comment&quot;&gt;// mid 猜大了，答案比 mid 小&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            r = mid - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;                &lt;span class=&quot;comment&quot;&gt;// mid^2 &amp;lt;= n，答案 &amp;gt;= mid&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            l = mid;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// l, r 差距 &amp;lt;= 5，逐个判断&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 寻找最大的 x*x &amp;lt;= n 的 x&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(ll x=r; x&amp;gt;=l; x--)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x * x &amp;lt;= n) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可能会有人问：“嗯？你这个二分怎么和一般的二分不一样？”&lt;/p&gt;
+&lt;p&gt;因为这样好写，不容易写炸。如果写“学院派”二分可能不小心就写炸了。&lt;/p&gt;
+&lt;p&gt;这样写之比“学院派”二分慢一点点，称为”通用二分“。&lt;/p&gt;
+&lt;p&gt;我们缩小到5个后逐个判断。&lt;/p&gt;
+&lt;h2 id=&quot;可二分性&quot;&gt;&lt;a href=&quot;#可二分性&quot; class=&quot;headerlink&quot; title=&quot;可二分性&quot;&gt;&lt;/a&gt;可二分性&lt;/h2&gt;&lt;p&gt;如果你可以快速判断一个答案是否满足要求，那就满足可二分性，可以尝试二分求解。&lt;/p&gt;
+&lt;h1 id=&quot;区间和-前缀和&quot;&gt;&lt;a href=&quot;#区间和-前缀和&quot; class=&quot;headerlink&quot; title=&quot;区间和(前缀和)&quot;&gt;&lt;/a&gt;区间和(前缀和)&lt;/h1&gt;&lt;p&gt;今有 n 个同学，学号为 1 ∼ n。给出每个人的语文成绩。 需要处理 m 次询问，每次询问给定 l, r，查询学号在 [l, r] 范围内的学生的成绩&lt;br&gt;sum。&lt;/p&gt;
+&lt;p&gt;即给定一个数组，多次查询区间和。&lt;/p&gt;
+&lt;p&gt;如果采用分块，每次查询代价是 $O(\sqrt n)$，总复杂度 $O(m\sqrt n)$&lt;/p&gt;
+&lt;p&gt;那么我们可以弄一个&lt;em&gt;pre&lt;/em&gt;数组,来储存&lt;em&gt;1~k&lt;/em&gt;的和，求&lt;em&gt;i~k&lt;/em&gt;的和即为&lt;em&gt;pre[k]-pre[i]&lt;/em&gt; 真是方便呢！&lt;/p&gt;
+&lt;p&gt;这个&lt;em&gt;pre&lt;/em&gt;数组便被成为前缀和。&lt;/p&gt;
+&lt;p&gt;所以前缀和实际上也不是个很高级的东西。&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// pre[k] = a[1] + a[2] + ... + a[k]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i&amp;lt;=n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        pre[i] = pre[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;] + a[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// a[l] + a[l+1] + ... + a[r]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getSum&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; l, &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; r)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; pre[r] - pre[l&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;仅适用于数组固定，如果是动态(插入+查询)的那种就不能使用。&lt;/p&gt;
+&lt;p&gt;我们需要使用 O(n) 的时间预处理出 pre 数组。 接下来每个询问可以 O(1) 回答。&lt;br&gt;复杂度在 OI 中简记为 O(n) −O(1)，即 O(n) 预处理，每次查询 O(1)。&lt;/p&gt;
+&lt;h2 id=&quot;差分&quot;&gt;&lt;a href=&quot;#差分&quot; class=&quot;headerlink&quot; title=&quot;差分&quot;&gt;&lt;/a&gt;差分&lt;/h2&gt;&lt;mark class=&quot;hl-label red&quot;&gt;差分&lt;/mark&gt; 可以用来解决&lt;mark class=&quot;hl-label red&quot;&gt;多次区间加，最终求整个数组&lt;/mark&gt; 的问题。 我们采用 d[x] 记录&lt;mark class=&quot;hl-label 数组从&quot;&gt;a&lt;/mark&gt; 。 那么，[l, r] 区间加 k 可以表示为：
+- d[l] += k 
+- d[r+1] -= k
+最后扫一遍 d 数组即可还原 a[]。
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;a=&amp;#123;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pre=&amp;#123;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这样即可实现区间加/减。&lt;br&gt;不用直接给数组加减，我们只需维护差分数组即可。&lt;br&gt;前缀和和查询何为逆运算。&lt;/p&gt;
+&lt;p&gt;想要给&lt;em&gt;1~3&lt;/em&gt;加1，只需要给差分数组的[1]+1,[3]-1即可。&lt;br&gt;在所有的都做完差分后做一次差分即可$O(n)$完成运算。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h1 id=&quot;浇花&quot;&gt;&lt;a href=&quot;#浇花&quot; class=&quot;headerlink&quot; title=&quot;浇花&quot;&gt;&lt;/a&gt;浇花&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;今有 $n$ 盆花摆成一排，编号为 $1\sim n$。&lt;/p&gt;
+&lt;p&gt;机器猫一时兴起，就会去浇花。机器猫每次浇花，是选择一个区间 $[l, r]$，给这个区间内的花浇水。&lt;/p&gt;
+&lt;p&gt;机器猫一共浇了 $m$ 次水。我们想知道，每盆花被浇了多少次。&lt;/p&gt;
+&lt;h2 id=&quot;输入格式-1&quot;&gt;&lt;a href=&quot;#输入格式-1&quot; class=&quot;headerlink&quot; title=&quot;输入格式&quot;&gt;&lt;/a&gt;输入格式&lt;/h2&gt;&lt;p&gt;第一行，两个正整数 $n, m$。&lt;/p&gt;
+&lt;p&gt;接下来 $m$ 行，每行两个正整数 $l, r$，表示一次浇花。&lt;/p&gt;
+&lt;h2 id=&quot;输出格式-1&quot;&gt;&lt;a href=&quot;#输出格式-1&quot; class=&quot;headerlink&quot; title=&quot;输出格式&quot;&gt;&lt;/a&gt;输出格式&lt;/h2&gt;&lt;p&gt;仅一行，$n$ 个整数，表示每盆花被浇了多少次。&lt;/p&gt;
+&lt;h2 id=&quot;样例-1-1&quot;&gt;&lt;a href=&quot;#样例-1-1&quot; class=&quot;headerlink&quot; title=&quot;样例 #1&quot;&gt;&lt;/a&gt;样例 #1&lt;/h2&gt;&lt;h3 id=&quot;样例输入-1-1&quot;&gt;&lt;a href=&quot;#样例输入-1-1&quot; class=&quot;headerlink&quot; title=&quot;样例输入 #1&quot;&gt;&lt;/a&gt;样例输入 #1&lt;/h3&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;5 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1 4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3 3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;样例输出-1-1&quot;&gt;&lt;a href=&quot;#样例输出-1-1&quot; class=&quot;headerlink&quot; title=&quot;样例输出 #1&quot;&gt;&lt;/a&gt;样例输出 #1&lt;/h3&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1 2 3 2 1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;提示-1&quot;&gt;&lt;a href=&quot;#提示-1&quot; class=&quot;headerlink&quot; title=&quot;提示&quot;&gt;&lt;/a&gt;提示&lt;/h2&gt;&lt;p&gt;对于 $100\%$ 的数据，$n, m\leq 100000$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; l, &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; r)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    d[l] += &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    d[r+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] += &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(m--) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; l, r;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cin &amp;gt;&amp;gt; l &amp;gt;&amp;gt; r;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;add&lt;/span&gt;(l, r);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 通过 d 数组恢复 a 数组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i&amp;lt;=n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        a[i] = a[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;] + d[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i&amp;lt;=n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cout &amp;lt;&amp;lt; a[i] &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&amp;#x27; &amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span</summary>
         
       
     
@@ -907,7 +955,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/vscode-config/"/>
     <id>https://blog.loveoi.net/OI/vscode-config/</id>
     <published>2022-07-15T15:04:46.000Z</published>
-    <updated>2022-07-25T01:47:05.293Z</updated>
+    <updated>2022-08-04T14:35:00.986Z</updated>
     
     
       
@@ -1077,9 +1125,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1339,9 +1387,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1374,9 +1422,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1411,9 +1459,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1449,9 +1497,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1479,9 +1527,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1748,9 +1796,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1780,9 +1828,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1883,9 +1931,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1928,9 +1976,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
