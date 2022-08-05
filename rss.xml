@@ -97,7 +97,7 @@
     <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/course-day-7-2/"/>
     <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/course-day-7-2/</id>
     <published>2022-07-27T07:31:35.000Z</published>
-    <updated>2022-07-31T14:36:40.569Z</updated>
+    <updated>2022-08-05T05:39:29.341Z</updated>
     
     
       
@@ -118,11 +118,11 @@
 &lt;li&gt;给x加分或者减分&lt;/li&gt;
 &lt;li&gt;给定l,r求区间和&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;数据范围是很经典的$10^{5}}$。&lt;/p&gt;
-&lt;p&gt;建立一个树，根是1~n的区间和，左孩子和有孩子是1~mid和mid~n，叶子节点为单个学生。&lt;/p&gt;
+&lt;p&gt;数据范围是很经典的$10^{5}$。&lt;/p&gt;
+&lt;p&gt;建立一个树，根是1~n的区间和，左孩子和有孩子是&lt;em&gt;1 ~ mid&lt;/em&gt;和&lt;em&gt;mid&lt;/em&gt; ~ &lt;em&gt;n&lt;/em&gt;，叶子节点为单个学生。&lt;/p&gt;
 &lt;p&gt;给x加分即给x的所有父节点加分，这就是线段树。&lt;/p&gt;
 &lt;p&gt;我们使用堆式存储存下整个树。&lt;/p&gt;
-&lt;p&gt;虽然说是有10w个节点，但是我们不能只开10w，我们要开2的整次幂，且接近10w。而$2^17$可以满足条件。&lt;/p&gt;
+&lt;p&gt;虽然说是有10w个节点，但是我们不能只开10w，我们要开2的整次幂，且接近10w。而$2^{17}$可以满足条件。&lt;/p&gt;
 &lt;p&gt;我们定义w[]存储一个节点的值。&lt;/p&gt;
 &lt;h2 id=&quot;单点加&quot;&gt;&lt;a href=&quot;#单点加&quot; class=&quot;headerlink&quot; title=&quot;单点加&quot;&gt;&lt;/a&gt;单点加&lt;/h2&gt;&lt;p&gt;我们单点加可以从叶子节点开始加，叶子节点加完后直接/2来到父节点。&lt;/p&gt;
 &lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;pointAdd&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; pos, &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; k)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 找到 pos 在 w[] 位于什么位置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; cur = SIZE + pos - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;   &lt;span class=&quot;comment&quot;&gt;// 例如，1号同学位于 w[131072]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(cur != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        w[cur] += k;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cur = cur / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
