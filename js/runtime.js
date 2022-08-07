@@ -1,6 +1,6 @@
 setInterval(() => {
 	let create_time = Math.round(
-		new Date("2021-01-10 00:00:00").getTime() / 1000
+		new Date("2021-11-10 00:00:00").getTime() / 1000
 	); //在此行修改建站时间
 	let timestamp = Math.round(new Date().getTime() / 1000);
 	let second = timestamp - create_time;
@@ -30,7 +30,7 @@ setInterval(() => {
 	}
 	if (Number(time[2]) < 22 && Number(time[2]) > 7) {
 		currentTimeHtml =
-			"<img class='boardsign' src='https://img.shields.io/badge/CS%E5%A5%87%E5%A6%99-%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C-6adea8' title='虽然我的OI之旅未开始就要结束,但我的CS之旅才刚刚开始!'><div id='runtime'>" +
+			"<img class='boardsign' src='https://cdn.loveoi.net/img/runing.svg' title='虽然我的OI之旅未开始就要结束,但我的CS之旅才刚刚开始!'><div id='runtime'>" +
 			time[0] +
 			" YEAR " +
 			time[1] +
@@ -43,7 +43,7 @@ setInterval(() => {
 			"</div>";
 	} else {
 		currentTimeHtml =
-			"<img class='boardsign' src='https://img.shields.io/badge/CS%E5%A5%87%E5%A6%99-%E8%AF%A5%E7%9D%A1%E8%A7%89%E4%BA%86-lightgrey' title='这个点了应该去睡觉啦，熬夜对身体不好哦'><div id='runtime'>" +
+			"<img class='boardsign' src='https://cdn.loveoi.net/img/run.svg' title='这个点了应该去睡觉啦，熬夜对身体不好哦'><div id='runtime'>" +
 			time[0] +
 			" YEAR " +
 			time[1] +
