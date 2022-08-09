@@ -34,7 +34,7 @@
   isPhotoFigcaption: true,
   islazyload: true,
   isAnchor: true
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"页面没有找到",isPost:!1,isHome:!1,isHighlightShrink:!1,isToc:!1,postUpdate:"2022-08-09 10:03:59"}</script><noscript><style type="text/css">#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(win=>{
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"页面没有找到",isPost:!1,isHome:!1,isHighlightShrink:!1,isToc:!1,postUpdate:"2022-08-09 11:49:31"}</script><noscript><style type="text/css">#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(win=>{
     win.saveToLocal = {
       set: function setWithExpiry(key, value, ttl) {
         if (ttl === 0) return
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script src="ht
 
     window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
   }
-})()</script></div><script src="https://cdn.staticfile.org/blueimp-md5/2.19.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+})()</script></div><script>window.addEventListener('load', () => {
   const changeContent = (content) => {
     if (content === '') return content
 
@@ -165,13 +165,6 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script src="ht
       content = content.substring(0,150) + '...'
     }
     return content
-  }
-
-  const getIcon = (icon, mail) => {
-    if (icon) return icon
-    let defaultIcon = '?d=only@matthew.xin'
-    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
-    return iconUrl
   }
 
   const generateHtml = array => {
@@ -202,40 +195,35 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script src="ht
   }
 
   const getComment = () => {
-    const serverURL = 'https://waline.loveoi.net'
-
-    var settings = {
-      "method": "GET",
-      "headers": {
-        "X-LC-Id": 'bTI48MXRmj1M0kim0zHlFyGy-9Nh9j0Va',
-        "X-LC-Key": '3ahOcEQL2qmQJQryg9X6zhTg',
-        "Content-Type": "application/json"
-      },
-    }
-
-    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
-      .then(response => response.json())
-      .then(data => {
-        const valineArray = data.results.map(function (e) {
+    const loadWaline = () => {
+      Waline.RecentComments({
+        serverURL: 'https://api.cmt.loveoi.net/',
+        count: 6
+      }).then(({comments}) => {
+        const walineArray = comments.map(e => {
           return {
-            'avatar': getIcon(e.QQAvatar, e.mail),
             'content': changeContent(e.comment),
+            'avatar': e.avatar,
             'nick': e.nick,
             'url': e.url + '#' + e.objectId,
-            'date': e.updatedAt,
+            'date': e.insertedAt,
           }
         })
-        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
-        generateHtml(valineArray)
+        saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+        generateHtml(walineArray)
       }).catch(e => {
         const $dom = document.querySelector('#card-newest-comments .aside-list')
         $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
       }) 
+    }
+
+    if (typeof Waline === 'function') loadWaline() 
+    else getScript('https://cdn.staticfile.org/waline/2.6.1/waline.min.js').then(loadWaline)
   }
 
   const newestCommentInit = () => {
     if (document.querySelector('#card-newest-comments .aside-list')) {
-      const data = saveToLocal.get('valine-newest-comments')
+      const data = saveToLocal.get('waline-newest-comments')
       if (data) {
         generateHtml(JSON.parse(data))
       } else {
