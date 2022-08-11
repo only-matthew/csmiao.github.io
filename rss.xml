@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-08-09T02:03:43.987Z</updated>
+  <updated>2022-08-11T15:03:29.422Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>acwing-course-1-排序-二分-高精度的学习</title>
+    <link href="https://blog.loveoi.net/OI/OI-Course/acwing-course-1/"/>
+    <id>https://blog.loveoi.net/OI/OI-Course/acwing-course-1/</id>
+    <published>2022-08-11T12:50:24.000Z</published>
+    <updated>2022-08-11T15:03:29.422Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;忽然想起自己中考前还报了一个acwing的课,似乎内容比洛谷的还多,报名人数3.5w不是瞎说的。&lt;/p&gt;
+&lt;p&gt;(&lt;del&gt;听完第一节课感觉讲的甚至比RXZ还好&lt;/del&gt;。)&lt;/p&gt;
+&lt;h1 id=&quot;排序&quot;&gt;&lt;a href=&quot;#排序&quot; class=&quot;headerlink&quot; title=&quot;排序&quot;&gt;&lt;/a&gt;排序&lt;/h1&gt;&lt;h2 id=&quot;快排&quot;&gt;&lt;a href=&quot;#快排&quot; class=&quot;headerlink&quot; title=&quot;快排&quot;&gt;&lt;/a&gt;快排&lt;/h2&gt;&lt;p&gt;之前已经在很多地方学习过了,RXZ与yxc所说的暴力方法有点不一样，但是很相似,是不得已才使用的。&lt;/p&gt;
+&lt;h3 id=&quot;暴力方式&quot;&gt;&lt;a href=&quot;#暴力方式&quot; class=&quot;headerlink&quot; title=&quot;暴力方式&quot;&gt;&lt;/a&gt;暴力方式&lt;/h3&gt;&lt;p&gt;暴力的方式是指重新开一个数组，将小于哨兵的放入排序数组，大于哨兵的放入tmp数组，放完大于后从tmp数组中取出大于哨兵的放入排序数组。这样做常数有点大。&lt;/p&gt;
+&lt;h3 id=&quot;优美的方法&quot;&gt;&lt;a href=&quot;#优美的方法&quot; class=&quot;headerlink&quot; title=&quot;优美的方法&quot;&gt;&lt;/a&gt;优美的方法&lt;/h3&gt;&lt;p&gt;yxc讲一个非常优美的做法，起初有2个指针，&lt;em&gt;l&lt;/em&gt;和&lt;em&gt;r&lt;/em&gt;分别在区间头部和区间尾部。&lt;/p&gt;
+&lt;p&gt;当&lt;em&gt;l&lt;/em&gt;指向的数小于哨兵时，继续移动，直到遇到大于哨兵的数为止。&lt;/p&gt;
+&lt;p&gt;此时开始移动&lt;em&gt;r&lt;/em&gt;指针，当&lt;em&gt;r&lt;/em&gt;指向的数小于哨兵时停止。&lt;/p&gt;
+&lt;p&gt;此时将&lt;em&gt;l&lt;/em&gt;和&lt;em&gt;r&lt;/em&gt;指向的数交换。&lt;/p&gt;
+&lt;p&gt;是不是非常优美，常数也不大，要付出的代价只是指针的移动罢了。&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;quick_sort&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; q[], &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; l, &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; r)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (l &amp;gt;= r) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; i = l - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, j = r + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, x = q[l + r &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (i &amp;lt; j)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; i ++ ; &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (q[i] &amp;lt; x);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; j -- ; &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (q[j] &amp;gt; x);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (i &amp;lt; j) &lt;span class=&quot;built_in&quot;&gt;swap&lt;/span&gt;(q[i], q[j]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;quick_sort&lt;/span&gt;(q, l, j), &lt;span class=&quot;built_in&quot;&gt;quick_sort&lt;/span&gt;(q, j + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, r);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;归并排序&quot;&gt;&lt;a href=&quot;#归并排序&quot; class=&quot;headerlink&quot; title=&quot;归并排序&quot;&gt;&lt;/a&gt;归并排序&lt;/h2&gt;&lt;p&gt;&lt;del&gt;RXZ也讲过可以看我另外一篇blog:&lt;a href=&quot;[courese-day-3 | CS奇妙 (loveoi.net&quot;&gt;RXZ讲的归并排序&lt;/a&gt;](&lt;a href=&quot;https://blog.loveoi.net/OI/OI-Course/course-day-3/#O-nlogn-的实用算法&quot;&gt;https://blog.loveoi.net/OI/OI-Course/course-day-3/#O-nlogn-的实用算法&lt;/a&gt;))&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;真贴心，还指出了归并与快排的区别。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;归并：先递归后排序&lt;/li&gt;
+&lt;li&gt;快排，先排序后归并&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然归并的稳定排序，快排的不稳定排序（毒瘤数据可以退化成$O(n^{2})$)。&lt;/p&gt;
+&lt;p&gt;在递归后我们有2个有序序列&lt;em&gt;A&lt;/em&gt;,&lt;em&gt;B&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A&lt;/em&gt;,&lt;em&gt;B&lt;/em&gt;各有一个指针&lt;em&gt;i&lt;/em&gt;,&lt;em&gt;j&lt;/em&gt;起初分别指向两个序列的头部。&lt;/p&gt;
+&lt;p&gt;此时两个指针指向的数就是两个序列中的最小值，此时将他们比大小，最小值即为两个序列的最小值。&lt;/p&gt;
+&lt;p&gt;将其填入tmp数组，最后回填即可，和RXZ讲的类似。&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;merge_sort&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; q[], &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; l, &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; r)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (l &amp;gt;= r) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; mid = l + r &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;merge_sort&lt;/span&gt;(q, l, mid);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;merge_sort&lt;/span&gt;(q, mid + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, r);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; k = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, i = l, j = mid + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (i &amp;lt;= mid &amp;amp;&amp;amp; j &amp;lt;= r)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (q[i] &amp;lt;= q[j]) tmp[k ++ ] = q[i ++ ];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; tmp[k ++ ] = q[j ++ ];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (i &amp;lt;= mid) tmp[k ++ ] = q[i ++ ];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (j &amp;lt;= r) tmp[k ++ ] = q[j ++ ];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (i = l, j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt;= r; i ++, j ++ ) q[i] = tmp[j];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;二分&quot;&gt;&lt;a href=&quot;#二分&quot; class=&quot;headerlink&quot; title=&quot;二分&quot;&gt;&lt;/a&gt;二分&lt;/h2&gt;&lt;h3 id=&quot;整数二分&quot;&gt;&lt;a href=&quot;#整数二分&quot; class=&quot;headerlink&quot; title=&quot;整数二分&quot;&gt;&lt;/a&gt;整数二分&lt;/h3&gt;&lt;p&gt;和RXZ的统一二分不同,这个是”学院派”二分,时间复杂度比通用稍小,容易写炸,但是我们还是要学习一下.&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; x)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;span class=&quot;comment&quot;&gt;/* ... */&lt;/span&gt;&amp;#125; &lt;span class=&quot;comment&quot;&gt;// 检查x是否满足某种性质&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 区间[l, r]被划分成[l, mid]和[mid + 1, r]时使用：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;bsearch_1&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; l, &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; r)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (l &amp;lt; r)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; mid = l + r &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;built_in&quot;&gt;check&lt;/span&gt;(mid)) r = mid;    &lt;span class=&quot;comment&quot;&gt;// check()判断mid是否满足性质&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; l = mid + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; l;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 区间[l, r]被划分成[l, mid - 1]和[mid, r]时使用：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;bsearch_2&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; l, &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; r)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (l &amp;lt; r)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; mid = l + r + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;built_in&quot;&gt;check&lt;/span&gt;(mid)) l = mid;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; r = mid - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; l;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;往左边二分和往右边二分的两种方式.&lt;/p&gt;
+&lt;h3 id=&quot;浮点二分&quot;&gt;&lt;a href=&quot;#浮点二分&quot; class=&quot;headerlink&quot; title=&quot;浮点二分&quot;&gt;&lt;/a&gt;浮点二分&lt;/h3&gt;&lt;p&gt;多两个精度上模板即可&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;double&lt;/span&gt; x)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;span class=&quot;comment&quot;&gt;/* ... */&lt;/span&gt;&amp;#125; &lt;span class=&quot;comment&quot;&gt;// 检查x是否满足某种性质&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;bsearch_3&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;double&lt;/span&gt; l, &lt;span class=&quot;type&quot;&gt;double&lt;/span&gt; r)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;double&lt;/span&gt; eps = &lt;span class=&quot;number&quot;&gt;1e-6&lt;/span&gt;;   &lt;span class=&quot;comment&quot;&gt;// eps 表示精度，取决于题目对精度的要求&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (r - l &amp;gt; eps)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;double&lt;/span&gt; mid = (l + r) / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;built_in&quot;&gt;check&lt;/span&gt;(mid)) r = mid;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; l = mid;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; l;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This post was written on August 11, 2022 at</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="acwing" scheme="https://blog.loveoi.net/tags/acwing/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+  </entry>
   
   <entry>
     <title>myoilean</title>
@@ -81,56 +140,36 @@
   
   <entry>
     <title>course-day-9</title>
-    <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/course-day-9/"/>
-    <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/course-day-9/</id>
+    <link href="https://blog.loveoi.net/uncategorized/course-day-9/"/>
+    <id>https://blog.loveoi.net/uncategorized/course-day-9/</id>
     <published>2022-07-29T13:59:07.000Z</published>
-    <updated>2022-07-29T13:59:07.689Z</updated>
+    <updated>2022-08-11T13:29:44.946Z</updated>
     
     
     
     
-    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
-    
-    <category term="刷题记" scheme="https://blog.loveoi.net/categories/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
-    
-    
-    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
-    
-    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
-    
-    <category term="刷题记" scheme="https://blog.loveoi.net/tags/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>course-day-8</title>
-    <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/course-day-8/"/>
-    <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/course-day-8/</id>
+    <link href="https://blog.loveoi.net/uncategorized/course-day-8/"/>
+    <id>https://blog.loveoi.net/uncategorized/course-day-8/</id>
     <published>2022-07-29T13:59:00.000Z</published>
-    <updated>2022-07-29T13:59:00.085Z</updated>
+    <updated>2022-08-11T13:29:36.716Z</updated>
     
     
     
     
-    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
-    
-    <category term="刷题记" scheme="https://blog.loveoi.net/categories/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
-    
-    
-    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
-    
-    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
-    
-    <category term="刷题记" scheme="https://blog.loveoi.net/tags/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>course-day-7-2-线段树实现求区间和、RMQ的学习</title>
-    <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/course-day-7-2/"/>
-    <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/course-day-7-2/</id>
+    <link href="https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-7-2/"/>
+    <id>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-7-2/</id>
     <published>2022-07-27T07:31:35.000Z</published>
-    <updated>2022-08-05T05:39:29.341Z</updated>
+    <updated>2022-08-11T13:29:16.885Z</updated>
     
     
       
@@ -172,23 +211,27 @@
     
     <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
     
-    <category term="刷题记" scheme="https://blog.loveoi.net/categories/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    <category term="数据结构" scheme="https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
     <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
     
     <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
     
-    <category term="刷题记" scheme="https://blog.loveoi.net/tags/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+    <category term="数据结构" scheme="https://blog.loveoi.net/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>Course-Day-7-数据结构进阶</title>
-    <link href="https://blog.loveoi.net/OI/OI-Course/coures-day-7/"/>
-    <id>https://blog.loveoi.net/OI/OI-Course/coures-day-7/</id>
+    <link href="https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/coures-day-7/"/>
+    <id>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/coures-day-7/</id>
     <published>2022-07-27T03:35:13.000Z</published>
-    <updated>2022-07-31T06:13:54.023Z</updated>
+    <updated>2022-08-11T12:54:51.413Z</updated>
     
     
       
@@ -259,6 +302,8 @@
     
     <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
     
+    <category term="数据结构" scheme="https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
     
     <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
     
@@ -266,14 +311,16 @@
     
     <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
     
+    <category term="数据结构" scheme="https://blog.loveoi.net/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
   </entry>
   
   <entry>
     <title>Course-day-6-数据结构基石</title>
-    <link href="https://blog.loveoi.net/OI/OI-Course/course-day-6/"/>
-    <id>https://blog.loveoi.net/OI/OI-Course/course-day-6/</id>
+    <link href="https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-6/"/>
+    <id>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-6/</id>
     <published>2022-07-24T08:49:36.000Z</published>
-    <updated>2022-07-25T10:16:30.570Z</updated>
+    <updated>2022-08-11T12:55:09.337Z</updated>
     
     
       
@@ -377,12 +424,16 @@
     
     <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
     
+    <category term="数据结构" scheme="https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
     
     <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
     
     <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
     
     <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+    <category term="数据结构" scheme="https://blog.loveoi.net/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
@@ -538,7 +589,7 @@
     <link href="https://blog.loveoi.net/OI/OI-Course/courses-day-5-1/"/>
     <id>https://blog.loveoi.net/OI/OI-Course/courses-day-5-1/</id>
     <published>2022-07-21T04:23:26.000Z</published>
-    <updated>2022-07-25T10:16:15.295Z</updated>
+    <updated>2022-08-11T12:42:26.604Z</updated>
     
     
       
@@ -597,11 +648,7 @@ f[x]=min(f[x-1],f[x/2])+1 &amp; \{x|x=2n, n∈Z\}
 &lt;p&gt;所以只要a,p满足p&amp;lt;x,a[p]&amp;lt;a[x],然后枚举f[p]+1的最大值就是f[x]的最优解。&lt;/p&gt;
 &lt;p&gt;此时我们已经找到了状态以及状态转移方程:&lt;/p&gt;
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
-\begin{equation}
-
-    f[x]=\mathop{\max}_{p&lt;x,a[p]&lt;a[x]} \{ f[p]+1 \}
-
-\end{equation}&lt;/script&gt;&lt;h2 id=&quot;小结：状态和转移&quot;&gt;&lt;a href=&quot;#小结：状态和转移&quot; class=&quot;headerlink&quot; title=&quot;小结：状态和转移&quot;&gt;&lt;/a&gt;小结：状态和转移&lt;/h2&gt;&lt;p&gt;一个dp题，应该经历2个过程：&lt;/p&gt;
+f[x]=\mathop{\max}_{p&lt;x,a[p]&lt;a[x]} \{ f[p]+1 \}&lt;/script&gt;&lt;h2 id=&quot;小结：状态和转移&quot;&gt;&lt;a href=&quot;#小结：状态和转移&quot; class=&quot;headerlink&quot; title=&quot;小结：状态和转移&quot;&gt;&lt;/a&gt;小结：状态和转移&lt;/h2&gt;&lt;p&gt;一个dp题，应该经历2个过程：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;设计状态。把面临的每一个问题，表达成一个个「状态」。&lt;/li&gt;
 &lt;li&gt;设计转移。写出状态转移方程，从而利用小问题的解推出大问题的解。&lt;/li&gt;
