@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blog.loveoi.net/OI/OI-Course/acwing-course-1/</loc>
-    <lastmod>2022-08-11</lastmod>
+    <lastmod>2022-08-13</lastmod>
   </url>
   <url>
     <loc>https://blog.loveoi.net/uncategorized/course-day-9/</loc>
@@ -65,11 +65,11 @@
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</loc>
+    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%BB%99blog%E5%8E%8B%E7%BC%A9%E5%AD%97%E4%BD%93/</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%BB%99blog%E5%8E%8B%E7%BC%A9%E5%AD%97%E4%BD%93/</loc>
+    <loc>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
@@ -89,6 +89,10 @@
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
+    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/</loc>
+    <lastmod>2022-07-25</lastmod>
+  </url>
+  <url>
     <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8C%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E9%AB%98%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
@@ -101,15 +105,7 @@
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/</loc>
-    <lastmod>2022-07-25</lastmod>
-  </url>
-  <url>
     <loc>https://blog.loveoi.net/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/</loc>
-    <lastmod>2022-07-25</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
@@ -117,15 +113,19 @@
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
+    <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</loc>
+    <lastmod>2022-07-25</lastmod>
+  </url>
+  <url>
     <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&quick-out/</loc>
+    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/ohmyposh/</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/ohmyposh/</loc>
+    <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&quick-out/</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
@@ -169,11 +169,11 @@
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2133/</loc>
+    <loc>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</loc>
+    <loc>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2133/</loc>
     <lastmod>2022-07-25</lastmod>
   </url>
 </urlset> 

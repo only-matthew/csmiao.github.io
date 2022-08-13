@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-08-11T15:03:29.422Z</updated>
+  <updated>2022-08-13T06:31:31.525Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://blog.loveoi.net/OI/OI-Course/acwing-course-1/"/>
     <id>https://blog.loveoi.net/OI/OI-Course/acwing-course-1/</id>
     <published>2022-08-11T12:50:24.000Z</published>
-    <updated>2022-08-11T15:03:29.422Z</updated>
+    <updated>2022-08-13T06:31:31.525Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;忽然想起自己中考前还报了一个acwing的课,似乎内容比洛谷的还多,报名人数3.5w不是瞎说的。&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;忽然想起自己考前还报了一个acwing的课,似乎内容比洛谷的还多,报名人数3.5w不是瞎说的。&lt;/p&gt;
 &lt;p&gt;(&lt;del&gt;听完第一节课感觉讲的甚至比RXZ还好&lt;/del&gt;。)&lt;/p&gt;
 &lt;h1 id=&quot;排序&quot;&gt;&lt;a href=&quot;#排序&quot; class=&quot;headerlink&quot; title=&quot;排序&quot;&gt;&lt;/a&gt;排序&lt;/h1&gt;&lt;h2 id=&quot;快排&quot;&gt;&lt;a href=&quot;#快排&quot; class=&quot;headerlink&quot; title=&quot;快排&quot;&gt;&lt;/a&gt;快排&lt;/h2&gt;&lt;p&gt;之前已经在很多地方学习过了,RXZ与yxc所说的暴力方法有点不一样，但是很相似,是不得已才使用的。&lt;/p&gt;
 &lt;h3 id=&quot;暴力方式&quot;&gt;&lt;a href=&quot;#暴力方式&quot; class=&quot;headerlink&quot; title=&quot;暴力方式&quot;&gt;&lt;/a&gt;暴力方式&lt;/h3&gt;&lt;p&gt;暴力的方式是指重新开一个数组，将小于哨兵的放入排序数组，大于哨兵的放入tmp数组，放完大于后从tmp数组中取出大于哨兵的放入排序数组。这样做常数有点大。&lt;/p&gt;
@@ -69,9 +69,9 @@
     
     <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
     
-    <category term="acwing" scheme="https://blog.loveoi.net/tags/acwing/"/>
-    
     <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+    <category term="acwing" scheme="https://blog.loveoi.net/tags/acwing/"/>
     
   </entry>
   
