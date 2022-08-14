@@ -272,7 +272,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</loc>
+    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8C%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E9%AB%98%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/</loc>
     
     <lastmod>2022-07-25</lastmod>
     
@@ -281,7 +281,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8C%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E9%AB%98%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/</loc>
+    <loc>https://blog.loveoi.net/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</loc>
     
     <lastmod>2022-07-25</lastmod>
     
@@ -335,15 +335,6 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&quick-out/</loc>
-    
-    <lastmod>2022-07-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/ohmyposh/</loc>
     
     <lastmod>2022-07-25</lastmod>
@@ -353,7 +344,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</loc>
+    <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&quick-out/</loc>
     
     <lastmod>2022-07-25</lastmod>
     
@@ -363,6 +354,15 @@
   
   <url>
     <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/</loc>
+    
+    <lastmod>2022-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</loc>
     
     <lastmod>2022-07-25</lastmod>
     
@@ -500,6 +500,13 @@
   </url>
   
   <url>
+    <loc>https://blog.loveoi.net/tags/acwing/</loc>
+    <lastmod>2022-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.loveoi.net/tags/Course/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -514,14 +521,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/tags/acwing/</loc>
-    <lastmod>2022-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.loveoi.net/tags/OI%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>https://blog.loveoi.net/tags/Web/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -535,7 +535,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/tags/Web/</loc>
+    <loc>https://blog.loveoi.net/tags/OI%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -600,13 +600,6 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/OI/OI%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2022-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -614,7 +607,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://blog.loveoi.net/categories/OI/OI%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -622,6 +615,13 @@
   
   <url>
     <loc>https://blog.loveoi.net/categories/%E8%87%AA%E5%86%99/</loc>
+    <lastmod>2022-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
