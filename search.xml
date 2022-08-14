@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>[刷题记]Luogu-B2133</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2133/</url>
+    <content><![CDATA[<p>题目传送门：<a href="https://www.luogu.com.cn/problem/B2133">B2133 我家的门牌号 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
+<p>我们设总门牌号之和为cnt，小明家门牌号为x，其他人门牌号之和为a(即cnt-x）,得：</p>
+<ol>
+<li>a-2x=n</li>
+<li>a=cnt-x;</li>
+</ol>
+<p>∴     n=cnt-3x</p>
+<p>依据条件，直接暴力：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">long</span> <span class="type">long</span> <span class="type">int</span> n,cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> i=<span class="number">1</span>;;i++)&#123;</span><br><span class="line">        cnt+=i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> j=<span class="number">1</span>;j&lt;=i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((cnt<span class="number">-3</span>*j)==n)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%lld %lld&quot;</span>,j,i);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2022/6/22</p>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>刷题记</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>刷题记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[刷题记]Luogu-B2136</title>
     <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
     <content><![CDATA[<p>收获了新模板:</p>
@@ -21,18 +45,9 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-B2133</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2133/</url>
-    <content><![CDATA[<p>题目传送门：<a href="https://www.luogu.com.cn/problem/B2133">B2133 我家的门牌号 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
-<p>我们设总门牌号之和为cnt，小明家门牌号为x，其他人门牌号之和为a(即cnt-x）,得：</p>
-<ol>
-<li>a-2x=n</li>
-<li>a=cnt-x;</li>
-</ol>
-<p>∴     n=cnt-3x</p>
-<p>依据条件，直接暴力：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">long</span> <span class="type">long</span> <span class="type">int</span> n,cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> i=<span class="number">1</span>;;i++)&#123;</span><br><span class="line">        cnt+=i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> j=<span class="number">1</span>;j&lt;=i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((cnt<span class="number">-3</span>*j)==n)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%lld %lld&quot;</span>,j,i);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2022/6/22</p>
+    <title>[刷题记]Luogu-P6321</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P6321/</url>
+    <content><![CDATA[<p>中考终于考完了！又可以做题了！<br>在1年没做题后发现自己啥也不会了，只能从红题开始重刷（哭笑）。<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">50</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> r, c, zr, zc;</span><br><span class="line"><span class="type">char</span> ch[MAXN][MAXN];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>, &amp;r, &amp;c, &amp;zr, &amp;zc);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            std::cin &gt;&gt; ch[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; zr; k++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> l = <span class="number">0</span>; l &lt; zc; l++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, ch[i][j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这道题也是有点意思，我第一时间想到的居然是各种数据结构，然后发现自己啥也不会写了（数据结构学了和没学似的）。<br>应该是按照行和列输出，把行扩大（i行套zr），在每行里嵌套l列，即可实现“矩阵”输出。<br>2022/6/22</p>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -69,18 +84,47 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-P6321</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P6321/</url>
-    <content><![CDATA[<p>中考终于考完了！又可以做题了！<br>在1年没做题后发现自己啥也不会了，只能从红题开始重刷（哭笑）。<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">50</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> r, c, zr, zc;</span><br><span class="line"><span class="type">char</span> ch[MAXN][MAXN];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>, &amp;r, &amp;c, &amp;zr, &amp;zc);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            std::cin &gt;&gt; ch[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; zr; k++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> l = <span class="number">0</span>; l &lt; zc; l++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, ch[i][j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这道题也是有点意思，我第一时间想到的居然是各种数据结构，然后发现自己啥也不会写了（数据结构学了和没学似的）。<br>应该是按照行和列输出，把行扩大（i行套zr），在每行里嵌套l列，即可实现“矩阵”输出。<br>2022/6/22</p>
+    <title>acwing-course-1-排序-二分-高精度的学习</title>
+    <url>/OI/OI-Course/acwing-course-1/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>忽然想起自己考前还报了一个acwing的课,似乎内容比洛谷的还多,报名人数3.5w不是瞎说的。</p>
+<p>(<del>听完第一节课感觉讲的甚至比RXZ还好</del>。)</p>
+<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h2><p>之前已经在很多地方学习过了,RXZ与yxc所说的暴力方法有点不一样，但是很相似,是不得已才使用的。</p>
+<h3 id="暴力方式"><a href="#暴力方式" class="headerlink" title="暴力方式"></a>暴力方式</h3><p>暴力的方式是指重新开一个数组，将小于哨兵的放入排序数组，大于哨兵的放入tmp数组，放完大于后从tmp数组中取出大于哨兵的放入排序数组。这样做常数有点大。</p>
+<h3 id="优美的方法"><a href="#优美的方法" class="headerlink" title="优美的方法"></a>优美的方法</h3><p>yxc讲一个非常优美的做法，起初有2个指针，<em>l</em>和<em>r</em>分别在区间头部和区间尾部。</p>
+<p>当<em>l</em>指向的数小于哨兵时，继续移动，直到遇到大于哨兵的数为止。</p>
+<p>此时开始移动<em>r</em>指针，当<em>r</em>指向的数小于哨兵时停止。</p>
+<p>此时将<em>l</em>和<em>r</em>指向的数交换。</p>
+<p>是不是非常优美，常数也不大，要付出的代价只是指针的移动罢了。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(<span class="type">int</span> q[], <span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i = l - <span class="number">1</span>, j = r + <span class="number">1</span>, x = q[l + r &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">while</span> (i &lt; j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">do</span> i ++ ; <span class="keyword">while</span> (q[i] &lt; x);</span><br><span class="line">        <span class="keyword">do</span> j -- ; <span class="keyword">while</span> (q[j] &gt; x);</span><br><span class="line">        <span class="keyword">if</span> (i &lt; j) <span class="built_in">swap</span>(q[i], q[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">quick_sort</span>(q, l, j), <span class="built_in">quick_sort</span>(q, j + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p><del>RXZ也讲过可以看我另外一篇blog:<a href="[courese-day-3 | CS奇妙 (loveoi.net">RXZ讲的归并排序</a>](<a href="https://blog.loveoi.net/OI/OI-Course/course-day-3/#O-nlogn-的实用算法">https://blog.loveoi.net/OI/OI-Course/course-day-3/#O-nlogn-的实用算法</a>))</del></p>
+<p>真贴心，还指出了归并与快排的区别。</p>
+<ul>
+<li>归并：先递归后排序</li>
+<li>快排，先排序后归并</li>
+</ul>
+<p>当然归并的稳定排序，快排的不稳定排序（毒瘤数据可以退化成$O(n^{2})$)。</p>
+<p>在递归后我们有2个有序序列<em>A</em>,<em>B</em>。</p>
+<p><em>A</em>,<em>B</em>各有一个指针<em>i</em>,<em>j</em>起初分别指向两个序列的头部。</p>
+<p>此时两个指针指向的数就是两个序列中的最小值，此时将他们比大小，最小值即为两个序列的最小值。</p>
+<p>将其填入tmp数组，最后回填即可，和RXZ讲的类似。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge_sort</span><span class="params">(<span class="type">int</span> q[], <span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">merge_sort</span>(q, l, mid);</span><br><span class="line">    <span class="built_in">merge_sort</span>(q, mid + <span class="number">1</span>, r);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> k = <span class="number">0</span>, i = l, j = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= r)</span><br><span class="line">        <span class="keyword">if</span> (q[i] &lt;= q[j]) tmp[k ++ ] = q[i ++ ];</span><br><span class="line">        <span class="keyword">else</span> tmp[k ++ ] = q[j ++ ];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid) tmp[k ++ ] = q[i ++ ];</span><br><span class="line">    <span class="keyword">while</span> (j &lt;= r) tmp[k ++ ] = q[j ++ ];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = l, j = <span class="number">0</span>; i &lt;= r; i ++, j ++ ) q[i] = tmp[j];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h2><h3 id="整数二分"><a href="#整数二分" class="headerlink" title="整数二分"></a>整数二分</h3><p>和RXZ的统一二分不同,这个是”学院派”二分,时间复杂度比通用稍小,容易写炸,但是我们还是要学习一下.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;<span class="comment">/* ... */</span>&#125; <span class="comment">// 检查x是否满足某种性质</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 区间[l, r]被划分成[l, mid]和[mid + 1, r]时使用：</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bsearch_1</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">check</span>(mid)) r = mid;    <span class="comment">// check()判断mid是否满足性质</span></span><br><span class="line">        <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 区间[l, r]被划分成[l, mid - 1]和[mid, r]时使用：</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bsearch_2</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = l + r + <span class="number">1</span> &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">check</span>(mid)) l = mid;</span><br><span class="line">        <span class="keyword">else</span> r = mid - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>往左边二分和往右边二分的两种方式.</p>
+<h3 id="浮点二分"><a href="#浮点二分" class="headerlink" title="浮点二分"></a>浮点二分</h3><p>多两个精度上模板即可</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(<span class="type">double</span> x)</span> </span>&#123;<span class="comment">/* ... */</span>&#125; <span class="comment">// 检查x是否满足某种性质</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">bsearch_3</span><span class="params">(<span class="type">double</span> l, <span class="type">double</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">double</span> eps = <span class="number">1e-6</span>;   <span class="comment">// eps 表示精度，取决于题目对精度的要求</span></span><br><span class="line">    <span class="keyword">while</span> (r - l &gt; eps)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">double</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">check</span>(mid)) r = mid;</span><br><span class="line">        <span class="keyword">else</span> l = mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>This post was written on August 11, 2022 at 23:03.</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>OI</category>
-        <category>刷题记</category>
+        <category>OI-Course</category>
       </categories>
       <tags>
-        <tag>luogu</tag>
         <tag>OI</tag>
-        <tag>刷题记</tag>
+        <tag>acwing</tag>
+        <tag>Course</tag>
       </tags>
   </entry>
   <entry>
@@ -216,50 +260,6 @@
         <tag>OI</tag>
         <tag>Course</tag>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>acwing-course-1-排序-二分-高精度的学习</title>
-    <url>/OI/OI-Course/acwing-course-1/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>忽然想起自己考前还报了一个acwing的课,似乎内容比洛谷的还多,报名人数3.5w不是瞎说的。</p>
-<p>(<del>听完第一节课感觉讲的甚至比RXZ还好</del>。)</p>
-<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h2><p>之前已经在很多地方学习过了,RXZ与yxc所说的暴力方法有点不一样，但是很相似,是不得已才使用的。</p>
-<h3 id="暴力方式"><a href="#暴力方式" class="headerlink" title="暴力方式"></a>暴力方式</h3><p>暴力的方式是指重新开一个数组，将小于哨兵的放入排序数组，大于哨兵的放入tmp数组，放完大于后从tmp数组中取出大于哨兵的放入排序数组。这样做常数有点大。</p>
-<h3 id="优美的方法"><a href="#优美的方法" class="headerlink" title="优美的方法"></a>优美的方法</h3><p>yxc讲一个非常优美的做法，起初有2个指针，<em>l</em>和<em>r</em>分别在区间头部和区间尾部。</p>
-<p>当<em>l</em>指向的数小于哨兵时，继续移动，直到遇到大于哨兵的数为止。</p>
-<p>此时开始移动<em>r</em>指针，当<em>r</em>指向的数小于哨兵时停止。</p>
-<p>此时将<em>l</em>和<em>r</em>指向的数交换。</p>
-<p>是不是非常优美，常数也不大，要付出的代价只是指针的移动罢了。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(<span class="type">int</span> q[], <span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i = l - <span class="number">1</span>, j = r + <span class="number">1</span>, x = q[l + r &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">while</span> (i &lt; j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">do</span> i ++ ; <span class="keyword">while</span> (q[i] &lt; x);</span><br><span class="line">        <span class="keyword">do</span> j -- ; <span class="keyword">while</span> (q[j] &gt; x);</span><br><span class="line">        <span class="keyword">if</span> (i &lt; j) <span class="built_in">swap</span>(q[i], q[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">quick_sort</span>(q, l, j), <span class="built_in">quick_sort</span>(q, j + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p><del>RXZ也讲过可以看我另外一篇blog:<a href="[courese-day-3 | CS奇妙 (loveoi.net">RXZ讲的归并排序</a>](<a href="https://blog.loveoi.net/OI/OI-Course/course-day-3/#O-nlogn-的实用算法">https://blog.loveoi.net/OI/OI-Course/course-day-3/#O-nlogn-的实用算法</a>))</del></p>
-<p>真贴心，还指出了归并与快排的区别。</p>
-<ul>
-<li>归并：先递归后排序</li>
-<li>快排，先排序后归并</li>
-</ul>
-<p>当然归并的稳定排序，快排的不稳定排序（毒瘤数据可以退化成$O(n^{2})$)。</p>
-<p>在递归后我们有2个有序序列<em>A</em>,<em>B</em>。</p>
-<p><em>A</em>,<em>B</em>各有一个指针<em>i</em>,<em>j</em>起初分别指向两个序列的头部。</p>
-<p>此时两个指针指向的数就是两个序列中的最小值，此时将他们比大小，最小值即为两个序列的最小值。</p>
-<p>将其填入tmp数组，最后回填即可，和RXZ讲的类似。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge_sort</span><span class="params">(<span class="type">int</span> q[], <span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">merge_sort</span>(q, l, mid);</span><br><span class="line">    <span class="built_in">merge_sort</span>(q, mid + <span class="number">1</span>, r);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> k = <span class="number">0</span>, i = l, j = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= r)</span><br><span class="line">        <span class="keyword">if</span> (q[i] &lt;= q[j]) tmp[k ++ ] = q[i ++ ];</span><br><span class="line">        <span class="keyword">else</span> tmp[k ++ ] = q[j ++ ];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid) tmp[k ++ ] = q[i ++ ];</span><br><span class="line">    <span class="keyword">while</span> (j &lt;= r) tmp[k ++ ] = q[j ++ ];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = l, j = <span class="number">0</span>; i &lt;= r; i ++, j ++ ) q[i] = tmp[j];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h2><h3 id="整数二分"><a href="#整数二分" class="headerlink" title="整数二分"></a>整数二分</h3><p>和RXZ的统一二分不同,这个是”学院派”二分,时间复杂度比通用稍小,容易写炸,但是我们还是要学习一下.</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;<span class="comment">/* ... */</span>&#125; <span class="comment">// 检查x是否满足某种性质</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 区间[l, r]被划分成[l, mid]和[mid + 1, r]时使用：</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bsearch_1</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">check</span>(mid)) r = mid;    <span class="comment">// check()判断mid是否满足性质</span></span><br><span class="line">        <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 区间[l, r]被划分成[l, mid - 1]和[mid, r]时使用：</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bsearch_2</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (l &lt; r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = l + r + <span class="number">1</span> &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">check</span>(mid)) l = mid;</span><br><span class="line">        <span class="keyword">else</span> r = mid - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>往左边二分和往右边二分的两种方式.</p>
-<h3 id="浮点二分"><a href="#浮点二分" class="headerlink" title="浮点二分"></a>浮点二分</h3><p>多两个精度上模板即可</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(<span class="type">double</span> x)</span> </span>&#123;<span class="comment">/* ... */</span>&#125; <span class="comment">// 检查x是否满足某种性质</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">bsearch_3</span><span class="params">(<span class="type">double</span> l, <span class="type">double</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">double</span> eps = <span class="number">1e-6</span>;   <span class="comment">// eps 表示精度，取决于题目对精度的要求</span></span><br><span class="line">    <span class="keyword">while</span> (r - l &gt; eps)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">double</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">check</span>(mid)) r = mid;</span><br><span class="line">        <span class="keyword">else</span> l = mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>This post was written on August 11, 2022 at 23:03.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI-Course</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>Course</tag>
-        <tag>acwing</tag>
       </tags>
   </entry>
   <entry>
@@ -504,6 +504,182 @@ O(n!)只能跑到10</script><blockquote>
       </tags>
   </entry>
   <entry>
+    <title>course-day-8</title>
+    <url>/uncategorized/course-day-8/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>course-day-7-2-线段树实现求区间和、RMQ的学习</title>
+    <url>/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-7-2/</url>
+    <content><![CDATA[<p>虽然说：“一般普及组集训不会讲线段树，所以即便听不懂，也没有什么关系。”</p>
+<p>但是我们也必须学好。</p>
+<p>线段树是快速的查找某一个节点在若干条线段中出现的次数，RMQ也常常使用线段树来实现。</p>
+<blockquote>
+<p>线段树是一种<a href="https://baike.baidu.com/item/二叉搜索树/7077855">二叉搜索树</a>，与<a href="https://baike.baidu.com/item/区间树/5772433">区间树</a>相似，它将一个区间划分成一些单元区间，每个单元区间对应线段树中的一个叶结点。</p>
+<p>使用线段树可以快速的查找某一个节点在若干条线段中出现的次数，时间复杂度为O(logN)。而未优化的<a href="https://baike.baidu.com/item/空间复杂度/9664257">空间复杂度</a>为2N，实际应用时一般还要开4N的数组以免越界，因此有时需要离散化让空间压缩。</p>
+<p>—— 百度百科</p>
+</blockquote>
+<h1 id="eg1-《动态成绩查询》"><a href="#eg1-《动态成绩查询》" class="headerlink" title="eg1:《动态成绩查询》"></a>eg1:《动态成绩查询》</h1><p>一个班里有<em>n</em>名学生，他们的学号是<em>1~n</em></p>
+<p>起初，所有人的成绩都是0，有m次操作。</p>
+<ul>
+<li>给x加分或者减分</li>
+<li>给定l,r求区间和</li>
+</ul>
+<p>数据范围是很经典的$10^{5}$。</p>
+<p>建立一个树，根是1~n的区间和，左孩子和有孩子是<em>1 ~ mid</em>和<em>mid</em> ~ <em>n</em>，叶子节点为单个学生。</p>
+<p>给x加分即给x的所有父节点加分，这就是线段树。</p>
+<p>我们使用堆式存储存下整个树。</p>
+<p>虽然说是有10w个节点，但是我们不能只开10w，我们要开2的整次幂，且接近10w。而$2^{17}$可以满足条件。</p>
+<p>我们定义w[]存储一个节点的值。</p>
+<h2 id="单点加"><a href="#单点加" class="headerlink" title="单点加"></a>单点加</h2><p>我们单点加可以从叶子节点开始加，叶子节点加完后直接/2来到父节点。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">pointAdd</span><span class="params">(<span class="type">int</span> pos, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 找到 pos 在 w[] 位于什么位置</span></span><br><span class="line">    <span class="type">int</span> cur = SIZE + pos - <span class="number">1</span>;   <span class="comment">// 例如，1号同学位于 w[131072]</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(cur != <span class="number">0</span>) &#123;</span><br><span class="line">        w[cur] += k;</span><br><span class="line">        cur = cur / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="区间求和"><a href="#区间求和" class="headerlink" title="区间求和"></a>区间求和</h2><p>如果要查询的区间就在自己的管辖范围之内，直接返回即可。如果不在就交给自己的孩子节点去做。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 查询 [queryLe, queryRt] 的区间和</span></span><br><span class="line"><span class="comment">// querySum 要返回所查的那些元素，落在 node 管辖区间里面的这部分的 sum</span></span><br><span class="line"><span class="comment">// querySum 只管 「node 管辖区间」与「查询区间」的交集元素，其余的不管</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">querySum</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> queryLe, <span class="type">int</span> queryRt)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(queryRt &lt; fieldLe || fieldRt &lt; queryLe)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;       <span class="comment">// 查询区间的右端点比管辖区间的 l 还小，显然本次查询不关这个 node 的事</span></span><br><span class="line">    <span class="keyword">if</span>(queryLe &lt;= fieldLe &amp;&amp; fieldRt &lt;= queryRt)</span><br><span class="line">        <span class="keyword">return</span> w[node]; <span class="comment">// 查询区间完全覆盖掉了 node 的管辖区间，返回 w[node]，即管辖区间的 sum</span></span><br><span class="line">    <span class="comment">// 例如，查询 [1, 100]，而管辖区间是 [9, 16]</span></span><br><span class="line">    <span class="comment">// 那我显然直接返回 sum(9, 16)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在，查询区间和管辖区间有交集，需要细化处理</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 由左儿子查询、右儿子查询，返回它们的和</span></span><br><span class="line">    <span class="comment">// 左儿子会处理自己管辖区域内的 sum，右儿子同理</span></span><br><span class="line">    <span class="type">int</span> sumLe = <span class="built_in">querySum</span>(node*<span class="number">2</span>, fieldLe, mid, queryLe, queryRt);</span><br><span class="line">    <span class="type">int</span> sumRt = <span class="built_in">querySum</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, queryLe, queryRt);</span><br><span class="line">    <span class="keyword">return</span> sumLe + sumRt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="eg2RMQ：洛谷P1816《忠诚》"><a href="#eg2RMQ：洛谷P1816《忠诚》" class="headerlink" title="eg2RMQ：洛谷P1816《忠诚》"></a>eg2RMQ：洛谷P1816《忠诚》</h1><p>我们在给区间加的时候顺手统计最小值即可。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;       <span class="comment">// n 个学生，m 次操作</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">input</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 维护一个长度为 131072（i.e. 2^17）长度的序列</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SIZE 131072</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> w[SIZE * <span class="number">2</span> + <span class="number">5</span>];    <span class="comment">// w[x]: x结点所管辖区间的 sum</span></span><br><span class="line"><span class="comment">// w[1] 的管辖区间是 [1, 131072]</span></span><br><span class="line"><span class="comment">// w[2]: [1, 65536], w[3]: [65537, 131072]</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="comment">// w[131072]: [1, 1], ....</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 给 pos 同学加 k 分</span></span><br><span class="line"><span class="comment">// 目前正在处理 node 结点，它的管辖区间是 [fieldLe, fieldRt]</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pointAdd</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> pos, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 更新 node 管辖区域的 sum </span></span><br><span class="line">    w[node] += k;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果已经处理到底层，则更新 w 之后直接返回</span></span><br><span class="line">    <span class="keyword">if</span>(fieldLe == fieldRt) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 还需要递归处理</span></span><br><span class="line">    <span class="comment">// 左半块：编号是 node*2, 管辖区间 [fieldLe, mid]</span></span><br><span class="line">    <span class="comment">// 右半块：编号是 node*2+1, 管辖区间 [mid+1, fieldRt]</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 例如：node 管辖区间是 [8, 16]</span></span><br><span class="line">    <span class="comment">// mid = (8+16)/2 = 12，左半块的管辖区间是 [8, 12]；右半块 [13, 16]</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(pos &lt;= mid)      <span class="comment">// 如果 pos 落在左半块，则递归给左边半块</span></span><br><span class="line">        <span class="built_in">pointAdd</span>(node*<span class="number">2</span>, fieldLe, mid, pos, k);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">pointAdd</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, pos, k);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询 [queryLe, queryRt] 的区间和</span></span><br><span class="line"><span class="comment">// querySum 要返回所查的那些元素，落在 node 管辖区间里面的这部分的 sum</span></span><br><span class="line"><span class="comment">// querySum 只管 「node 管辖区间」与「查询区间」的交集元素，其余的不管</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">querySum</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> queryLe, <span class="type">int</span> queryRt)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(queryRt &lt; fieldLe || fieldRt &lt; queryLe)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;       <span class="comment">// 查询区间的右端点比管辖区间的 l 还小，显然本次查询不关这个 node 的事</span></span><br><span class="line">    <span class="keyword">if</span>(queryLe &lt;= fieldLe &amp;&amp; fieldRt &lt;= queryRt)</span><br><span class="line">        <span class="keyword">return</span> w[node]; <span class="comment">// 查询区间完全覆盖掉了 node 的管辖区间，返回 w[node]，即管辖区间的 sum</span></span><br><span class="line">    <span class="comment">// 例如，查询 [1, 100]，而管辖区间是 [9, 16]</span></span><br><span class="line">    <span class="comment">// 那我显然直接返回 sum(9, 16)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在，查询区间和管辖区间有交集，需要细化处理</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 由左儿子查询、右儿子查询，返回它们的和</span></span><br><span class="line">    <span class="comment">// 左儿子会处理自己管辖区域内的 sum，右儿子同理</span></span><br><span class="line">    <span class="type">int</span> sumLe = <span class="built_in">querySum</span>(node*<span class="number">2</span>, fieldLe, mid, queryLe, queryRt);</span><br><span class="line">    <span class="type">int</span> sumRt = <span class="built_in">querySum</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, queryLe, queryRt);</span><br><span class="line">    <span class="keyword">return</span> sumLe + sumRt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(m--) &#123;</span><br><span class="line">        <span class="type">int</span> cmd, x, y;</span><br><span class="line">        cin &gt;&gt; cmd &gt;&gt; x &gt;&gt; y;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(cmd == <span class="number">1</span>)</span><br><span class="line">            <span class="built_in">pointAdd</span>(<span class="number">1</span>, <span class="number">1</span>, SIZE, x, y);     <span class="comment">// 交给 1 号结点，其管辖区间是 [1, SIZE]</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            cout &lt;&lt; <span class="built_in">querySum</span>(<span class="number">1</span>, <span class="number">1</span>, SIZE, x, y) &lt;&lt; endl;     <span class="comment">// 交给 1 号点，1 号的管辖区间是全集</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">input</span>();</span><br><span class="line">    <span class="built_in">work</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>This post was written on July 27, 2022</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI-Course</category>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>Course</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Courses-day-5-DP(动态规划)的初步学习-第一部分</title>
+    <url>/OI/OI-Course/courses-day-5-1/</url>
+    <content><![CDATA[<blockquote>
+<p>Today is the fifth day of the course.</p>
+</blockquote>
+<h1 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h1><h2 id="dp是什么？"><a href="#dp是什么？" class="headerlink" title="dp是什么？"></a>dp是什么？</h2><blockquote>
+<p>动态规划（DP）不是某种具体算法，而是一种思想。<br>核心在于：把大问题转化为小问题，利用小问题的解，推断出大问题的解。</p>
+</blockquote>
+<h2 id="什么是状态？"><a href="#什么是状态？" class="headerlink" title="什么是状态？"></a>什么是状态？</h2><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><h4 id="《硬币问题》"><a href="#《硬币问题》" class="headerlink" title="《硬币问题》"></a>《硬币问题》</h4><blockquote>
+<p>Luogu-B3635</p>
+<p>今天你手上有无限的面值为1,5,11 元的硬币。<br>给定n，问：至少用多少枚硬币，可以恰好凑出n 元？</p>
+</blockquote>
+<h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><blockquote>
+<p>用f[x]表示多少钱的时候最小的硬币数，f[x]由上一次选择的最小硬币数+1得到，所以我们只需要找到上一次选择的硬币+1的最小值就可以了。故有状态转移方程：</p>
+</blockquote>
+<script type="math/tex; mode=display">
+f(x)=\left\{
+\begin{aligned}
+1+f[x-1]\newline
+1+f[x-5]\newline
+1+f[x-11]\newline
+\end{aligned}
+\right.</script><h4 id="《凑字》"><a href="#《凑字》" class="headerlink" title="《凑字》"></a>《凑字》</h4><blockquote>
+<p>现在有一篇文章是一个字，你可以添加一个字或者复制整个文章再粘贴（即字数翻倍）。说人话就是可以使一个数字加<em>1</em>或者<em>×</em>2</p>
+<p>求码出n字的最小次数</p>
+</blockquote>
+<p>数组<em>f[x]</em>,<em>x</em>表示码出<em>x</em>字所需的最小增加次数，因为<em>x</em>字要么是加以得来，要么是<em>×2</em>得来。</p>
+<p>所以如果<em>x</em>是奇数，那么他的次数为:</p>
+<script type="math/tex; mode=display">
+f[x]=f[x-1]+1</script><p>如果<em>x</em>是偶数，那么他可能是<em>+1</em>得到的，也可能是<em>×2</em>得到的，所以有：</p>
+<script type="math/tex; mode=display">
+f[x]=min(f[x-1],f[x/2])+1</script><p>所以状态转移方程为：</p>
+<script type="math/tex; mode=display">
+f[x]=
+\begin{cases}
+f[x]=f[x-1]+1 & \{x|x=2n+1，n∈Z\}\newline 
+f[x]=min(f[x-1],f[x/2])+1 & \{x|x=2n, n∈Z\}
+\end{cases}</script><h3 id="初步总结：状态"><a href="#初步总结：状态" class="headerlink" title="初步总结：状态"></a>初步总结：状态</h3><blockquote>
+<p>硬币问题中，要表达“我们需要凑出n 元钱”这个局面，可以设计状态：“f[x] 表示凑出x 元用的最少硬币数”。<br>上楼梯问题中，设计状态：“f[x] 表示走上x 级的方案数”。</p>
+</blockquote>
+<p>可见，只有大问题和小问题拥有相同的形式，才能考虑拆分子问题。<br>如果满足这个要求，那么我们遇到的每个子问题，都可以通过某种简洁的形式来表达。<br>我们把可能遇到的每种“局面”称为状态。</p>
+<blockquote>
+<p>所以最优解的最优解就是我们要的结果，一层层下去到可以人工计算或者无需计算的开头，这就是DP</p>
+<p>形象的说，状态就是格子，而寻找状态就是寻找格子，dp就是用之前的格子来推出之后的格子。</p>
+</blockquote>
+<h2 id="转移"><a href="#转移" class="headerlink" title="转移"></a>转移</h2><h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h4><h5 id="LIS-最长上升子序列"><a href="#LIS-最长上升子序列" class="headerlink" title="LIS(最长上升子序列)"></a>LIS(最长上升子序列)</h5><blockquote>
+<p>给定一个数组a，求a中最长的上升子序列</p>
+<p>最长上升子序列：数组中最长的那一个单调上升的子序列。</p>
+</blockquote>
+<p>下文我们以lis指代最长上升子序列。</p>
+<p>数组<em>f[x]</em>表示以a[x]结尾的lis，a[p]表示接到的数，即为小于a[x]的数。所以我们只需要把a[x]接到每一个f[p]的后即可找到lis。</p>
+<p>所以只要a,p满足p&lt;x,a[p]&lt;a[x],然后枚举f[p]+1的最大值就是f[x]的最优解。</p>
+<p>此时我们已经找到了状态以及状态转移方程:</p>
+<script type="math/tex; mode=display">
+f[x]=\mathop{\max}_{p<x,a[p]<a[x]} \{ f[p]+1 \}</script><h2 id="小结：状态和转移"><a href="#小结：状态和转移" class="headerlink" title="小结：状态和转移"></a>小结：状态和转移</h2><p>一个dp题，应该经历2个过程：</p>
+<ol>
+<li>设计状态。把面临的每一个问题，表达成一个个「状态」。</li>
+<li>设计转移。写出状态转移方程，从而利用小问题的解推出大问题的解。</li>
+</ol>
+<p>可以通俗的说：大事化小，小事化了</p>
+<h2 id="dp的两种实现方式"><a href="#dp的两种实现方式" class="headerlink" title="dp的两种实现方式"></a>dp的两种实现方式</h2><p>dp的递推形式可以从过去推到现在，也可以从现在推到未来，时间复杂度和空间都是一样的，只是写法不同罢了，就像dp可以用递推实现也可以用记忆化搜索实现。</p>
+<p>可以称为“我从哪里来”和“我到哪里去”</p>
+<p>刚刚的《硬币问题》也可以使用“我到哪里去”实现：</p>
+<script type="math/tex; mode=display">
+f[x]
+\to f[x+1]\\
+\to f[x+5]\\
+\to f[x+11]</script><p>《Lis》问题也可以：</p>
+<script type="math/tex; mode=display">
+f[x]
+\xrightarrow[p>x]{a[p]>a[x]}
+f[p]</script><h3 id="小结：设计转移"><a href="#小结：设计转移" class="headerlink" title="小结：设计转移"></a>小结：设计转移</h3><blockquote>
+<p>我从哪里来：对于一个没有求出解的状态，利用能走到它的状态，来得出它的解。</p>
+<p>我到哪里去：对于一个已经求好了解的状态，拿去更新它能走到的状态。</p>
+</blockquote>
+<p>两者只有写法上的区别，没有效率上的区别（根据状态和状态转移方程来选择写法）</p>
+<h1 id="dp总结"><a href="#dp总结" class="headerlink" title="dp总结"></a>dp总结</h1><p><em>dp</em>可以分为3步：</p>
+<ol>
+<li>设计状态</li>
+<li>找到状态转移方程</li>
+<li>在“我从哪里来”和“我到哪里去”中选择好写的一个实现代码</li>
+</ol>
+<p>完成后你就完美的切掉了一道<em>dp</em>题，<em>congratulations !</em></p>
+<h1 id="dp与贪心的区别"><a href="#dp与贪心的区别" class="headerlink" title="dp与贪心的区别"></a>dp与贪心的区别</h1><p>通过一个例题来说明：</p>
+<blockquote>
+<p>你手上有1 个苹果，他每次施法可以让苹果数量+1 或×2。<br>请问你至少需要多少次施法，才能恰好得到n 个苹果。</p>
+</blockquote>
+<p>和刚刚的《凑字》问题是一模一样的，dp：</p>
+<script type="math/tex; mode=display">
+f[x]=
+\begin{cases}
+f[x]=f[x-1]+1 & \{x|x=2n+1，n∈Z\}\newline 
+f[x]=min(f[x-1],f[x/2])+1 & \{x|x=2n, n∈Z\}
+\end{cases}</script><p>而贪心要好写一些：</p>
+<script type="math/tex; mode=display">
+f[x]=
+\begin{cases}
+f[x]=f[x-1]+1 & \{x|x=2n+1，n∈Z\}\newline 
+f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
+\end{cases}</script><p>可以看到，贪心是直接使用了<em>f[x/2]+1</em>而不去确认是否有更优解，贪心是对当前状态下的最优解而不是全局最优解，所以人们说贪心是“目光短浅”的。但是对于这道题，贪心更快也更好些。而dp开头讲过,dp是把大问题转化为小问题，利用小问题的解，推断出大问题的解。</p>
+<p>这便是dp与贪心的区别，他们之间没有目前的分界线，可能一道题贪心和dp都占了。</p>
+<blockquote>
+<p>贪心算法和动态规划最大的不同在于：贪心法并不是首先寻找子问题的最优解，然后在其中进行选择，而是首先做出一次「贪心」选择——在当时（局部）看来最优的选择，然后求解选出的子问题，从而不必费心求解所有可能相关的子问题。</p>
+<p>—— 《算法导论》</p>
+</blockquote>
+<p>欢迎查看第二部分哦。</p>
+<blockquote>
+<p>This article was written on July 21, 2022 at 13:41.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI-Course</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>Course</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>course-day-9</title>
+    <url>/uncategorized/course-day-9/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>courese-day-4-序列算法-分治思想的学习</title>
     <url>/OI/OI-Course/course-day-4/</url>
     <content><![CDATA[<blockquote>
@@ -636,200 +812,6 @@ T(n) = 2T(n/2) +O(n) = O(nlog n)</script><h2 id="快速幂"><a href="#快速幂"
       </tags>
   </entry>
   <entry>
-    <title>course-day-7-2-线段树实现求区间和、RMQ的学习</title>
-    <url>/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-7-2/</url>
-    <content><![CDATA[<p>虽然说：“一般普及组集训不会讲线段树，所以即便听不懂，也没有什么关系。”</p>
-<p>但是我们也必须学好。</p>
-<p>线段树是快速的查找某一个节点在若干条线段中出现的次数，RMQ也常常使用线段树来实现。</p>
-<blockquote>
-<p>线段树是一种<a href="https://baike.baidu.com/item/二叉搜索树/7077855">二叉搜索树</a>，与<a href="https://baike.baidu.com/item/区间树/5772433">区间树</a>相似，它将一个区间划分成一些单元区间，每个单元区间对应线段树中的一个叶结点。</p>
-<p>使用线段树可以快速的查找某一个节点在若干条线段中出现的次数，时间复杂度为O(logN)。而未优化的<a href="https://baike.baidu.com/item/空间复杂度/9664257">空间复杂度</a>为2N，实际应用时一般还要开4N的数组以免越界，因此有时需要离散化让空间压缩。</p>
-<p>—— 百度百科</p>
-</blockquote>
-<h1 id="eg1-《动态成绩查询》"><a href="#eg1-《动态成绩查询》" class="headerlink" title="eg1:《动态成绩查询》"></a>eg1:《动态成绩查询》</h1><p>一个班里有<em>n</em>名学生，他们的学号是<em>1~n</em></p>
-<p>起初，所有人的成绩都是0，有m次操作。</p>
-<ul>
-<li>给x加分或者减分</li>
-<li>给定l,r求区间和</li>
-</ul>
-<p>数据范围是很经典的$10^{5}$。</p>
-<p>建立一个树，根是1~n的区间和，左孩子和有孩子是<em>1 ~ mid</em>和<em>mid</em> ~ <em>n</em>，叶子节点为单个学生。</p>
-<p>给x加分即给x的所有父节点加分，这就是线段树。</p>
-<p>我们使用堆式存储存下整个树。</p>
-<p>虽然说是有10w个节点，但是我们不能只开10w，我们要开2的整次幂，且接近10w。而$2^{17}$可以满足条件。</p>
-<p>我们定义w[]存储一个节点的值。</p>
-<h2 id="单点加"><a href="#单点加" class="headerlink" title="单点加"></a>单点加</h2><p>我们单点加可以从叶子节点开始加，叶子节点加完后直接/2来到父节点。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">pointAdd</span><span class="params">(<span class="type">int</span> pos, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 找到 pos 在 w[] 位于什么位置</span></span><br><span class="line">    <span class="type">int</span> cur = SIZE + pos - <span class="number">1</span>;   <span class="comment">// 例如，1号同学位于 w[131072]</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(cur != <span class="number">0</span>) &#123;</span><br><span class="line">        w[cur] += k;</span><br><span class="line">        cur = cur / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="区间求和"><a href="#区间求和" class="headerlink" title="区间求和"></a>区间求和</h2><p>如果要查询的区间就在自己的管辖范围之内，直接返回即可。如果不在就交给自己的孩子节点去做。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 查询 [queryLe, queryRt] 的区间和</span></span><br><span class="line"><span class="comment">// querySum 要返回所查的那些元素，落在 node 管辖区间里面的这部分的 sum</span></span><br><span class="line"><span class="comment">// querySum 只管 「node 管辖区间」与「查询区间」的交集元素，其余的不管</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">querySum</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> queryLe, <span class="type">int</span> queryRt)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(queryRt &lt; fieldLe || fieldRt &lt; queryLe)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;       <span class="comment">// 查询区间的右端点比管辖区间的 l 还小，显然本次查询不关这个 node 的事</span></span><br><span class="line">    <span class="keyword">if</span>(queryLe &lt;= fieldLe &amp;&amp; fieldRt &lt;= queryRt)</span><br><span class="line">        <span class="keyword">return</span> w[node]; <span class="comment">// 查询区间完全覆盖掉了 node 的管辖区间，返回 w[node]，即管辖区间的 sum</span></span><br><span class="line">    <span class="comment">// 例如，查询 [1, 100]，而管辖区间是 [9, 16]</span></span><br><span class="line">    <span class="comment">// 那我显然直接返回 sum(9, 16)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在，查询区间和管辖区间有交集，需要细化处理</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 由左儿子查询、右儿子查询，返回它们的和</span></span><br><span class="line">    <span class="comment">// 左儿子会处理自己管辖区域内的 sum，右儿子同理</span></span><br><span class="line">    <span class="type">int</span> sumLe = <span class="built_in">querySum</span>(node*<span class="number">2</span>, fieldLe, mid, queryLe, queryRt);</span><br><span class="line">    <span class="type">int</span> sumRt = <span class="built_in">querySum</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, queryLe, queryRt);</span><br><span class="line">    <span class="keyword">return</span> sumLe + sumRt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="eg2RMQ：洛谷P1816《忠诚》"><a href="#eg2RMQ：洛谷P1816《忠诚》" class="headerlink" title="eg2RMQ：洛谷P1816《忠诚》"></a>eg2RMQ：洛谷P1816《忠诚》</h1><p>我们在给区间加的时候顺手统计最小值即可。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;       <span class="comment">// n 个学生，m 次操作</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">input</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 维护一个长度为 131072（i.e. 2^17）长度的序列</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SIZE 131072</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> w[SIZE * <span class="number">2</span> + <span class="number">5</span>];    <span class="comment">// w[x]: x结点所管辖区间的 sum</span></span><br><span class="line"><span class="comment">// w[1] 的管辖区间是 [1, 131072]</span></span><br><span class="line"><span class="comment">// w[2]: [1, 65536], w[3]: [65537, 131072]</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="comment">// w[131072]: [1, 1], ....</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 给 pos 同学加 k 分</span></span><br><span class="line"><span class="comment">// 目前正在处理 node 结点，它的管辖区间是 [fieldLe, fieldRt]</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pointAdd</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> pos, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 更新 node 管辖区域的 sum </span></span><br><span class="line">    w[node] += k;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果已经处理到底层，则更新 w 之后直接返回</span></span><br><span class="line">    <span class="keyword">if</span>(fieldLe == fieldRt) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 还需要递归处理</span></span><br><span class="line">    <span class="comment">// 左半块：编号是 node*2, 管辖区间 [fieldLe, mid]</span></span><br><span class="line">    <span class="comment">// 右半块：编号是 node*2+1, 管辖区间 [mid+1, fieldRt]</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 例如：node 管辖区间是 [8, 16]</span></span><br><span class="line">    <span class="comment">// mid = (8+16)/2 = 12，左半块的管辖区间是 [8, 12]；右半块 [13, 16]</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(pos &lt;= mid)      <span class="comment">// 如果 pos 落在左半块，则递归给左边半块</span></span><br><span class="line">        <span class="built_in">pointAdd</span>(node*<span class="number">2</span>, fieldLe, mid, pos, k);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">pointAdd</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, pos, k);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询 [queryLe, queryRt] 的区间和</span></span><br><span class="line"><span class="comment">// querySum 要返回所查的那些元素，落在 node 管辖区间里面的这部分的 sum</span></span><br><span class="line"><span class="comment">// querySum 只管 「node 管辖区间」与「查询区间」的交集元素，其余的不管</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">querySum</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> queryLe, <span class="type">int</span> queryRt)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(queryRt &lt; fieldLe || fieldRt &lt; queryLe)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;       <span class="comment">// 查询区间的右端点比管辖区间的 l 还小，显然本次查询不关这个 node 的事</span></span><br><span class="line">    <span class="keyword">if</span>(queryLe &lt;= fieldLe &amp;&amp; fieldRt &lt;= queryRt)</span><br><span class="line">        <span class="keyword">return</span> w[node]; <span class="comment">// 查询区间完全覆盖掉了 node 的管辖区间，返回 w[node]，即管辖区间的 sum</span></span><br><span class="line">    <span class="comment">// 例如，查询 [1, 100]，而管辖区间是 [9, 16]</span></span><br><span class="line">    <span class="comment">// 那我显然直接返回 sum(9, 16)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在，查询区间和管辖区间有交集，需要细化处理</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 由左儿子查询、右儿子查询，返回它们的和</span></span><br><span class="line">    <span class="comment">// 左儿子会处理自己管辖区域内的 sum，右儿子同理</span></span><br><span class="line">    <span class="type">int</span> sumLe = <span class="built_in">querySum</span>(node*<span class="number">2</span>, fieldLe, mid, queryLe, queryRt);</span><br><span class="line">    <span class="type">int</span> sumRt = <span class="built_in">querySum</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, queryLe, queryRt);</span><br><span class="line">    <span class="keyword">return</span> sumLe + sumRt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(m--) &#123;</span><br><span class="line">        <span class="type">int</span> cmd, x, y;</span><br><span class="line">        cin &gt;&gt; cmd &gt;&gt; x &gt;&gt; y;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(cmd == <span class="number">1</span>)</span><br><span class="line">            <span class="built_in">pointAdd</span>(<span class="number">1</span>, <span class="number">1</span>, SIZE, x, y);     <span class="comment">// 交给 1 号结点，其管辖区间是 [1, SIZE]</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            cout &lt;&lt; <span class="built_in">querySum</span>(<span class="number">1</span>, <span class="number">1</span>, SIZE, x, y) &lt;&lt; endl;     <span class="comment">// 交给 1 号点，1 号的管辖区间是全集</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">input</span>();</span><br><span class="line">    <span class="built_in">work</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>This post was written on July 27, 2022</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI-Course</category>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>Course</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>course-day-8</title>
-    <url>/uncategorized/course-day-8/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>course-day-9</title>
-    <url>/uncategorized/course-day-9/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Courses-day-5-DP(动态规划)的初步学习-第一部分</title>
-    <url>/OI/OI-Course/courses-day-5-1/</url>
-    <content><![CDATA[<blockquote>
-<p>Today is the fifth day of the course.</p>
-</blockquote>
-<h1 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h1><h2 id="dp是什么？"><a href="#dp是什么？" class="headerlink" title="dp是什么？"></a>dp是什么？</h2><blockquote>
-<p>动态规划（DP）不是某种具体算法，而是一种思想。<br>核心在于：把大问题转化为小问题，利用小问题的解，推断出大问题的解。</p>
-</blockquote>
-<h2 id="什么是状态？"><a href="#什么是状态？" class="headerlink" title="什么是状态？"></a>什么是状态？</h2><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><h4 id="《硬币问题》"><a href="#《硬币问题》" class="headerlink" title="《硬币问题》"></a>《硬币问题》</h4><blockquote>
-<p>Luogu-B3635</p>
-<p>今天你手上有无限的面值为1,5,11 元的硬币。<br>给定n，问：至少用多少枚硬币，可以恰好凑出n 元？</p>
-</blockquote>
-<h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><blockquote>
-<p>用f[x]表示多少钱的时候最小的硬币数，f[x]由上一次选择的最小硬币数+1得到，所以我们只需要找到上一次选择的硬币+1的最小值就可以了。故有状态转移方程：</p>
-</blockquote>
-<script type="math/tex; mode=display">
-f(x)=\left\{
-\begin{aligned}
-1+f[x-1]\newline
-1+f[x-5]\newline
-1+f[x-11]\newline
-\end{aligned}
-\right.</script><h4 id="《凑字》"><a href="#《凑字》" class="headerlink" title="《凑字》"></a>《凑字》</h4><blockquote>
-<p>现在有一篇文章是一个字，你可以添加一个字或者复制整个文章再粘贴（即字数翻倍）。说人话就是可以使一个数字加<em>1</em>或者<em>×</em>2</p>
-<p>求码出n字的最小次数</p>
-</blockquote>
-<p>数组<em>f[x]</em>,<em>x</em>表示码出<em>x</em>字所需的最小增加次数，因为<em>x</em>字要么是加以得来，要么是<em>×2</em>得来。</p>
-<p>所以如果<em>x</em>是奇数，那么他的次数为:</p>
-<script type="math/tex; mode=display">
-f[x]=f[x-1]+1</script><p>如果<em>x</em>是偶数，那么他可能是<em>+1</em>得到的，也可能是<em>×2</em>得到的，所以有：</p>
-<script type="math/tex; mode=display">
-f[x]=min(f[x-1],f[x/2])+1</script><p>所以状态转移方程为：</p>
-<script type="math/tex; mode=display">
-f[x]=
-\begin{cases}
-f[x]=f[x-1]+1 & \{x|x=2n+1，n∈Z\}\newline 
-f[x]=min(f[x-1],f[x/2])+1 & \{x|x=2n, n∈Z\}
-\end{cases}</script><h3 id="初步总结：状态"><a href="#初步总结：状态" class="headerlink" title="初步总结：状态"></a>初步总结：状态</h3><blockquote>
-<p>硬币问题中，要表达“我们需要凑出n 元钱”这个局面，可以设计状态：“f[x] 表示凑出x 元用的最少硬币数”。<br>上楼梯问题中，设计状态：“f[x] 表示走上x 级的方案数”。</p>
-</blockquote>
-<p>可见，只有大问题和小问题拥有相同的形式，才能考虑拆分子问题。<br>如果满足这个要求，那么我们遇到的每个子问题，都可以通过某种简洁的形式来表达。<br>我们把可能遇到的每种“局面”称为状态。</p>
-<blockquote>
-<p>所以最优解的最优解就是我们要的结果，一层层下去到可以人工计算或者无需计算的开头，这就是DP</p>
-<p>形象的说，状态就是格子，而寻找状态就是寻找格子，dp就是用之前的格子来推出之后的格子。</p>
-</blockquote>
-<h2 id="转移"><a href="#转移" class="headerlink" title="转移"></a>转移</h2><h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h4><h5 id="LIS-最长上升子序列"><a href="#LIS-最长上升子序列" class="headerlink" title="LIS(最长上升子序列)"></a>LIS(最长上升子序列)</h5><blockquote>
-<p>给定一个数组a，求a中最长的上升子序列</p>
-<p>最长上升子序列：数组中最长的那一个单调上升的子序列。</p>
-</blockquote>
-<p>下文我们以lis指代最长上升子序列。</p>
-<p>数组<em>f[x]</em>表示以a[x]结尾的lis，a[p]表示接到的数，即为小于a[x]的数。所以我们只需要把a[x]接到每一个f[p]的后即可找到lis。</p>
-<p>所以只要a,p满足p&lt;x,a[p]&lt;a[x],然后枚举f[p]+1的最大值就是f[x]的最优解。</p>
-<p>此时我们已经找到了状态以及状态转移方程:</p>
-<script type="math/tex; mode=display">
-f[x]=\mathop{\max}_{p<x,a[p]<a[x]} \{ f[p]+1 \}</script><h2 id="小结：状态和转移"><a href="#小结：状态和转移" class="headerlink" title="小结：状态和转移"></a>小结：状态和转移</h2><p>一个dp题，应该经历2个过程：</p>
-<ol>
-<li>设计状态。把面临的每一个问题，表达成一个个「状态」。</li>
-<li>设计转移。写出状态转移方程，从而利用小问题的解推出大问题的解。</li>
-</ol>
-<p>可以通俗的说：大事化小，小事化了</p>
-<h2 id="dp的两种实现方式"><a href="#dp的两种实现方式" class="headerlink" title="dp的两种实现方式"></a>dp的两种实现方式</h2><p>dp的递推形式可以从过去推到现在，也可以从现在推到未来，时间复杂度和空间都是一样的，只是写法不同罢了，就像dp可以用递推实现也可以用记忆化搜索实现。</p>
-<p>可以称为“我从哪里来”和“我到哪里去”</p>
-<p>刚刚的《硬币问题》也可以使用“我到哪里去”实现：</p>
-<script type="math/tex; mode=display">
-f[x]
-\to f[x+1]\\
-\to f[x+5]\\
-\to f[x+11]</script><p>《Lis》问题也可以：</p>
-<script type="math/tex; mode=display">
-f[x]
-\xrightarrow[p>x]{a[p]>a[x]}
-f[p]</script><h3 id="小结：设计转移"><a href="#小结：设计转移" class="headerlink" title="小结：设计转移"></a>小结：设计转移</h3><blockquote>
-<p>我从哪里来：对于一个没有求出解的状态，利用能走到它的状态，来得出它的解。</p>
-<p>我到哪里去：对于一个已经求好了解的状态，拿去更新它能走到的状态。</p>
-</blockquote>
-<p>两者只有写法上的区别，没有效率上的区别（根据状态和状态转移方程来选择写法）</p>
-<h1 id="dp总结"><a href="#dp总结" class="headerlink" title="dp总结"></a>dp总结</h1><p><em>dp</em>可以分为3步：</p>
-<ol>
-<li>设计状态</li>
-<li>找到状态转移方程</li>
-<li>在“我从哪里来”和“我到哪里去”中选择好写的一个实现代码</li>
-</ol>
-<p>完成后你就完美的切掉了一道<em>dp</em>题，<em>congratulations !</em></p>
-<h1 id="dp与贪心的区别"><a href="#dp与贪心的区别" class="headerlink" title="dp与贪心的区别"></a>dp与贪心的区别</h1><p>通过一个例题来说明：</p>
-<blockquote>
-<p>你手上有1 个苹果，他每次施法可以让苹果数量+1 或×2。<br>请问你至少需要多少次施法，才能恰好得到n 个苹果。</p>
-</blockquote>
-<p>和刚刚的《凑字》问题是一模一样的，dp：</p>
-<script type="math/tex; mode=display">
-f[x]=
-\begin{cases}
-f[x]=f[x-1]+1 & \{x|x=2n+1，n∈Z\}\newline 
-f[x]=min(f[x-1],f[x/2])+1 & \{x|x=2n, n∈Z\}
-\end{cases}</script><p>而贪心要好写一些：</p>
-<script type="math/tex; mode=display">
-f[x]=
-\begin{cases}
-f[x]=f[x-1]+1 & \{x|x=2n+1，n∈Z\}\newline 
-f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
-\end{cases}</script><p>可以看到，贪心是直接使用了<em>f[x/2]+1</em>而不去确认是否有更优解，贪心是对当前状态下的最优解而不是全局最优解，所以人们说贪心是“目光短浅”的。但是对于这道题，贪心更快也更好些。而dp开头讲过,dp是把大问题转化为小问题，利用小问题的解，推断出大问题的解。</p>
-<p>这便是dp与贪心的区别，他们之间没有目前的分界线，可能一道题贪心和dp都占了。</p>
-<blockquote>
-<p>贪心算法和动态规划最大的不同在于：贪心法并不是首先寻找子问题的最优解，然后在其中进行选择，而是首先做出一次「贪心」选择——在当时（局部）看来最优的选择，然后求解选出的子问题，从而不必费心求解所有可能相关的子问题。</p>
-<p>—— 《算法导论》</p>
-</blockquote>
-<p>欢迎查看第二部分哦。</p>
-<blockquote>
-<p>This article was written on July 21, 2022 at 13:41.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI-Course</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>Course</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[模板]进制转换(10 to 2)</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</url>
-    <content><![CDATA[<p>code:<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int decToBin(int dec)</span><br><span class="line">&#123;</span><br><span class="line">    int result = 0, temp = dec, j = 1;</span><br><span class="line">    while (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % 2);</span><br><span class="line">        temp = temp / 2;</span><br><span class="line">        j = j * 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>This article was written on 2022/7/10.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI模板</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>OI模板</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo-sakura</title>
     <url>/%E6%8A%98%E8%85%BE/Web/hexo-sakura/</url>
     <content><![CDATA[<p>前两天回去折腾了一下wordpress，那个代码块和公式块给我整傻了，还是回来弄hexo算了，但是还是很重要我wordpress主题的樱花飘落特效，所以给hexo也折腾了一下，从网上找到了js（樱花图片是直接base64编码的，所以js有亿点长）：</p>
@@ -882,6 +864,24 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       <tags>
         <tag>Web</tag>
         <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[模板]进制转换(10 to 2)</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</url>
+    <content><![CDATA[<p>code:<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int decToBin(int dec)</span><br><span class="line">&#123;</span><br><span class="line">    int result = 0, temp = dec, j = 1;</span><br><span class="line">    while (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % 2);</span><br><span class="line">        temp = temp / 2;</span><br><span class="line">        j = j * 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>This article was written on 2022/7/10.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI模板</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>OI模板</tag>
       </tags>
   </entry>
   <entry>
@@ -1040,20 +1040,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>[模板]判断回文数</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI模板</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>OI模板</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>myoilean</title>
     <url>/%E8%87%AA%E5%86%99/myoilean/</url>
     <content><![CDATA[<p>余幼学便知$oi$。初学之时，因余居于五线，故余之学甚难。尝费重金学之，但余之师仅教余何为$C++$,$STL$等余之师仅知，不知怎用。<br>此后，余两载未学$oi$。</p>
@@ -1070,6 +1056,20 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </categories>
       <tags>
         <tag>自写</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[模板]判断回文数</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI模板</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>OI模板</tag>
       </tags>
   </entry>
   <entry>
@@ -1105,6 +1105,20 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       <tags>
         <tag>OI</tag>
         <tag>OI模板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用vercel部署blog</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/vercel-blog/</url>
+    <content><![CDATA[<p>上次去某个日本注册商撸了几个域名，然后直呼：“啊！我这无处安放的域名！”就打算用vercel部署几个镜像站。</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>折腾</tag>
       </tags>
   </entry>
   <entry>
@@ -1178,16 +1192,29 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>用vercel部署blog</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/vercel-blog/</url>
-    <content><![CDATA[<p>上次去某个日本注册商撸了几个域名，然后直呼：“啊！我这无处安放的域名！”就打算用vercel部署几个镜像站。</p>
+    <title>wsl安装ohmyposh-ubuntu</title>
+    <url>/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/</url>
+    <content><![CDATA[<p>发现在wls中无法使用ohmyposh的主题，于是打算安装官网的linux教程配置，但是发现国内用homedrew和下载有亿点慢。所以使用了官网的手动安装教程：<a href="https://ohmyposh.dev/docs/installation/linux">Linux | Oh My Posh</a></p>
+<h1 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h1><p>把手动安装脚本改成：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo wget https://download.fastgit.org/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.1/posh-linux-amd64 -O /usr/local/bin/oh-my-posh</span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/oh-my-posh</span><br></pre></td></tr></table></figure>
+<p>然后执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ~/.poshthemes</span><br><span class="line">wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip</span><br><span class="line">unzip ~/.poshthemes/themes.zip -d ~/.poshthemes</span><br><span class="line"><span class="built_in">chmod</span> u+rw ~/.poshthemes/*.omp.*</span><br><span class="line"><span class="built_in">rm</span> ~/.poshthemes/themes.zip</span><br></pre></td></tr></table></figure>
+<p>安装主题.</p>
+<h1 id="启用"><a href="#启用" class="headerlink" title="启用"></a>启用</h1><p><a href="https://ohmyposh.dev/docs/installation/customize">Customize | Oh My Posh</a></p>
+<p>官方教程说输入那个命令即可启用，启用了是启用了，但是没法打开bash就启用啊。</p>
+<p>安装了之后怎么启用呢？powershell可以配置启动脚本，bash怎么办？</p>
+<p>找了好久发现需要在用户目录下的bash配置中加入命令。</p>
+<p><a href="https://ohmyposh.dev/docs/installation/prompt">Change your prompt | Oh My Posh</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/.bashrc``~/.profile``~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>你的目录中可能会是这些文件中的一个。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(oh-my-posh init bash --config 主题目录)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+<p>在文件中加入即可。</p>
+<p>就可以愉快的使用了ohmyposh美化过的终端了。</p>
 ]]></content>
       <categories>
         <category>折腾</category>
-        <category>Web</category>
       </categories>
       <tags>
-        <tag>Web</tag>
         <tag>折腾</tag>
       </tags>
   </entry>
@@ -1213,33 +1240,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </categories>
       <tags>
         <tag>CS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>wsl安装ohmyposh-ubuntu</title>
-    <url>/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/</url>
-    <content><![CDATA[<p>发现在wls中无法使用ohmyposh的主题，于是打算安装官网的linux教程配置，但是发现国内用homedrew和下载有亿点慢。所以使用了官网的手动安装教程：<a href="https://ohmyposh.dev/docs/installation/linux">Linux | Oh My Posh</a></p>
-<h1 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h1><p>把手动安装脚本改成：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo wget https://download.fastgit.org/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.1/posh-linux-amd64 -O /usr/local/bin/oh-my-posh</span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/oh-my-posh</span><br></pre></td></tr></table></figure>
-<p>然后执行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ~/.poshthemes</span><br><span class="line">wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip</span><br><span class="line">unzip ~/.poshthemes/themes.zip -d ~/.poshthemes</span><br><span class="line"><span class="built_in">chmod</span> u+rw ~/.poshthemes/*.omp.*</span><br><span class="line"><span class="built_in">rm</span> ~/.poshthemes/themes.zip</span><br></pre></td></tr></table></figure>
-<p>安装主题.</p>
-<h1 id="启用"><a href="#启用" class="headerlink" title="启用"></a>启用</h1><p><a href="https://ohmyposh.dev/docs/installation/customize">Customize | Oh My Posh</a></p>
-<p>官方教程说输入那个命令即可启用，启用了是启用了，但是没法打开bash就启用啊。</p>
-<p>安装了之后怎么启用呢？powershell可以配置启动脚本，bash怎么办？</p>
-<p>找了好久发现需要在用户目录下的bash配置中加入命令。</p>
-<p><a href="https://ohmyposh.dev/docs/installation/prompt">Change your prompt | Oh My Posh</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/.bashrc``~/.profile``~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>你的目录中可能会是这些文件中的一个。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(oh-my-posh init bash --config 主题目录)</span>&quot;</span></span><br></pre></td></tr></table></figure>
-<p>在文件中加入即可。</p>
-<p>就可以愉快的使用了ohmyposh美化过的终端了。</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
       </tags>
   </entry>
   <entry>
@@ -1292,12 +1292,13 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>幡然醒悟</title>
-    <url>/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</url>
-    <content><![CDATA[<h1 id="幡然醒悟"><a href="#幡然醒悟" class="headerlink" title="幡然醒悟"></a>幡然醒悟</h1><p>余自幼便自豪于家中亲戚大抵为师。家父，家母，一数学，一语文，此乃二基础科。每逢其教诲，余曰：“家父、家母皆教于高中，余读于小学、初中，余为何从之？”故余不听其教诲，教诲如过耳之风，余从未放于心。而今，余幡然醒悟:“父母教诲何其重，为何不听此箴言？”良之习，静之心，韧之性，此乃成功之基本。余不听父母之<mark class="hl-label blue">教诲</mark> ，其因并非其教于高中，只因余之懒惰，余心之浮躁，余自幼之陋习。若无良之习，静之心，韧之性，将一事无成！</p>
-<p>读书便读书，心当静，习当良，性当韧。读书之时，不应任何杂念，不应在似通非通之时放弃。读书，当<mark class="hl-label blue">透</mark> ，当<mark class="hl-label red">全</mark> ，当读之所学如与生俱来，方可于考场之上立于不败之地！</p>
-<mark class="hl-label red">自种之果当自食</mark> 
-<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
+    <title>我本可以忍受黑暗 如果我不曾见过光明</title>
+    <url>/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</url>
+    <content><![CDATA[<p>我笑了，笑得很凄凉，脸上写满了后知后觉的懊悔。虽说我有着后路，可“我本可以忍受黑暗，如果我从未见过光明”。我曾见过4年级的小学生讨论学术，我曾见过5年级的小学生轻轻松松学着我学了1个学期的知识，我是多么的希望和他们一样啊。于是，我有了梦想，但从未真正付出行动，多少个应该好好学习的日夜，我看着手中的书本发呆。我自以为可以依仗自己的那点小聪明来不听父母的教诲，抛去那比成功更重要的习惯与心态。我是多么的无知啊！若我可以依仗我那点小聪明便可以成功，那那么多莘莘学子的挑灯夜读又算什么呢？我失败的结果是注定的，因为我只看到了他们光彩的一面，没有看到他们将我如蜻蜓点水一般依靠小聪明学的知识学了一遍又一遍，我是多么的可笑啊！</p>
+<p>可现在后悔又有什么用呢？</p>
+<p>有用，我明白了“习惯心态和心性，决定一生去和从”,让我知道了“若无良之习，静之心，将一事无成！”这三岁小孩都明白的道理。</p>
+<p>我本可以忍受黑暗，如果我不曾见过光明。</p>
+<p>我不能忍受这黑暗，我要调整我的心态，平静我浮躁的心，养成良好的行为习惯，我不但要重见光明，我更要成为光明！</p>
 ]]></content>
       <categories>
         <category>自写</category>
@@ -1307,13 +1308,12 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>我本可以忍受黑暗 如果我不曾见过光明</title>
-    <url>/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</url>
-    <content><![CDATA[<p>我笑了，笑得很凄凉，脸上写满了后知后觉的懊悔。虽说我有着后路，可“我本可以忍受黑暗，如果我从未见过光明”。我曾见过4年级的小学生讨论学术，我曾见过5年级的小学生轻轻松松学着我学了1个学期的知识，我是多么的希望和他们一样啊。于是，我有了梦想，但从未真正付出行动，多少个应该好好学习的日夜，我看着手中的书本发呆。我自以为可以依仗自己的那点小聪明来不听父母的教诲，抛去那比成功更重要的习惯与心态。我是多么的无知啊！若我可以依仗我那点小聪明便可以成功，那那么多莘莘学子的挑灯夜读又算什么呢？我失败的结果是注定的，因为我只看到了他们光彩的一面，没有看到他们将我如蜻蜓点水一般依靠小聪明学的知识学了一遍又一遍，我是多么的可笑啊！</p>
-<p>可现在后悔又有什么用呢？</p>
-<p>有用，我明白了“习惯心态和心性，决定一生去和从”,让我知道了“若无良之习，静之心，将一事无成！”这三岁小孩都明白的道理。</p>
-<p>我本可以忍受黑暗，如果我不曾见过光明。</p>
-<p>我不能忍受这黑暗，我要调整我的心态，平静我浮躁的心，养成良好的行为习惯，我不但要重见光明，我更要成为光明！</p>
+    <title>幡然醒悟</title>
+    <url>/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</url>
+    <content><![CDATA[<h1 id="幡然醒悟"><a href="#幡然醒悟" class="headerlink" title="幡然醒悟"></a>幡然醒悟</h1><p>余自幼便自豪于家中亲戚大抵为师。家父，家母，一数学，一语文，此乃二基础科。每逢其教诲，余曰：“家父、家母皆教于高中，余读于小学、初中，余为何从之？”故余不听其教诲，教诲如过耳之风，余从未放于心。而今，余幡然醒悟:“父母教诲何其重，为何不听此箴言？”良之习，静之心，韧之性，此乃成功之基本。余不听父母之<mark class="hl-label blue">教诲</mark> ，其因并非其教于高中，只因余之懒惰，余心之浮躁，余自幼之陋习。若无良之习，静之心，韧之性，将一事无成！</p>
+<p>读书便读书，心当静，习当良，性当韧。读书之时，不应任何杂念，不应在似通非通之时放弃。读书，当<mark class="hl-label blue">透</mark> ，当<mark class="hl-label red">全</mark> ，当读之所学如与生俱来，方可于考场之上立于不败之地！</p>
+<mark class="hl-label red">自种之果当自食</mark> 
+<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
 ]]></content>
       <categories>
         <category>自写</category>
@@ -1358,28 +1358,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>[折腾]折腾twikoo</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</url>
-    <content><![CDATA[<p>虽然我已经配置好了valine和waline，但是折腾嘛，就是为了折腾，就去折腾了一下twikoo.</p>
-<p><a href="https://twikoo.js.org/quick-start.html">官方文档</a></p>
-<p>因为一直用的阿里云，又不想让自己的腾讯云新用户没了，就打算 Vercel 部署。</p>
-<p>官方甚至还有视频教程：<a href="https://www.bilibili.com/video/BV1Fh411e7ZH">Twikoo Vercel 部署教程_哔哩哔哩_bilibili</a></p>
-<iframe src="//player.bilibili.com/player.html?aid=205905942&bvid=BV1Fh411e7ZH&cid=349476933&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p>打开mongodb cloud，注册，按照视频和文档操作（其实就是设置密码什么的）</p>
-<p>然后在<a href="https://vercel.com/signup">Vercel</a>设置变量即可。</p>
-<p>2022/6/29</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-        <tag>折腾</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>挥之不去的身影</title>
     <url>/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</url>
     <content><![CDATA[<p>依稀记得，2020的11月，那是我第一次参加csp，也是2场都参加，试卷是什么样，中间尽力的那些波折？早已记不清了。唯有那个身影，那个眼神，在我的脑海里挥之不去，犹如昨日一般。</p>
@@ -1400,14 +1378,17 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>[折腾]白嫖linuxone</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/%E7%99%BD%E5%AB%96linuxone/</url>
-    <content><![CDATA[<p>偶然看到Linuxone可以白嫖，就愉快的去申请了个。<a href="https://linuxone.cloud.marist.edu/#/login">链接</a></p>
-<p><img src="https://img.oier.xin/img/image-20220623095350976.png" alt="image-20220623095350976"></p>
-<p>我是用gmail注册的，所以理由用英语随便写点什么就好了，比如：test my website</p>
-<p><img src="https://img.oier.xin/img/image-20220623095534665.png" alt="image-20220623095534665"></p>
-<p>创建即可，注意创建的时候有个坑，密钥上传或者创建后要选择否则无法创建。</p>
-<p>等大约5分钟就会显示ip，使用user：linux1和你刚刚创建或者上传的密钥登录即可。<br>这玩意儿是s390x架构，我这个啥端口也没开（看有些人的全开了），似乎啥也干不了（哭笑）<br>2022/6/23</p>
+    <title>[折腾]折腾twikoo</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</url>
+    <content><![CDATA[<p>虽然我已经配置好了valine和waline，但是折腾嘛，就是为了折腾，就去折腾了一下twikoo.</p>
+<p><a href="https://twikoo.js.org/quick-start.html">官方文档</a></p>
+<p>因为一直用的阿里云，又不想让自己的腾讯云新用户没了，就打算 Vercel 部署。</p>
+<p>官方甚至还有视频教程：<a href="https://www.bilibili.com/video/BV1Fh411e7ZH">Twikoo Vercel 部署教程_哔哩哔哩_bilibili</a></p>
+<iframe src="//player.bilibili.com/player.html?aid=205905942&bvid=BV1Fh411e7ZH&cid=349476933&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>打开mongodb cloud，注册，按照视频和文档操作（其实就是设置密码什么的）</p>
+<p>然后在<a href="https://vercel.com/signup">Vercel</a>设置变量即可。</p>
+<p>2022/6/29</p>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -1456,6 +1437,43 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
+    <title>[折腾]白嫖linuxone</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/%E7%99%BD%E5%AB%96linuxone/</url>
+    <content><![CDATA[<p>偶然看到Linuxone可以白嫖，就愉快的去申请了个。<a href="https://linuxone.cloud.marist.edu/#/login">链接</a></p>
+<p><img src="https://img.oier.xin/img/image-20220623095350976.png" alt="image-20220623095350976"></p>
+<p>我是用gmail注册的，所以理由用英语随便写点什么就好了，比如：test my website</p>
+<p><img src="https://img.oier.xin/img/image-20220623095534665.png" alt="image-20220623095534665"></p>
+<p>创建即可，注意创建的时候有个坑，密钥上传或者创建后要选择否则无法创建。</p>
+<p>等大约5分钟就会显示ip，使用user：linux1和你刚刚创建或者上传的密钥登录即可。<br>这玩意儿是s390x架构，我这个啥端口也没开（看有些人的全开了），似乎啥也干不了（哭笑）<br>2022/6/23</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>长知识了</title>
+    <url>/Share/%E9%95%BF%E7%9F%A5%E8%AF%86%E4%BA%86/</url>
+    <content><![CDATA[<p>真就长知识了！如果这次有人干了这个事，就会一直包揽和这个东西有关的活甚至这类活，还没报酬。</p>
+<iframe src="//player.bilibili.com/player.html?aid=598512784&bvid=BV1VB4y1Y7TD&cid=777168723&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p><a href="https://www.bilibili.com/video/BV1VB4y1Y7TD">把用户当成傻瓜还是太保守了 | 我真想跟甲方打一架_哔哩哔哩_bilibili</a></p>
+<blockquote>
+<p>This article was written on July 17, 2022 at 22:44</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Share</category>
+      </categories>
+      <tags>
+        <tag>Share</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[折腾]阿里dcdn折腾之旅</title>
     <url>/%E6%8A%98%E8%85%BE/Web/%E9%98%BF%E9%87%8Cdcdn%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</url>
     <content><![CDATA[<h1 id="阿里dcdn折腾之旅"><a href="#阿里dcdn折腾之旅" class="headerlink" title="阿里dcdn折腾之旅"></a>阿里dcdn折腾之旅</h1><p>之前一直用的阿里cdn，但是听说动态网站能上dcdn就上吧。</p>
@@ -1484,24 +1502,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       <tags>
         <tag>Web</tag>
         <tag>折腾</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>长知识了</title>
-    <url>/Share/%E9%95%BF%E7%9F%A5%E8%AF%86%E4%BA%86/</url>
-    <content><![CDATA[<p>真就长知识了！如果这次有人干了这个事，就会一直包揽和这个东西有关的活甚至这类活，还没报酬。</p>
-<iframe src="//player.bilibili.com/player.html?aid=598512784&bvid=BV1VB4y1Y7TD&cid=777168723&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p><a href="https://www.bilibili.com/video/BV1VB4y1Y7TD">把用户当成傻瓜还是太保守了 | 我真想跟甲方打一架_哔哩哔哩_bilibili</a></p>
-<blockquote>
-<p>This article was written on July 17, 2022 at 22:44</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Share</category>
-      </categories>
-      <tags>
-        <tag>Share</tag>
       </tags>
   </entry>
 </search>
