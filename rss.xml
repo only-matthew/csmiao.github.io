@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-08-14T15:17:30.827Z</updated>
+  <updated>2022-08-15T03:16:13.088Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P1141/"/>
     <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P1141/</id>
     <published>2022-08-14T15:03:20.000Z</published>
-    <updated>2022-08-14T15:17:30.827Z</updated>
+    <updated>2022-08-15T03:16:13.088Z</updated>
     
     
       
@@ -42,6 +42,7 @@
 &lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; r,&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; c,&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; z,&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; lll)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (r&amp;lt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; || r&amp;gt;=n || c&amp;lt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; || c&amp;gt;=n || f[r][c]!=&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt; || s[r][c]-&lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt;!=z)&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    f[r][c]=lll;ans[lll]++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;dfs&lt;/span&gt;(r&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;,c,!z,lll);&lt;span class=&quot;built_in&quot;&gt;dfs&lt;/span&gt;(r+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,c,!z,lll);&lt;span class=&quot;built_in&quot;&gt;dfs&lt;/span&gt;(r,c&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;,!z,lll);&lt;span class=&quot;built_in&quot;&gt;dfs&lt;/span&gt;(r,c+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,!z,lll);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;看了我几分钟才看明白是通过z变量来判断是否通，难道他们不知道有个东西叫异或运算符吗？&lt;/p&gt;
 &lt;p&gt;‘^’ ：只有当两个不一样的时候才会返回true，否则返回false，多么方便啊！&lt;/p&gt;
+&lt;h1 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;是连通块做法，我之前虽然听说过但是不会用，在做完这道题后就初入连通块了！&lt;/p&gt;
 &lt;p&gt;大致思路就是用ans数组记录连通块的value，used数组（其实叫flag数组更合适）记录每个坐标所属的ans。&lt;/p&gt;
 &lt;p&gt;在搜索的时候就给连通块标号和计算通路，这样即可AC。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -180,9 +181,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -626,9 +627,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1286,9 +1287,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1548,9 +1549,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1583,9 +1584,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1620,9 +1621,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1658,9 +1659,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1688,9 +1689,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1957,9 +1958,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1989,9 +1990,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -2092,9 +2093,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -2137,9 +2138,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
