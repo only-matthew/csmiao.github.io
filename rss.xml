@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-08-15T03:16:13.088Z</updated>
+  <updated>2022-08-14T15:03:20.000Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P1141/"/>
     <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P1141/</id>
     <published>2022-08-14T15:03:20.000Z</published>
-    <updated>2022-08-15T03:16:13.088Z</updated>
+    <updated>2022-08-14T15:03:20.000Z</updated>
     
     
       
@@ -70,7 +70,7 @@
     <link href="https://blog.loveoi.net/OI/OI-Course/acwing-course-1/"/>
     <id>https://blog.loveoi.net/OI/OI-Course/acwing-course-1/</id>
     <published>2022-08-11T12:50:24.000Z</published>
-    <updated>2022-08-13T06:31:31.525Z</updated>
+    <updated>2022-08-11T12:50:24.000Z</updated>
     
     
       
@@ -118,9 +118,9 @@
     
     <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
     
-    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
-    
     <category term="acwing" scheme="https://blog.loveoi.net/tags/acwing/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
     
   </entry>
   
@@ -129,7 +129,7 @@
     <link href="https://blog.loveoi.net/%E8%87%AA%E5%86%99/myoilean/"/>
     <id>https://blog.loveoi.net/%E8%87%AA%E5%86%99/myoilean/</id>
     <published>2022-08-09T02:00:32.000Z</published>
-    <updated>2022-08-09T02:03:43.987Z</updated>
+    <updated>2022-08-09T02:00:32.000Z</updated>
     
     
       
@@ -162,7 +162,7 @@
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/vercel-blog/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/vercel-blog/</id>
     <published>2022-07-31T14:48:27.000Z</published>
-    <updated>2022-07-31T14:56:18.941Z</updated>
+    <updated>2022-07-31T14:48:27.000Z</updated>
     
     
       
@@ -170,7 +170,23 @@
         
         
     <summary type="html">&lt;p&gt;上次去某个日本注册商撸了几个域名，然后直呼：“啊！我这无处安放的域名！”就打算用vercel部署几个镜像站。&lt;/p&gt;
-</summary>
+&lt;p&gt;镜像站是个好东西，主站炸了也不至于人没了。&lt;/p&gt;
+&lt;p&gt;去github新建一个仓库，用于存放hexo生成的静态文件。注意：是静态文件，可以使用hexo d直接上传。&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-   type: git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    repo:	你的github仓库地址&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    branch: master&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    message: blog_update&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;github 仓库自然不必多说。&lt;/p&gt;
+&lt;p&gt;进入vercel官网：&lt;a href=&quot;https://vercel.app&quot;&gt;https://vercel.app&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.oier.xin/img/image-20220815133323285.png&quot; alt=&quot;image-20220815133323285&quot;&gt;&lt;/p&gt;
+&lt;p&gt;点击new project创建新项目。&lt;/p&gt;
+&lt;p&gt;选择你刚刚新建的github仓库：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.oier.xin/img/image-20220815133514471.png&quot; alt=&quot;image-20220815133514471&quot;&gt;&lt;/p&gt;
+&lt;p&gt;部署即可。&lt;/p&gt;
+&lt;p&gt;记得选择香港节点！！！！&lt;/p&gt;
+&lt;p&gt;如果没选择，可以到：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.oier.xin/img/image-20220815133657476.png&quot; alt=&quot;image-20220815133657476&quot;&gt;&lt;/p&gt;
+&lt;p&gt;更换节点，更换后记得重新部署。&lt;/p&gt;
+&lt;p&gt;还可以到侧边栏的domain绑定域名。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This post was written on Aug 15,</summary>
         
       
     
@@ -192,7 +208,7 @@
     <link href="https://blog.loveoi.net/uncategorized/course-day-9/"/>
     <id>https://blog.loveoi.net/uncategorized/course-day-9/</id>
     <published>2022-07-29T13:59:07.000Z</published>
-    <updated>2022-08-11T13:29:44.946Z</updated>
+    <updated>2022-07-29T13:59:07.000Z</updated>
     
     
     
@@ -205,7 +221,7 @@
     <link href="https://blog.loveoi.net/uncategorized/course-day-8/"/>
     <id>https://blog.loveoi.net/uncategorized/course-day-8/</id>
     <published>2022-07-29T13:59:00.000Z</published>
-    <updated>2022-08-11T13:29:36.716Z</updated>
+    <updated>2022-07-29T13:59:00.000Z</updated>
     
     
     
@@ -218,7 +234,7 @@
     <link href="https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-7-2/"/>
     <id>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-7-2/</id>
     <published>2022-07-27T07:31:35.000Z</published>
-    <updated>2022-08-11T13:29:16.885Z</updated>
+    <updated>2022-07-27T07:31:35.000Z</updated>
     
     
       
@@ -280,7 +296,7 @@
     <link href="https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/coures-day-7/"/>
     <id>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/coures-day-7/</id>
     <published>2022-07-27T03:35:13.000Z</published>
-    <updated>2022-08-11T12:54:51.413Z</updated>
+    <updated>2022-07-27T03:35:13.000Z</updated>
     
     
       
@@ -369,7 +385,7 @@
     <link href="https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-6/"/>
     <id>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-6/</id>
     <published>2022-07-24T08:49:36.000Z</published>
-    <updated>2022-08-11T12:55:09.337Z</updated>
+    <updated>2022-07-24T08:49:36.000Z</updated>
     
     
       
@@ -491,7 +507,7 @@
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/</id>
     <published>2022-07-23T13:09:11.000Z</published>
-    <updated>2022-07-25T01:47:05.294Z</updated>
+    <updated>2022-07-23T13:09:11.000Z</updated>
     
     
       
@@ -529,7 +545,7 @@
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/ohmyposh/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/ohmyposh/</id>
     <published>2022-07-23T13:04:41.000Z</published>
-    <updated>2022-07-25T01:47:05.292Z</updated>
+    <updated>2022-07-23T13:04:41.000Z</updated>
     
     
       
@@ -559,7 +575,7 @@
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/%E6%8A%98%E8%85%BEohmyposh/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/%E6%8A%98%E8%85%BEohmyposh/</id>
     <published>2022-07-23T06:55:32.000Z</published>
-    <updated>2022-07-29T01:09:48.173Z</updated>
+    <updated>2022-07-23T06:55:32.000Z</updated>
     
     
       
@@ -606,7 +622,7 @@
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo-sakura/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo-sakura/</id>
     <published>2022-07-21T13:17:23.000Z</published>
-    <updated>2022-07-25T01:47:05.289Z</updated>
+    <updated>2022-07-21T13:17:23.000Z</updated>
     
     
       
@@ -638,7 +654,7 @@
     <link href="https://blog.loveoi.net/OI/OI-Course/courses-day-5-1/"/>
     <id>https://blog.loveoi.net/OI/OI-Course/courses-day-5-1/</id>
     <published>2022-07-21T04:23:26.000Z</published>
-    <updated>2022-08-11T12:42:26.604Z</updated>
+    <updated>2022-07-21T04:23:26.000Z</updated>
     
     
       
@@ -774,7 +790,7 @@ f[x]=f[x/2]+1 &amp; \{x|x=2n, n∈Z\}
     <link href="https://blog.loveoi.net/Share/%E9%95%BF%E7%9F%A5%E8%AF%86%E4%BA%86/"/>
     <id>https://blog.loveoi.net/Share/%E9%95%BF%E7%9F%A5%E8%AF%86%E4%BA%86/</id>
     <published>2022-07-19T14:39:35.000Z</published>
-    <updated>2022-07-25T01:47:05.296Z</updated>
+    <updated>2022-07-19T14:39:35.000Z</updated>
     
     
       
@@ -804,7 +820,7 @@ f[x]=f[x/2]+1 &amp; \{x|x=2n, n∈Z\}
     <link href="https://blog.loveoi.net/OI/OI-Course/course-day-3/"/>
     <id>https://blog.loveoi.net/OI/OI-Course/course-day-3/</id>
     <published>2022-07-18T17:59:38.000Z</published>
-    <updated>2022-07-25T01:47:05.287Z</updated>
+    <updated>2022-07-18T17:59:38.000Z</updated>
     
     
       
@@ -899,7 +915,7 @@ O(n^{log_ba}) &amp;&amp; d&lt;log_{b}a\newline
     <link href="https://blog.loveoi.net/OI/OI-Course/course-day-4/"/>
     <id>https://blog.loveoi.net/OI/OI-Course/course-day-4/</id>
     <published>2022-07-18T17:59:35.000Z</published>
-    <updated>2022-08-05T15:19:42.342Z</updated>
+    <updated>2022-07-18T17:59:35.000Z</updated>
     
     
       
@@ -1046,7 +1062,7 @@ T(n) = 2T(n/2) +O(n) = O(nlog n)&lt;/script&gt;&lt;h2 id=&quot;快速幂&quot;&g
     <link href="https://blog.loveoi.net/OI/OI-Course/course-day-2/"/>
     <id>https://blog.loveoi.net/OI/OI-Course/course-day-2/</id>
     <published>2022-07-16T04:22:45.000Z</published>
-    <updated>2022-07-29T12:17:43.657Z</updated>
+    <updated>2022-07-16T04:22:45.000Z</updated>
     
     
       
@@ -1117,7 +1133,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/vscode-config/"/>
     <id>https://blog.loveoi.net/OI/vscode-config/</id>
     <published>2022-07-15T15:04:46.000Z</published>
-    <updated>2022-08-04T14:35:00.986Z</updated>
+    <updated>2022-07-15T15:04:46.000Z</updated>
     
     
       
@@ -1202,7 +1218,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/OI-Course/course-day-1/"/>
     <id>https://blog.loveoi.net/OI/OI-Course/course-day-1/</id>
     <published>2022-07-14T13:40:11.000Z</published>
-    <updated>2022-07-25T12:25:48.366Z</updated>
+    <updated>2022-07-14T13:40:11.000Z</updated>
     
     
       
@@ -1263,7 +1279,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/</id>
     <published>2022-07-11T14:58:20.000Z</published>
-    <updated>2022-07-25T01:47:05.291Z</updated>
+    <updated>2022-07-11T14:58:20.000Z</updated>
     
     
       
@@ -1298,7 +1314,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/"/>
     <id>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</id>
     <published>2022-07-10T13:58:24.000Z</published>
-    <updated>2022-07-25T01:47:05.288Z</updated>
+    <updated>2022-07-10T13:58:24.000Z</updated>
     
     
       
@@ -1331,7 +1347,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/"/>
     <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/</id>
     <published>2022-07-10T13:53:56.000Z</published>
-    <updated>2022-07-25T01:47:05.286Z</updated>
+    <updated>2022-07-10T13:53:56.000Z</updated>
     
     
       
@@ -1370,7 +1386,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/"/>
     <id>https://blog.loveoi.net/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/</id>
     <published>2022-07-10T13:15:22.000Z</published>
-    <updated>2022-07-25T01:47:05.293Z</updated>
+    <updated>2022-07-10T13:15:22.000Z</updated>
     
     
       
@@ -1406,7 +1422,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/"/>
     <id>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</id>
     <published>2022-07-09T13:49:11.000Z</published>
-    <updated>2022-07-25T01:47:05.295Z</updated>
+    <updated>2022-07-09T13:49:11.000Z</updated>
     
     
       
@@ -1440,7 +1456,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/"/>
     <id>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</id>
     <published>2022-07-09T13:44:43.000Z</published>
-    <updated>2022-07-25T01:47:05.295Z</updated>
+    <updated>2022-07-09T13:44:43.000Z</updated>
     
     
       
@@ -1470,7 +1486,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/"/>
     <id>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</id>
     <published>2022-07-05T14:05:03.000Z</published>
-    <updated>2022-07-25T01:47:05.296Z</updated>
+    <updated>2022-07-05T14:05:03.000Z</updated>
     
     
       
@@ -1496,7 +1512,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/"/>
     <id>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</id>
     <published>2022-07-05T12:41:35.000Z</published>
-    <updated>2022-07-25T01:47:05.294Z</updated>
+    <updated>2022-07-05T12:41:35.000Z</updated>
     
     
       
@@ -1524,7 +1540,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</id>
     <published>2022-06-29T14:56:11.000Z</published>
-    <updated>2022-07-25T01:47:05.295Z</updated>
+    <updated>2022-06-29T14:56:11.000Z</updated>
     
     
       
@@ -1560,7 +1576,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BEwaline%E8%AF%84%E8%AE%BA/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BEwaline%E8%AF%84%E8%AE%BA/</id>
     <published>2022-06-29T11:11:20.000Z</published>
-    <updated>2022-07-25T01:47:05.290Z</updated>
+    <updated>2022-06-29T11:11:20.000Z</updated>
     
     
       
@@ -1595,7 +1611,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E9%85%8D%E7%BD%AE%E8%AF%84%E8%AE%BA/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E9%85%8D%E7%BD%AE%E8%AF%84%E8%AE%BA/</id>
     <published>2022-06-29T04:32:35.000Z</published>
-    <updated>2022-07-25T01:47:05.292Z</updated>
+    <updated>2022-06-29T04:32:35.000Z</updated>
     
     
       
@@ -1632,7 +1648,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%BB%99blog%E5%8E%8B%E7%BC%A9%E5%AD%97%E4%BD%93/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%BB%99blog%E5%8E%8B%E7%BC%A9%E5%AD%97%E4%BD%93/</id>
     <published>2022-06-28T16:02:42.000Z</published>
-    <updated>2022-07-25T01:47:05.296Z</updated>
+    <updated>2022-06-28T16:02:42.000Z</updated>
     
     
       
@@ -1670,7 +1686,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/</id>
     <published>2022-06-27T13:13:25.000Z</published>
-    <updated>2022-07-25T01:47:05.290Z</updated>
+    <updated>2022-06-27T13:13:25.000Z</updated>
     
     
       
@@ -1700,7 +1716,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&amp;quick-out/"/>
     <id>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&amp;quick-out/</id>
     <published>2022-06-26T12:14:10.000Z</published>
-    <updated>2022-07-25T01:47:05.292Z</updated>
+    <updated>2022-06-26T12:14:10.000Z</updated>
     
     
       
@@ -1732,7 +1748,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isprime/"/>
     <id>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</id>
     <published>2022-06-26T12:11:57.000Z</published>
-    <updated>2022-07-25T01:47:05.292Z</updated>
+    <updated>2022-06-26T12:11:57.000Z</updated>
     
     
       
@@ -1761,7 +1777,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isrever/"/>
     <id>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</id>
     <published>2022-06-26T12:10:45.000Z</published>
-    <updated>2022-07-25T01:47:05.292Z</updated>
+    <updated>2022-06-26T12:10:45.000Z</updated>
     
     
       
@@ -1790,7 +1806,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/"/>
     <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</id>
     <published>2022-06-26T12:06:04.000Z</published>
-    <updated>2022-07-25T01:47:05.285Z</updated>
+    <updated>2022-06-26T12:06:04.000Z</updated>
     
     
       
@@ -1825,7 +1841,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P8401/"/>
     <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P8401/</id>
     <published>2022-06-25T05:05:12.000Z</published>
-    <updated>2022-07-25T01:47:05.286Z</updated>
+    <updated>2022-06-25T05:05:12.000Z</updated>
     
     
       
@@ -1857,7 +1873,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</id>
     <published>2022-06-24T05:36:13.000Z</published>
-    <updated>2022-07-25T01:47:05.291Z</updated>
+    <updated>2022-06-24T05:36:13.000Z</updated>
     
     
       
@@ -1969,7 +1985,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%99%BD%E5%AB%96linuxone/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%99%BD%E5%AB%96linuxone/</id>
     <published>2022-06-23T05:05:12.000Z</published>
-    <updated>2022-07-25T01:47:05.296Z</updated>
+    <updated>2022-06-23T05:05:12.000Z</updated>
     
     
       
@@ -2001,7 +2017,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P6321/"/>
     <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P6321/</id>
     <published>2022-06-22T12:32:15.000Z</published>
-    <updated>2022-07-25T01:47:05.286Z</updated>
+    <updated>2022-06-22T12:32:15.000Z</updated>
     
     
       
@@ -2032,7 +2048,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2133/"/>
     <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2133/</id>
     <published>2022-06-22T05:20:13.000Z</published>
-    <updated>2022-07-25T01:47:05.285Z</updated>
+    <updated>2022-06-22T05:20:13.000Z</updated>
     
     
       
@@ -2071,7 +2087,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8C%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E9%AB%98%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8C%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E9%AB%98%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/</id>
     <published>2022-05-14T05:05:12.000Z</published>
-    <updated>2022-07-25T01:47:05.294Z</updated>
+    <updated>2022-05-14T05:05:12.000Z</updated>
     
     
       
@@ -2104,7 +2120,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E9%98%BF%E9%87%8Cdcdn%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/"/>
     <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E9%98%BF%E9%87%8Cdcdn%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</id>
     <published>2022-05-02T05:05:12.000Z</published>
-    <updated>2022-07-25T01:47:05.297Z</updated>
+    <updated>2022-05-02T05:05:12.000Z</updated>
     
     
       
@@ -2149,7 +2165,7 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <link href="https://blog.loveoi.net/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/"/>
     <id>https://blog.loveoi.net/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</id>
     <published>2021-08-20T05:22:13.000Z</published>
-    <updated>2022-07-25T01:47:05.294Z</updated>
+    <updated>2021-08-20T05:22:13.000Z</updated>
     
     
       
