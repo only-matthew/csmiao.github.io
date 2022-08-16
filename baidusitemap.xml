@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-8/</loc>
+    <lastmod>2022-08-16</lastmod>
+  </url>
+  <url>
     <loc>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/waline-reply/</loc>
     <lastmod>2022-08-15</lastmod>
   </url>
@@ -22,10 +26,6 @@
   </url>
   <url>
     <loc>https://blog.loveoi.net/uncategorized/course-day-9/</loc>
-    <lastmod>2022-07-29</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.loveoi.net/uncategorized/course-day-8/</loc>
     <lastmod>2022-07-29</lastmod>
   </url>
   <url>
