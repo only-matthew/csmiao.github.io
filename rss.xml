@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-08-16T13:59:00.000Z</updated>
+  <updated>2022-08-17T15:14:27.000Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图上BFS和DFS - luogu - Course - OI - 数据结构</title>
+    <link href="https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/map-bfs-dfs/"/>
+    <id>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/map-bfs-dfs/</id>
+    <published>2022-08-17T15:14:27.000Z</published>
+    <updated>2022-08-17T15:14:27.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;假设我们不会DFS和BFS，因为DFS和BFS本身就是图而来的。&lt;/p&gt;
+&lt;p&gt;补充一下，之前没有说清楚，无向图的本质是存储有向图。&lt;/p&gt;
+&lt;p&gt;有向有权图是图的存储的终极形式。&lt;/p&gt;
+&lt;h1 id=&quot;补充知识：C-11循环&quot;&gt;&lt;a href=&quot;#补充知识：C-11循环&quot; class=&quot;headerlink&quot; title=&quot;补充知识：C++11循环&quot;&gt;&lt;/a&gt;补充知识：C++11循环&lt;/h1&gt;&lt;p&gt;c++11有增强for循环，可以这样遍历整个数组：&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;auto&lt;/span&gt; item : array)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cout &amp;lt;&amp;lt; item &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&quot;DFS&quot;&gt;&lt;a href=&quot;#DFS&quot; class=&quot;headerlink&quot; title=&quot;DFS&quot;&gt;&lt;/a&gt;DFS&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bd723f17af37401f98557313818c9a77~tplv-k3u1fbpfcp-watermark.image?&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;想一想为什么他叫DFS？因为DFS是deep first search,深度优先搜索！&lt;br&gt;他先搜索的深度，一条路走到黑再回头(~小朋友可不能学DFS一样一路走到黑哦~~)&lt;/p&gt;
+&lt;p&gt;如图现在我们需要用a~z的字母把他们4个格子填满，DFS会先填第一个并且考虑a然后在第一个为a的情况下考虑第二个。以此类推，当全部填满的时候就会回头考虑第四个填b。&lt;/p&gt;
+&lt;p&gt;这就是DFS：勇往直前，碰壁回头。&lt;/p&gt;
+&lt;h2 id=&quot;eg-跑路&quot;&gt;&lt;a href=&quot;#eg-跑路&quot; class=&quot;headerlink&quot; title=&quot;eg:跑路&quot;&gt;&lt;/a&gt;eg:跑路&lt;/h2&gt;&lt;p&gt;我们混得不好准备跑路，需要从城市1跑路到终点城市n。&lt;/p&gt;
+&lt;p&gt;问能否成功跑路？&lt;/p&gt;
+&lt;p&gt;定义vis[x]表示x节点是否经过，vector &amp;lt;&lt;em&gt;int&lt;/em&gt;&amp;gt; e[x]表示x城市的道路。&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; x)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(vis[x]) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    vis[x] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x == n)          &lt;span class=&quot;comment&quot;&gt;// 成功跑到&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ans = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &amp;amp;p: e[x])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;dfs&lt;/span&gt;(p);         &lt;span class=&quot;comment&quot;&gt;// 考虑从 x 能直接跑到的所有的 p，递归过去&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这样我们就完成了图上DFS遍历！&lt;/p&gt;
+&lt;p&gt;DFS：深度第一！上面说得优先深度！&lt;/p&gt;
+&lt;p&gt;BFS: 广度第一！上面说得优先访问每一条边&lt;/p&gt;
+&lt;h1 id=&quot;BFS&quot;&gt;&lt;a href=&quot;#BFS&quot; class=&quot;headerlink&quot; title=&quot;BFS&quot;&gt;&lt;/a&gt;BFS&lt;/h1&gt;&lt;p&gt;BFS(breadth first search)顾名思义，广度优先搜索自然是广度第一。&lt;/p&gt;
+&lt;p&gt;优先搜索每一条边。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f35cf1501d8349a7893dac085e0ae220~tplv-k3u1fbpfcp-watermark.image?&quot; alt=&quot;image.png&quot;&gt;&lt;br&gt;可以看到，搜完第1条直接搜索第二条，将第一条压入队列，搜完第一层再取出。所以dfs是一层一层的搜索的。&lt;/p&gt;
+&lt;h1 id=&quot;eg：跑路&quot;&gt;&lt;a href=&quot;#eg：跑路&quot; class=&quot;headerlink&quot; title=&quot;eg：跑路&quot;&gt;&lt;/a&gt;eg：跑路&lt;/h1&gt;&lt;p&gt;没错，又是我！&lt;/p&gt;
+&lt;p&gt;说明不必再提。&lt;/p&gt;
+&lt;p&gt;BFS需要队列来存储搜到哪.&lt;/p&gt;
+&lt;p&gt;还是和刚刚一样，定义vis[x]表示x节点是否经过，vector &amp;lt;&lt;em&gt;int&lt;/em&gt;&amp;gt; e[x]表示x城市的道路。&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;bfs&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    queue &amp;lt;&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;&amp;gt; q;      &lt;span class=&quot;comment&quot;&gt;// STL 容器有二次内存分配机制&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 把起点加进队列&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    q.&lt;span class=&quot;built_in&quot;&gt;push&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(!q.&lt;span class=&quot;built_in&quot;&gt;empty&lt;/span&gt;()) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; now = q.&lt;span class=&quot;built_in&quot;&gt;front&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        q.&lt;span class=&quot;built_in&quot;&gt;pop&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 取出队首，访问&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(vis[now]) &lt;span class=&quot;keyword&quot;&gt;continue&lt;/span&gt;;      &lt;span class=&quot;comment&quot;&gt;// 防止重复访问&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        vis[now] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(now == n) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;puts&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;Yes&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &amp;amp;p: e[now])     &lt;span class=&quot;comment&quot;&gt;// 把相邻的点丢进队列&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            q.&lt;span class=&quot;built_in&quot;&gt;push&lt;/span&gt;(p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;puts&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;No&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这样我们就完成了图上BFS！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This post was written on August 17,</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    <category term="数据结构" scheme="https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>图的学习 - luogu - Course - OI - 数据结构</title>
@@ -270,9 +322,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -703,9 +755,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1363,9 +1415,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1490,12 +1542,12 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
         
         
     <summary type="html">&lt;p&gt;依稀记得，2020的11月，那是我第一次参加csp，也是2场都参加，试卷是什么样，中间尽力的那些波折？早已记不清了。唯有那个身影，那个眼神，在我的脑海里挥之不去，犹如昨日一般。&lt;/p&gt;
-&lt;p&gt;进入考场，找到位置，那时还是个懵懂少年的我四处张望，在离我的不远处，有一个位置，是空的。我正思索的为什么是空的，不远处的谈话声&lt;/p&gt;
+&lt;p&gt;进入考场，找到位置，那时还是个懵懂少年的我四处张望，在离我的不远处，有一个位置，是空的。我正思索着为什么是空的，不远处的谈话声&lt;/p&gt;
 &lt;p&gt;打断了我的思绪：“老师，个人报名的坐哪里？”监考老师指了指那个空位，一个身高180，比我稍大的男孩走向了那个位置。&lt;/p&gt;
 &lt;p&gt;在看到他的背影的瞬间，我心中的某个地方似乎被触动了，感到无尽的萧瑟与沧桑。仿佛他不是一个比我稍大的男孩，是一个尝尽天下疾苦的老人，是一个经历无数大起大落但仍不放弃的奋斗者。&lt;/p&gt;
-&lt;p&gt;他坐下了，从身后的背包中找出身份证递给监考老师，老师验完后他收起身份证的那个眼神让我终身难忘。那是一个怎样的眼神？有着对未来的迷茫与期望，同时也有着坚定与执着。&lt;/p&gt;
-&lt;p&gt;我十分好奇这样的眼神与背影为何会出现在一个比我稍大的男孩身上，以及为什么我能看的如此透彻。&lt;br&gt;我甩了甩头，丢弃这些杂念，开始做题。&lt;/p&gt;
-&lt;p&gt;那一场考试的结果是注定的――分数甚至低于瞎蒙。&lt;/p&gt;
+&lt;p&gt;他坐下了，从身后的背包中找出身份证递给监考老师，老师验完后他收起身份证的那个眼神让我终生难忘。那是一个怎样的眼神？有着对未来的迷茫与期望，同时也有着坚定与执着。&lt;/p&gt;
+&lt;p&gt;我十分好奇这样的眼神与背影为何会出现在一个比我稍大的男孩身上，以及为什么我能看的如此透彻。我甩了甩头，丢弃这些杂念，开始做题。&lt;/p&gt;
+&lt;p&gt;那一场考试的结果是注定的——分数甚至低于瞎蒙。&lt;/p&gt;
 &lt;p&gt;2年没有学习的我自然不会得到好结果。可惜当时的我过于懵懂无知，没有真正明白努力与收获的关系，直至今日我才真正明白这个三岁小孩都是明白的道理。&lt;/p&gt;
 &lt;p&gt;2021的csp出发前，我照了照镜子，与记忆中的那个身影是如此的相似，一瞬间我明白了为何我能看懂他的眼神。因为，他就是现在的我啊。&lt;/p&gt;
 </summary>
@@ -1579,8 +1631,8 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
       
         
         
-    <summary type="html">&lt;h1 id=&quot;幡然醒悟&quot;&gt;&lt;a href=&quot;#幡然醒悟&quot; class=&quot;headerlink&quot; title=&quot;幡然醒悟&quot;&gt;&lt;/a&gt;幡然醒悟&lt;/h1&gt;&lt;p&gt;余自幼便自豪于家中亲戚大抵为师。家父，家母，一数学，一语文，此乃二基础科。每逢其教诲，余曰：“家父、家母皆教于高中，余读于小学、初中，余为何从之？”故余不听其教诲，教诲如过耳之风，余从未放于心。而今，余幡然醒悟:“父母教诲何其重，为何不听此箴言？”良之习，静之心，韧之性，此乃成功之基本。余不听父母之&lt;mark class=&quot;hl-label blue&quot;&gt;教诲&lt;/mark&gt; ，其因并非其教于高中，只因余之懒惰，余心之浮躁，余自幼之陋习。若无良之习，静之心，韧之性，将一事无成！&lt;/p&gt;
-&lt;p&gt;读书便读书，心当静，习当良，性当韧。读书之时，不应任何杂念，不应在似通非通之时放弃。读书，当&lt;mark class=&quot;hl-label blue&quot;&gt;透&lt;/mark&gt; ，当&lt;mark class=&quot;hl-label red&quot;&gt;全&lt;/mark&gt; ，当读之所学如与生俱来，方可于考场之上立于不败之地！&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;幡然醒悟&quot;&gt;&lt;a href=&quot;#幡然醒悟&quot; class=&quot;headerlink&quot; title=&quot;幡然醒悟&quot;&gt;&lt;/a&gt;幡然醒悟&lt;/h1&gt;&lt;p&gt;​    余自幼豪于亲戚大抵为师。家父,家母,一数学。一语文,乃二基础科。每遇其诲,余曰:“家父、家母皆教于高中,余读于小学、初中。余何从之?”故余不从其教,教如过耳之风,未尝释然。今者,余幡然悟曰:“父母教诲何重,如何不听此箴?”良之习,静之心,韧之性,成之基本。余不用父母之教,其由非教于高中也,徒以余之惰,余之躁,余自幼之陋。若无良习,静之心,韧之性,将一事无成!&lt;/p&gt;
+&lt;p&gt;​    读书而静,习为良,性为柔。读书不宜于通非之际。读书当透当全,当读之所学,如与生俱来,立于场中不败之地!&lt;/p&gt;
 &lt;mark class=&quot;hl-label red&quot;&gt;自种之果当自食&lt;/mark&gt; 
 &lt;p&gt;昔日不听母&lt;mark class=&quot;hl-label red&quot;&gt;良言&lt;/mark&gt; ，今日终食&lt;mark class=&quot;hl-label red&quot;&gt;昔日果&lt;/mark&gt; 。&lt;br&gt;父母之诲何其重，为何不听此&lt;mark class=&quot;hl-label red&quot;&gt;箴言&lt;/mark&gt; 。&lt;br&gt;倘若不生此&lt;mark class=&quot;hl-label red&quot;&gt;突变&lt;/mark&gt; ，只怕数年难&lt;mark class=&quot;hl-label blue&quot;&gt;领会&lt;/mark&gt; 。&lt;br&gt;自种之果当&lt;mark class=&quot;hl-label red&quot;&gt;自食&lt;/mark&gt; ，吾当自此明&lt;mark class=&quot;hl-label red&quot;&gt;此理&lt;/mark&gt;</summary>
         
@@ -1625,9 +1677,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1660,9 +1712,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1697,9 +1749,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1735,9 +1787,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1765,9 +1817,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -2034,9 +2086,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -2066,9 +2118,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -2169,9 +2221,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -2214,9 +2266,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
