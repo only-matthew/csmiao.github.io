@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>CS奇妙</title>
   <icon>https://blog.loveoi.net/icon.png</icon>
-  
+  <subtitle>How wonderful Computer Science is !</subtitle>
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
@@ -243,9 +243,9 @@
     
     <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
     
-    <category term="acwing" scheme="https://blog.loveoi.net/tags/acwing/"/>
-    
     <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+    <category term="acwing" scheme="https://blog.loveoi.net/tags/acwing/"/>
     
   </entry>
   
@@ -322,21 +322,27 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
   <entry>
-    <title>course-day-9</title>
-    <link href="https://blog.loveoi.net/uncategorized/course-day-9/"/>
-    <id>https://blog.loveoi.net/uncategorized/course-day-9/</id>
+    <title>course-day-9 - luogu - Course - OI - 数据结构</title>
+    <link href="https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-9/"/>
+    <id>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-9/</id>
     <published>2022-07-29T13:59:07.000Z</published>
     <updated>2022-07-29T13:59:07.000Z</updated>
     
     
     
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    <category term="数据结构" scheme="https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
   </entry>
@@ -755,9 +761,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1415,9 +1421,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1677,9 +1683,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1712,9 +1718,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1749,9 +1755,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1787,9 +1793,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1817,9 +1823,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -2086,9 +2092,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -2118,9 +2124,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -2221,9 +2227,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -2266,9 +2272,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
