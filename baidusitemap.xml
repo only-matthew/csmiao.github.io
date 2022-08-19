@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/tree-1/</loc>
+    <lastmod>2022-08-19</lastmod>
+  </url>
+  <url>
     <loc>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/map-bfs-dfs/</loc>
     <lastmod>2022-08-17</lastmod>
   </url>

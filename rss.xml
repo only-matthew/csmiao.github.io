@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-08-17T15:14:27.000Z</updated>
+  <updated>2022-08-19T05:30:11.000Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,90 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>树的学习</title>
+    <link href="https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/tree-1/"/>
+    <id>https://blog.loveoi.net/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/tree-1/</id>
+    <published>2022-08-19T05:30:11.000Z</published>
+    <updated>2022-08-19T05:30:11.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;其实树是一种特殊的图，他可以帮助我们解决很多问题，比如STL中的MAP就是用平衡树实现的，我们还可以用线段树实现RMQ等。&lt;/p&gt;
+&lt;p&gt;总之树的功能非常强大。&lt;/p&gt;
+&lt;p&gt;将树当作图看待时，他的特殊在于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;图中有 n 个点和 n − 1 条边，且连通&lt;/li&gt;
+&lt;li&gt;不存在环，任意两个点之间有且仅有一条简单路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://baike.baidu.com/item/树/2699484&quot;&gt;树（数据结构名词）_百度百科 (baidu.com)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;eg-组织架构&quot;&gt;&lt;a href=&quot;#eg-组织架构&quot; class=&quot;headerlink&quot; title=&quot;eg:组织架构&quot;&gt;&lt;/a&gt;eg:组织架构&lt;/h1&gt;&lt;p&gt;现在我们有一个组织，创始人叫做“根”是组织的实际掌权者。&lt;/p&gt;
+&lt;p&gt;他有两个得力干将分别叫“左孩子”和“右孩子”。&lt;/p&gt;
+&lt;p&gt;左孩子和右孩子下面又各有两个孩子也叫“左孩子”和“右孩子”。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.oier.xin/img/20220819134629.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果无法想象出来可以看图。&lt;/p&gt;
+&lt;p&gt;这就是一棵二叉树,因为他的每一个节点都是满的，所以称为完美二叉树(也叫满二叉树)。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.oier.xin/img/20220819134921.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;那如果是这样一棵树呢？&lt;/p&gt;
+&lt;p&gt;这样的树被成为完全二叉树，他的节点排列和完美二叉树一样，但不是满的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.oier.xin/img/1094457-20170225183305616-1864401342.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;还有这样的二叉树，被成为完全二叉树，所有的节点的度都是2，说人话就是，如果你有孩子，那就必须为2个。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从&lt;a href=&quot;https://baike.baidu.com/item/满二叉树/7773283&quot;&gt;满二叉树&lt;/a&gt;和完全二叉树的定义可以看出, 满二叉树是完全二叉树的特殊形态, 即如果一棵二叉树是满二叉树, 则它必定是完全二叉树。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;终于来到了题目环节:&lt;/p&gt;
+&lt;p&gt;今有一个 &lt;em&gt;n&lt;/em&gt; 人团伙，除了老大（1 号）之外的每一个人都有个直接领导。当然，一个人的领导的领导也是他的领导。&lt;/p&gt;
+&lt;p&gt;给定这个组织的结构。接下来有 m&lt;em&gt;m&lt;/em&gt; 组询问，每次询问给定 &lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt; ，问 &lt;em&gt;x&lt;/em&gt; 是否为 &lt;em&gt;y&lt;/em&gt; 的领导。&lt;/p&gt;
+&lt;p&gt;第一眼想到并查集？我们是来学习树的怎么能用并查集呢？&lt;/p&gt;
+&lt;p&gt;可以建一颗树，dfs/bfs遍历找x是否为y的祖先即可：&lt;/p&gt;
+&lt;p&gt;定义dad[x]记录x的父节点，询问是否为dad只需要dfs查询即可，这里选择dfs：&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ask&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; x, &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; y)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; cur = dad[y];&lt;span class=&quot;comment&quot;&gt;//向上找dad&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (cur != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;span class=&quot;comment&quot;&gt;//如果不是根节点如果没有dad了&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (cur == x)&lt;span class=&quot;comment&quot;&gt;//如果找到了&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cur = dad[cur];&lt;span class=&quot;comment&quot;&gt;//没找到就继续向上&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;;&lt;span class=&quot;comment&quot;&gt;//找到根了还是没有就返回false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;eg-混乱的组织&quot;&gt;&lt;a href=&quot;#eg-混乱的组织&quot; class=&quot;headerlink&quot; title=&quot;eg:混乱的组织&quot;&gt;&lt;/a&gt;eg:混乱的组织&lt;/h1&gt;&lt;p&gt;今有一个 $n$ 人组织，除了老大（1 号）之外的每一个人都有个直接领导。当然，一个人的领导的领导也是他的领导。&lt;/p&gt;
+&lt;p&gt;不幸的是，你拿到的资料相比起上一题少一些——资料里只写了 $x$ 和 $y$ 之间存在直接上下级关系，而没写谁是领导、谁是打工的！&lt;/p&gt;
+&lt;p&gt;但你仍然要面对 $m$ 组询问，每次询问给定 $x, y$ ，问 $x$ 是否为 $y$ 的领导。&lt;/p&gt;
+&lt;p&gt;似乎和刚刚的不一样，不知道如何入手？&lt;/p&gt;
+&lt;p&gt;想一想，组织的老大我们是知道的，直接从根结点开始遍历即可完成。&lt;/p&gt;
+&lt;p&gt;我们先按照图的方式存储，从根节点遍历建树。&lt;/p&gt;
+&lt;p&gt;定义visit数组记录是否访问过，因为一开始是一个无向图。&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; x)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    vis[x] = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &amp;amp;p : e[x])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!vis[p])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            dad[p] = x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;init&lt;/span&gt;(p);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;图的存储之前说过，e[x]什么意思便不提了。&lt;/p&gt;
+&lt;h1 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结:&quot;&gt;&lt;/a&gt;总结:&lt;/h1&gt;&lt;p&gt;树的存储方法比较多样。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;dad 数组存储&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;图存储&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;针对不同的题目，要选择效率较好的存储方法。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This post was written on</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    <category term="数据结构" scheme="https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+    <category term="数据结构" scheme="https://blog.loveoi.net/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>图上BFS和DFS - luogu - Course - OI - 数据结构</title>
@@ -322,9 +406,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -761,9 +845,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1421,9 +1505,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1683,9 +1767,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1718,9 +1802,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1755,9 +1839,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1793,9 +1877,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -1823,9 +1907,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -2092,9 +2176,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -2124,9 +2208,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -2227,9 +2311,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
@@ -2272,9 +2356,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
