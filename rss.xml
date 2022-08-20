@@ -327,9 +327,9 @@
     
     <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
     
-    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
-    
     <category term="acwing" scheme="https://blog.loveoi.net/tags/acwing/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
     
   </entry>
   
@@ -1327,91 +1327,6 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
     
     <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vscode-config</title>
-    <link href="https://blog.loveoi.net/OI/vscode-config/"/>
-    <id>https://blog.loveoi.net/OI/vscode-config/</id>
-    <published>2022-07-15T15:04:46.000Z</published>
-    <updated>2022-07-15T15:04:46.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本文转自OI-Wiki&lt;br&gt;&lt;a href=&quot;https://oi-wiki.org/&quot;&gt;OI-WiKi&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;author: NachtgeistW, Ir1d, ouuan, Enter-tainer, Xeonacid, ChungZH, keepthethink, abc1763613206, partychicken, Chrogeek, xkww3n, HeliumOI&lt;/p&gt;
-&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;Visual Studio Code（以下简称 VS Code) 是一个由微软开发，同时支持 Windows、Linux 和 macOS 等操作系统且开放源代码的代码编辑器。它是用 TypeScript 编写的，并且采用 Electron 架构。它带有对 JavaScript、TypeScript 和 Node.js 的内置支持，并为其他语言（如 C、C++、Java、Python、PHP、Go）提供了丰富的扩展生态系统。&lt;/p&gt;
-&lt;p&gt;官网：&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;Visual Studio Code - Code Editing. Redefined&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;使用-Code-Runner-插件运行代码&quot;&gt;&lt;a href=&quot;#使用-Code-Runner-插件运行代码&quot; class=&quot;headerlink&quot; title=&quot;使用 Code Runner 插件运行代码&quot;&gt;&lt;/a&gt;使用 Code Runner 插件运行代码&lt;/h2&gt;&lt;p&gt;VS Code 安装并配置插件后可实现对 C/C++ 的支持，但配置过程比较复杂。一个简单的编译与运行 C++ 程序的方案是安装 Code Runner 插件。&lt;/p&gt;
-&lt;p&gt;Code Runner 是一个可以一键运行代码的插件，在工程上一般用来验证代码片段，支持 Node.js、Python、C、C++、Java、PHP、Perl、Ruby、Go 等 40 多种语言。&lt;/p&gt;
-&lt;p&gt;安装的方式是在插件商店搜索 Code Runner 并点击 Install；或者前往 &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner&quot;&gt;Marketplace&lt;/a&gt; 并点击 Install，浏览器会自动打开 VS Code 并进行安装。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://oi-wiki.org/tools/editor/images/vscode-1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;安装完成后，打开需要运行的文件，点击右上角的小三角图标即可运行代码；按下快捷键&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;N&lt;/kbd&gt;（在 macOS 下是&lt;kbd&gt;Control&lt;/kbd&gt;+&lt;kbd&gt;Option&lt;/kbd&gt;+&lt;kbd&gt;N&lt;/kbd&gt;）也可以得到同样的效果。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;warning&lt;br&gt;    如果安装了 VS Code 与 Code Runner 后，代码仍然无法运行，很有可能是因为系统尚未安装 C/C++ 的运行环境，参考 &lt;a href=&quot;../../lang/helloworld.md&quot;&gt;Hello, World! 页面&lt;/a&gt; 以安装。&lt;/p&gt;
-&lt;p&gt;记得勾选设置中的 Run In Terminal 选项，如图：&lt;img src=&quot;https://oi-wiki.org/tools/editor/images/vscode-7.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;使用-C-C-插件编译并调试&quot;&gt;&lt;a href=&quot;#使用-C-C-插件编译并调试&quot; class=&quot;headerlink&quot; title=&quot;使用 C/C++ 插件编译并调试&quot;&gt;&lt;/a&gt;使用 C/C++ 插件编译并调试&lt;/h2&gt;&lt;h3 id=&quot;安装插件&quot;&gt;&lt;a href=&quot;#安装插件&quot; class=&quot;headerlink&quot; title=&quot;安装插件&quot;&gt;&lt;/a&gt;安装插件&lt;/h3&gt;&lt;p&gt;在 VS Code 中打开插件商店，在搜索栏中输入 &lt;code&gt;C++&lt;/code&gt; 或者 &lt;code&gt;@category:&amp;quot;programming languages&amp;quot;&lt;/code&gt;，然后找到 C/C++，点击 Install 安装插件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://oi-wiki.org/tools/editor/images/vscode-2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;warning&lt;br&gt;    在配置前，请确保系统已经安装了 G++ 或 Clang，并已添加到了 &lt;code&gt;PATH&lt;/code&gt; 中。请使用 CMD 或者 PowerShell，而不是 Git Bash 作为集成终端。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;配置编译&quot;&gt;&lt;a href=&quot;#配置编译&quot; class=&quot;headerlink&quot; title=&quot;配置编译&quot;&gt;&lt;/a&gt;配置编译&lt;/h3&gt;&lt;p&gt;首先用 VS Code 打开一个文件夹，然后按下&lt;kbd&gt;F1&lt;/kbd&gt;，输入 &lt;code&gt;C/C++: Edit configurations (UI)&lt;/code&gt;，进入 C/C++ 插件的设置界面。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://oi-wiki.org/tools/editor/images/vscode-3.png&quot; alt=&quot;vscode-3&quot;&gt;&lt;/p&gt;
-&lt;p&gt;在“编译器路径”中选择 G++ 或 Clang 的所在路径。如果没有可选项，请检查编译器所在路径是否添加到了操作系统的 &lt;code&gt;PATH&lt;/code&gt; 变量中。&lt;/p&gt;
-&lt;h3 id=&quot;配置-IntelliSense&quot;&gt;&lt;a href=&quot;#配置-IntelliSense&quot; class=&quot;headerlink&quot; title=&quot;配置 IntelliSense&quot;&gt;&lt;/a&gt;配置 IntelliSense&lt;/h3&gt;&lt;p&gt;用于调整 VS Code 的智能补全。&lt;/p&gt;
-&lt;p&gt;如果你使用 Clang 编译器，在“IntelliSense 模式”中选择 &lt;code&gt;clang-x64&lt;/code&gt; 而非默认的 &lt;code&gt;msvc-x64&lt;/code&gt;；如果你使用 G++ 编译器，选择 &lt;code&gt;gcc-x64&lt;/code&gt; 以使用自动补全等功能。否则会得到“IntelliSense 模式 msvc-x64 与编译器路径不兼容。”的错误。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://oi-wiki.org/tools/editor/images/vscode-4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;配置-GDB-LLDB-调试器&quot;&gt;&lt;a href=&quot;#配置-GDB-LLDB-调试器&quot; class=&quot;headerlink&quot; title=&quot;配置 GDB/LLDB 调试器&quot;&gt;&lt;/a&gt;配置 GDB/LLDB 调试器&lt;/h3&gt;&lt;p&gt;在 VS Code 中新建一份 C++ 代码文件，按照 C++ 语法写入一些内容（如 &lt;code&gt;int main()&amp;#123;&amp;#125;&lt;/code&gt;），保存并按下&lt;kbd&gt;F5&lt;/kbd&gt;，进入调试模式。&lt;br&gt;如果出现了“选择环境”的提示，选择“C++ (GDB/LLDB)”。在“选择配置”中，G++ 用户选择 &lt;code&gt;g++.exe - 生成和调试活动文件&lt;/code&gt;；Clang 用户选择 &lt;code&gt;clang++ - 生成和调试活动文件&lt;/code&gt;。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;warning&lt;br&gt;    配置名称并非固定，而是可以自定义的。不同的操作系统可能具有不同的配置名称。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;完成后，VS Code 将自动完成初始化操作并弹出一个 &lt;code&gt;launch.json&lt;/code&gt; 配置文件。关闭它。&lt;/p&gt;
-&lt;p&gt;至此，所有的配置流程已经完毕。再次按下&lt;kbd&gt;F5&lt;/kbd&gt;即可看到软件下方的调试信息。&lt;/p&gt;
-&lt;p&gt;若要在以后使用 VS Code 编译并调试代码，所有的源代码都需要保存至这个文件夹内。若要编译并调试其他文件夹中存放的代码，需要重新执行上述步骤（或将旧文件夹内的 &lt;code&gt;.vscode&lt;/code&gt; 子文件夹复制到新文件夹内）。&lt;/p&gt;
-&lt;h3 id=&quot;开始调试代码&quot;&gt;&lt;a href=&quot;#开始调试代码&quot; class=&quot;headerlink&quot; title=&quot;开始调试代码&quot;&gt;&lt;/a&gt;开始调试代码&lt;/h3&gt;&lt;p&gt;使用 VS Code 打开一份代码，将鼠标悬停在行数左侧的空白区域，并单击出现的红点即可为该行代码设置断点。再次单击可取消设置断点。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://oi-wiki.org/tools/editor/images/vscode-5.apng&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;按下&lt;kbd&gt;F5&lt;/kbd&gt;进入调试模式，编辑器上方会出现一个调试工具栏，四个蓝色按钮从左至右分别代表 GDB 中的 &lt;code&gt;continue&lt;/code&gt;,&lt;code&gt;next&lt;/code&gt;,&lt;code&gt;step&lt;/code&gt; 和 &lt;code&gt;until&lt;/code&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://oi-wiki.org/tools/editor/images/vscode-6.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如果编辑器未自动跳转，点击左侧工具栏中的“调试”图标进入调试窗口，即可在左侧看到变量的值。&lt;/p&gt;
-&lt;p&gt;在调试模式中，编辑器将以黄色底色显示下一步将要执行的代码。&lt;/p&gt;
-&lt;h2 id=&quot;配置-clangd&quot;&gt;&lt;a href=&quot;#配置-clangd&quot; class=&quot;headerlink&quot; title=&quot;配置 clangd&quot;&gt;&lt;/a&gt;配置 clangd&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;warning&lt;br&gt;    由于功能冲突，安装 clangd 插件后 C/C++ 插件的 IntelliSense 功能将被自动禁用。（调试等功能仍然使用 C/C++ 插件。）如果 clangd 插件的功能出现问题，可以查看是否禁用了 C/C++ 插件的 IntelliSense 功能。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;简介-1&quot;&gt;&lt;a href=&quot;#简介-1&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;LLVM 官网上对 clangd 的介绍是这样的：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clangd is an implementation of the Language Server Protocol leveraging Clang. Clangd’s goal is to provide language“smartness”features like code completion, find references, etc. for clients such as C/C++ Editors.&lt;br&gt;简单来说，clangd 是 Clang 对语言服务器协定（Language Server Protocol）的实现，提供了一些智能的特性，例如全项目索引、代码跳转、变量重命名、更快的代码补全、提示信息、格式化代码等，并且能利用 LSP 与 Vim、Emacs、VSCode 等编辑器协作。虽然官方给出的定义是 LSP 的实现，但 clangd 的功能更接近语言服务器（Language Server）而不仅仅只是协议本身。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;VS Code 的 C/C++ 插件也有自动补全等功能，但在提示信息的易读程度的准确度等方面与 clangd 相比稍逊一筹，所以我们有时会使用 clangd 代替 C/C++ 插件来实现代码自动补全等功能。&lt;/p&gt;
-&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;Linux 用户可以直接用内置的包管理器安装 clangd，各个发行版的操作大同小异。&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Ubuntu/Debian&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt install clangd &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;有的发行版只需要安装 clang。&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Arch/Manjaro&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo pacman -S clang&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;对于 macOS 用户，由于自带的 XcodeCommandLineTools 中的 LLVM 不包含 clangd，需要使用 Homebrew 安装 LLVM。&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;brew install llvm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;Windows 用户在 &lt;a href=&quot;https://releases.llvm.org/download.html&quot;&gt;LLVM Download Page&lt;/a&gt; 上下载二进制文件并安装。&lt;/p&gt;
-&lt;h3 id=&quot;VS-Code-插件&quot;&gt;&lt;a href=&quot;#VS-Code-插件&quot; class=&quot;headerlink&quot; title=&quot;VS Code 插件&quot;&gt;&lt;/a&gt;VS Code 插件&lt;/h3&gt;&lt;p&gt;打开 VS Code 插件商店，在搜索栏中输入 &lt;code&gt;clang&lt;/code&gt; 找到 clang 插件并安装&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://oi-wiki.org/tools/editor/images/vscode-8.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;现在就可以享受 clangd</summary>
-        
-      
-    
-    
-    
-    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
-    
-    
-    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
-    
-    <category term="刷题记" scheme="https://blog.loveoi.net/tags/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
-    
-    <category term="转载" scheme="https://blog.loveoi.net/tags/%E8%BD%AC%E8%BD%BD/"/>
     
   </entry>
   
