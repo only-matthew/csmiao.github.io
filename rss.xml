@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-08-19T05:30:11.000Z</updated>
+  <updated>2022-08-31T08:43:21.000Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Luogu-P1056</title>
+    <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P1056/"/>
+    <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P1056/</id>
+    <published>2022-08-31T08:43:21.000Z</published>
+    <updated>2022-08-31T08:43:21.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;h1 id=&quot;NOIP2008-普及组-排座椅&quot;&gt;&lt;a href=&quot;#NOIP2008-普及组-排座椅&quot; class=&quot;headerlink&quot; title=&quot;[NOIP2008 普及组] 排座椅&quot;&gt;&lt;/a&gt;[NOIP2008 普及组] 排座椅&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;上课的时候总会有一些同学和前后左右的人交头接耳，这是令小学班主任十分头疼的一件事情。不过，班主任小雪发现了一些有趣的现象，当同学们的座次确定下来之后，只有有限的 $D$ 对同学上课时会交头接耳。&lt;/p&gt;
+&lt;p&gt;同学们在教室中坐成了 $M$ 行 $N$ 列，坐在第 $i$ 行第 $j$ 列的同学的位置是 $(i,j)$，为了方便同学们进出，在教室中设置了 $K$ 条横向的通道，$L$ 条纵向的通道。&lt;/p&gt;
+&lt;p&gt;于是，聪明的小雪想到了一个办法，或许可以减少上课时学生交头接耳的问题：她打算重新摆放桌椅，改变同学们桌椅间通道的位置，因为如果一条通道隔开了 $2$ 个会交头接耳的同学，那么他们就不会交头接耳了。&lt;/p&gt;
+&lt;p&gt;请你帮忙给小雪编写一个程序，给出最好的通道划分方案。在该方案下，上课时交头接耳的学生的对数最少。&lt;/p&gt;
+&lt;h2 id=&quot;输入格式&quot;&gt;&lt;a href=&quot;#输入格式&quot; class=&quot;headerlink&quot; title=&quot;输入格式&quot;&gt;&lt;/a&gt;输入格式&lt;/h2&gt;&lt;p&gt;第一行，有 $5$ 个用空格隔开的整数，分别是 $M,N,K,L,D(2 \le N,M \le 1000,0 \le K&amp;lt;M,0 \le L&amp;lt;N,D \le 2000)$。&lt;/p&gt;
+&lt;p&gt;接下来的 $D$ 行，每行有 $4$ 个用空格隔开的整数。第 $i$ 行的 $4$ 个整数 $X_i,Y_i,P_i,Q_i$，表示坐在位置 $(X_i,Y_i)$ 与 $(P_i,Q_i)$ 的两个同学会交头接耳（输入保证他们前后相邻或者左右相邻）。&lt;/p&gt;
+&lt;p&gt;输入数据保证最优方案的唯一性。&lt;/p&gt;
+&lt;h2 id=&quot;输出格式&quot;&gt;&lt;a href=&quot;#输出格式&quot; class=&quot;headerlink&quot; title=&quot;输出格式&quot;&gt;&lt;/a&gt;输出格式&lt;/h2&gt;&lt;p&gt;共两行。&lt;br&gt;第一行包含 $K$ 个整数 $a&lt;em&gt;1,a_2,\ldots,a_K$，表示第 $a_1$ 行和 $a_1+1$ 行之间、第 $a_2$ 行和 $a_2+1$ 行之间、…、第 $a_K$ 行和第 $a_K+1$ 行之间要开辟通道，其中 $a_i&amp;lt; a&lt;/em&gt;{i+1}$，每两个整数之间用空格隔开（行尾没有空格）。&lt;/p&gt;
+&lt;p&gt;第二行包含 $L$ 个整数 $b&lt;em&gt;1,b_2,\ldots,b_L$，表示第 $b_1$ 列和 $b_1+1$ 列之间、第 $b_2$ 列和 $b_2+1$ 列之间、…、第 $b_L$ 列和第 $b_L+1$ 列之间要开辟通道，其中$b_i&amp;lt; b&lt;/em&gt;{i+1}$，每两个整数之间用空格隔开（列尾没有空格）。&lt;/p&gt;
+&lt;h2 id=&quot;样例-1&quot;&gt;&lt;a href=&quot;#样例-1&quot; class=&quot;headerlink&quot; title=&quot;样例 #1&quot;&gt;&lt;/a&gt;样例 #1&lt;/h2&gt;&lt;h3 id=&quot;样例输入-1&quot;&gt;&lt;a href=&quot;#样例输入-1&quot; class=&quot;headerlink&quot; title=&quot;样例输入 #1&quot;&gt;&lt;/a&gt;样例输入 #1&lt;/h3&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;4 5 1 2 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4 2 4 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 3 3 3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 5 2 4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;样例输出-1&quot;&gt;&lt;a href=&quot;#样例输出-1&quot; class=&quot;headerlink&quot; title=&quot;样例输出 #1&quot;&gt;&lt;/a&gt;样例输出 #1&lt;/h3&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2 4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;提示&quot;&gt;&lt;a href=&quot;#提示&quot; class=&quot;headerlink&quot; title=&quot;提示&quot;&gt;&lt;/a&gt;提示&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://img.oier.xin/img/20.png&quot; alt=&quot;&quot;&gt; &lt;/p&gt;
+&lt;p&gt;上图中用符号*、※、+标出了 $3$ 对会交头接耳的学生的位置，图中 $3$ 条粗线的位置表示通道，图示的通道划分方案是唯一的最佳方案。&lt;/p&gt;
+&lt;p&gt;2008 年普及组第二题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一开始想对每一行每一列进行统计，最后排序来获得最多的方案，后来发现这实在是太蠢了。&lt;/p&gt;
+&lt;p&gt;为什么不在输入每2个交头接耳的同学的时候直接统计，然后直接排序呢？&lt;/p&gt;
+&lt;p&gt;这样既省时间复杂度，又好写。&lt;/p&gt;
+&lt;h1 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;我们再想到类似对每一行都统计，但是很多都是无用功的方法的时候。&lt;/p&gt;
+&lt;p&gt;不妨试试类似这样对有数据的行和列进行统计后，再进行后续操作。&lt;/p&gt;
+&lt;p&gt;code:&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; MAXN = &lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;title class_&quot;&gt;Row_or_Column&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; sum, r;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Row_or_Column row[MAXN], col[MAXN];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; M, N, K, L, D;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;cmp1&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;const&lt;/span&gt; Row_or_Column a, &lt;span class=&quot;type&quot;&gt;const&lt;/span&gt; Row_or_Column b)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a.sum &amp;gt; b.sum;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;cmp2&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;type&quot;&gt;const&lt;/span&gt; Row_or_Column a, &lt;span class=&quot;type&quot;&gt;const&lt;/span&gt; Row_or_Column b)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a.r &amp;lt; b.r;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    cin &amp;gt;&amp;gt; M &amp;gt;&amp;gt; N &amp;gt;&amp;gt; K &amp;gt;&amp;gt; L &amp;gt;&amp;gt; D;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt;= D; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; x1, y1, x2, y2; &lt;span class=&quot;comment&quot;&gt;//(xx,yy)与(p,q)交头接耳&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cin &amp;gt;&amp;gt; x1 &amp;gt;&amp;gt; y1 &amp;gt;&amp;gt; x2 &amp;gt;&amp;gt; y2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (x1 != x2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; x = &lt;span class=&quot;built_in&quot;&gt;min&lt;/span&gt;(x1, x2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            row[x].sum++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            row[x].r = x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; y = &lt;span class=&quot;built_in&quot;&gt;min&lt;/span&gt;(y1, y2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            col[y].sum++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            col[y].r = y;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(row + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, row + M + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, cmp1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(col + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, col + N + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, cmp1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(row + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, row + K + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, cmp2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(col + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, col + L + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, cmp2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt;= K; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cout &amp;lt;&amp;lt; row[i].r &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    cout &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt;= L; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cout &amp;lt;&amp;lt; col[i].r &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;This post was written on Aug 31,</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="刷题记" scheme="https://blog.loveoi.net/categories/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="刷题记" scheme="https://blog.loveoi.net/tags/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>树的学习</title>
@@ -327,9 +383,9 @@
     
     <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
     
-    <category term="acwing" scheme="https://blog.loveoi.net/tags/acwing/"/>
-    
     <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+    <category term="acwing" scheme="https://blog.loveoi.net/tags/acwing/"/>
     
   </entry>
   
@@ -406,9 +462,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -845,9 +901,9 @@
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1420,9 +1476,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1682,9 +1738,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1717,9 +1773,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1754,9 +1810,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1792,9 +1848,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -1822,9 +1878,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -2091,9 +2147,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -2123,9 +2179,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -2226,9 +2282,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
@@ -2271,9 +2327,9 @@ O(n!)只能跑到10&lt;/script&gt;&lt;blockquote&gt;
     <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
     
     
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
     
   </entry>
   
