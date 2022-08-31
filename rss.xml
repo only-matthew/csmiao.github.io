@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-08-31T08:43:21.000Z</updated>
+  <updated>2022-08-31T14:38:27.000Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>评价Shancreeper后记（难忘RXZ夏令营）</title>
+    <link href="https://blog.loveoi.net/%E8%87%AA%E5%86%99/shancreeper-postscript/"/>
+    <id>https://blog.loveoi.net/%E8%87%AA%E5%86%99/shancreeper-postscript/</id>
+    <published>2022-08-31T14:38:27.000Z</published>
+    <updated>2022-08-31T14:38:27.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;原文可以去知乎看&lt;a href=&quot;https://www.zhihu.com/question/551059337/answer/2654429447&quot;&gt;如何评价 OIer ShanCreeper？ - 知乎 (zhihu.com)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里只存储后记。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;那是一个烈日当头的下午，我在家中，做着我喜欢的事情——学习OI。&lt;/p&gt;
+&lt;p&gt;为了学习OI我做了所有我能做的努力，找老师、找资源、考学校。都没有用。&lt;/p&gt;
+&lt;p&gt;后来我逐渐释然了，我只配触碰她，不配深入，不配和 Shancreeper 一样的人一起学习。&lt;/p&gt;
+&lt;p&gt;”就当兴趣爱好发展吧，‘提前’学点数据结构和算法对未来也有好处“ 我这样心想着。&lt;/p&gt;
+&lt;p&gt;就在此时，开始调我的代码了。&lt;/p&gt;
+&lt;p&gt;”哇哦，开始调我的代码了！“我一阵激动，盯着屏幕上的光标。&lt;/p&gt;
+&lt;p&gt;”作为一个邪教，你这样做不是一个合格的邪教。“阮行止不带任何感情的声音从音响中传来。&lt;/p&gt;
+&lt;p&gt;什么？我爆long long了？我惊讶地站了起来。&lt;/p&gt;
+&lt;p&gt;原来Oier在集训的时候爆long long是这样的感觉啊，我心想着。&lt;/p&gt;
+&lt;p&gt;虽然爆long long有些沮丧，但是体验到Oier生活的快乐很快如细雨一般滋润了我的心田。&lt;/p&gt;
+&lt;p&gt;窗外的烈日也不再刺眼，爆long long的沮丧瞬间消失。&lt;/p&gt;
+&lt;p&gt;我忘不了那个暑假，和ShanCreepe等一起学习OI的快乐。虽然这快乐是短暂的，这快乐的代价也很大，但是它给了我希望，对未来的希望，对OI的希望。&lt;/p&gt;
+&lt;p&gt;我同样也忘不了那个暑假和ShanCreeper等人一起搞的各种活动，我们甚至还创建了一个Github组织，邀请了 阮行止，当然吴老师是不可能加入的。&lt;/p&gt;
+&lt;p&gt;我马上就要进入”卷界“了，在闲暇时间我会打开洛谷做几道题，翻开《算法导论》等书籍学习，维护我的&lt;a href=&quot;blog.loveoi.net&quot;&gt;Blog&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;感谢OI，让我比我地区的同龄人看到了更多，让我看到了光明。让我看到五年级的小学生讨论学术，比我小的小学生学着高中的知识。让我在某些方面比一线城市的同龄人知道的更多，懂的更多，会的更多的。&lt;/p&gt;
+&lt;p&gt;最后以&lt;em&gt;Emily Dickinson&lt;/em&gt;的&lt;em&gt;Had I not seen the Sun&lt;/em&gt;结尾&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Had I not seen the Sun&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;———- by Emily Dickinson&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Had I not seen the sun&lt;/p&gt;
+&lt;p&gt;I could have borne the shade&lt;/p&gt;
+&lt;p&gt;But Light a newer Wilderness&lt;/p&gt;
+&lt;p&gt;My Wilderness has</summary>
+        
+      
+    
+    
+    
+    <category term="自写" scheme="https://blog.loveoi.net/categories/%E8%87%AA%E5%86%99/"/>
+    
+    
+    <category term="自写" scheme="https://blog.loveoi.net/tags/%E8%87%AA%E5%86%99/"/>
+    
+  </entry>
   
   <entry>
     <title>Luogu-P1056</title>
@@ -383,9 +432,9 @@
     
     <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
     
-    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
-    
     <category term="acwing" scheme="https://blog.loveoi.net/tags/acwing/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
     
   </entry>
   
