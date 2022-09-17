@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://blog.loveoi.net/article/haunting/</loc>
+    
+    <lastmod>2022-09-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.loveoi.net/%E8%87%AA%E5%86%99/shancreeper-postscript/</loc>
     
     <lastmod>2022-08-31</lastmod>
@@ -573,7 +582,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/</loc>
+    <loc>https://blog.loveoi.net/tags/article/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -581,6 +590,13 @@
   
   <url>
     <loc>https://blog.loveoi.net/tags/Web/</loc>
+    <lastmod>2022-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -645,14 +661,14 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/</loc>
+    <loc>https://blog.loveoi.net/categories/article/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -666,6 +682,13 @@
   </url>
   
   <url>
+    <loc>https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2022-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.loveoi.net/categories/CS/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -673,14 +696,14 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/</loc>
+    <loc>https://blog.loveoi.net/categories/OI/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/OI/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/</loc>
     <lastmod>2022-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
