@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-10-03T04:32:35.000Z</updated>
+  <updated>2022-10-05T13:00:47.000Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>suibi-2022-10-5</title>
+    <link href="https://blog.loveoi.net/suibi/2022/suibi-2022-10-5/"/>
+    <id>https://blog.loveoi.net/suibi/2022/suibi-2022-10-5/</id>
+    <published>2022-10-05T13:00:47.000Z</published>
+    <updated>2022-10-05T13:00:47.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;有的人的青春是拼搏的红色，有的人的青春是虚度的灰白，而我的颜色却在不同人的眼中，有着不同的颜色。&lt;/p&gt;
+&lt;p&gt;不知道什么时候开始，我爱上了OI，不知道从什么时候开始，我爱上了折腾计算机。从一开始的学习算法，到后来搭建网站，学习前后端。&lt;/p&gt;
+&lt;p&gt;他们看到我初中就报了算法课，他们说：“哦，这真的是未来啊！”&lt;/p&gt;
+&lt;p&gt;我自嘲的笑着：有的人小学就学完提高内容了。&lt;/p&gt;
+&lt;p&gt;可能有人会说我在虚度我的青春，不去拼搏，去学现一些没用的东西。&lt;/p&gt;
+&lt;p&gt;可是真的没用吗？即使现在没用，以后会有用的。至少，在学习OI的过程中，我在学习，没有让心“散”了。&lt;/p&gt;
+&lt;p&gt;我不知道我的青春到底是什么颜色的，但是有一点我很清楚，我没有虚度我的青春！&lt;/p&gt;
+&lt;p&gt;2022.10.5</summary>
+        
+      
+    
+    
+    
+    <category term="suibi" scheme="https://blog.loveoi.net/categories/suibi/"/>
+    
+    <category term="2022" scheme="https://blog.loveoi.net/categories/suibi/2022/"/>
+    
+    
+    <category term="suibi" scheme="https://blog.loveoi.net/tags/suibi/"/>
+    
+    <category term="2022" scheme="https://blog.loveoi.net/tags/2022/"/>
+    
+  </entry>
   
   <entry>
     <title>玩转OneManager</title>
