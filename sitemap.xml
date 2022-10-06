@@ -609,6 +609,13 @@
   </url>
   
   <url>
+    <loc>https://blog.loveoi.net/tags/Article/</loc>
+    <lastmod>2022-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.loveoi.net/tags/Web/</loc>
     <lastmod>2022-10-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -617,13 +624,6 @@
   
   <url>
     <loc>https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/</loc>
-    <lastmod>2022-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.loveoi.net/tags/Article/</loc>
     <lastmod>2022-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -695,21 +695,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2022-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.loveoi.net/categories/OI/OI%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2022-10-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/</loc>
     <lastmod>2022-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -723,7 +709,14 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/</loc>
+    <loc>https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/</loc>
+    <lastmod>2022-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -758,14 +751,21 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/suibi/2022/</loc>
+    <loc>https://blog.loveoi.net/categories/Share/</loc>
     <lastmod>2022-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/Share/</loc>
+    <loc>https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/</loc>
+    <lastmod>2022-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.loveoi.net/categories/suibi/2022/</loc>
     <lastmod>2022-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
