@@ -602,13 +602,6 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/tags/OI%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2022-10-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.loveoi.net/tags/Article/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -616,7 +609,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/tags/Web/</loc>
+    <loc>https://blog.loveoi.net/tags/OI%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -630,14 +623,14 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/tags/%E8%87%AA%E5%86%99/</loc>
+    <loc>https://blog.loveoi.net/tags/Web/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/tags/CS/</loc>
+    <loc>https://blog.loveoi.net/tags/%E8%87%AA%E5%86%99/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -652,6 +645,13 @@
   
   <url>
     <loc>https://blog.loveoi.net/tags/2022/</loc>
+    <lastmod>2022-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.loveoi.net/tags/CS/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -695,21 +695,14 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/OI/OI%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2022-10-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2022-10-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.loveoi.net/categories/Article/</loc>
+    <lastmod>2022-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.loveoi.net/categories/OI/OI%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -723,6 +716,13 @@
   </url>
   
   <url>
+    <loc>https://blog.loveoi.net/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2022-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.loveoi.net/categories/%E8%87%AA%E5%86%99/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -730,14 +730,14 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/CS/</loc>
+    <loc>https://blog.loveoi.net/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <loc>https://blog.loveoi.net/categories/CS/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
