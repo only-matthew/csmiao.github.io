@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>[刷题记]Luogu-B2133</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2133/</url>
-    <content><![CDATA[<p>题目传送门：<a href="https://www.luogu.com.cn/problem/B2133">B2133 我家的门牌号 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
-<p>我们设总门牌号之和为cnt，小明家门牌号为x，其他人门牌号之和为a(即cnt-x）,得：</p>
-<ol>
-<li>a-2x=n</li>
-<li>a=cnt-x;</li>
-</ol>
-<p>∴     n=cnt-3x</p>
-<p>依据条件，直接暴力：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">long</span> <span class="type">long</span> <span class="type">int</span> n,cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> i=<span class="number">1</span>;;i++)&#123;</span><br><span class="line">        cnt+=i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> j=<span class="number">1</span>;j&lt;=i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((cnt<span class="number">-3</span>*j)==n)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%lld %lld&quot;</span>,j,i);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2022/6/22</p>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>刷题记</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>刷题记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[刷题记]Luogu-B2136</title>
     <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
     <content><![CDATA[<p>收获了新模板:</p>
@@ -33,30 +9,6 @@
 <p>code:</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>2022/6/26</p>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>刷题记</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>刷题记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[刷题记]Luogu-B2140</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/</url>
-    <content><![CDATA[<p>遇到了一个有意思的题目，有意思的点不在于题目本身，在于它的10进制转2进制。</p>
-<p>题目传送门：<a href="https://www.luogu.com.cn/problem/B2140">B2140 二进制分类 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
-<p>想了很久才想出这个模板：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">decToBin</span><span class="params">(<span class="type">int</span> dec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>, temp = dec, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % <span class="number">2</span>);</span><br><span class="line">        temp = temp / <span class="number">2</span>;</span><br><span class="line">        j = j * <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以在草稿纸上演算一下。</p>
-<p>code：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, ansa, ansb;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">decToBin</span><span class="params">(<span class="type">int</span> dec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>, temp = dec, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % <span class="number">2</span>);</span><br><span class="line">        temp = temp / <span class="number">2</span>;</span><br><span class="line">        j = j * <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> tmp = <span class="built_in">decToBin</span>(i), n1 = <span class="number">0</span>, n0 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (tmp != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (tmp % <span class="number">10</span> == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                n1++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                n0++;</span><br><span class="line">            &#125;</span><br><span class="line">            tmp /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n1 &gt; n0)</span><br><span class="line">        &#123;</span><br><span class="line">            ansa++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            ansb++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>, ansa, ansb);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>This article was written on 2022/7/10.</p>
-</blockquote>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -98,6 +50,54 @@
 <ul>
 <li>This post was written on Aug 31, 2022.</li>
 </ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>刷题记</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>刷题记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[刷题记]Luogu-B2133</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2133/</url>
+    <content><![CDATA[<p>题目传送门：<a href="https://www.luogu.com.cn/problem/B2133">B2133 我家的门牌号 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
+<p>我们设总门牌号之和为cnt，小明家门牌号为x，其他人门牌号之和为a(即cnt-x）,得：</p>
+<ol>
+<li>a-2x=n</li>
+<li>a=cnt-x;</li>
+</ol>
+<p>∴     n=cnt-3x</p>
+<p>依据条件，直接暴力：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">long</span> <span class="type">long</span> <span class="type">int</span> n,cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> i=<span class="number">1</span>;;i++)&#123;</span><br><span class="line">        cnt+=i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> j=<span class="number">1</span>;j&lt;=i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((cnt<span class="number">-3</span>*j)==n)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%lld %lld&quot;</span>,j,i);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2022/6/22</p>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>刷题记</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>刷题记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[刷题记]Luogu-B2140</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/</url>
+    <content><![CDATA[<p>遇到了一个有意思的题目，有意思的点不在于题目本身，在于它的10进制转2进制。</p>
+<p>题目传送门：<a href="https://www.luogu.com.cn/problem/B2140">B2140 二进制分类 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
+<p>想了很久才想出这个模板：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">decToBin</span><span class="params">(<span class="type">int</span> dec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>, temp = dec, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % <span class="number">2</span>);</span><br><span class="line">        temp = temp / <span class="number">2</span>;</span><br><span class="line">        j = j * <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以在草稿纸上演算一下。</p>
+<p>code：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, ansa, ansb;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">decToBin</span><span class="params">(<span class="type">int</span> dec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>, temp = dec, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % <span class="number">2</span>);</span><br><span class="line">        temp = temp / <span class="number">2</span>;</span><br><span class="line">        j = j * <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> tmp = <span class="built_in">decToBin</span>(i), n1 = <span class="number">0</span>, n0 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (tmp != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (tmp % <span class="number">10</span> == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                n1++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                n0++;</span><br><span class="line">            &#125;</span><br><span class="line">            tmp /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n1 &gt; n0)</span><br><span class="line">        &#123;</span><br><span class="line">            ansa++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            ansb++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>, ansa, ansb);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>This article was written on 2022/7/10.</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -221,52 +221,6 @@
       </tags>
   </entry>
   <entry>
-    <title>时间复杂度的学习</title>
-    <url>/OI/OI-Course/course-day-1/</url>
-    <content><![CDATA[<p>今天是课程的第一天，众所周知上课不做笔记等于没上。</p>
-<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>时间复杂度：算法需要跑的时间（单位是操作数）。</p>
-<p>一般会省略常数项，所以</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for(int i=1;i&lt;2^32-1;i++)&#123;</span><br><span class="line">	printf(&quot;%d\n&quot;,i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>的时间复杂度是O(1);</p>
-<p>所以在时间复杂度中 log的底数可以省略.</p>
-<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><p> 粗略定义：整个程序占用了多大的内存。</p>
-<h2 id="各种变量类型占用的空间"><a href="#各种变量类型占用的空间" class="headerlink" title="各种变量类型占用的空间"></a>各种变量类型占用的空间</h2><h2 id="C-结构体占用空间（内存）"><a href="#C-结构体占用空间（内存）" class="headerlink" title="C 结构体占用空间（内存）"></a>C 结构体占用空间（内存）</h2><blockquote>
-<p><mark class="hl-label red">struct</mark>  的空间占用不要目测，要用 <mark class="hl-label red">siezeof</mark>  查看</p>
-<p>sizeof是个假函数，在编译器就已经跑了.</p>
-</blockquote>
-<p>一个类型占用的空间和操作系统平台也息息相关。</p>
-<h1 id="C-坑点"><a href="#C-坑点" class="headerlink" title="C++ 坑点"></a>C++ 坑点</h1><blockquote>
-<p>不要在局部变量开大数组（虽然我开数组从来开全局）</p>
-</blockquote>
-<h2 id="给大数组直接赋值"><a href="#给大数组直接赋值" class="headerlink" title="给大数组直接赋值"></a>给大数组直接赋值</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
-<p>会直接给你的可执行文件中中写1e10个0，然而在CSP中你的代码不得超过512KB（和可执行文件没有关系），但是这样会编译超时。</p>
-<p>所以应该:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	a[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	a[<span class="number">1</span>]=<span class="number">2</span>;</span><br><span class="line">	a[<span class="number">2</span>]=<span class="number">3</span>;</span><br><span class="line">	a[<span class="number">3</span>]=<span class="number">4</span>;</span><br><span class="line">	a[<span class="number">4</span>]=<span class="number">5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Define"><a href="#Define" class="headerlink" title="Define"></a>Define</h2><p>define的本质是<mark class="hl-label red">字符串替换</mark> </p>
-<h3 id="不要使用define实现Max，Min等函数"><a href="#不要使用define实现Max，Min等函数" class="headerlink" title="不要使用define实现Max，Min等函数"></a>不要使用define实现Max，Min等函数</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX(a,b) a&gt;b?a:b</span></span><br></pre></td></tr></table></figure>
-<p>这样写看起来没有什么问题，但是如果a和b是函数呢？</p>
-<p>那么a，b会被重复调用</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">a</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;A\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;B\b&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">MAX</span>(<span class="built_in">a</span>(),<span class="built_in">b</span>());</span><br></pre></td></tr></table></figure>
-<p>那么输出会</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A</span><br><span class="line">B</span><br><span class="line">B</span><br></pre></td></tr></table></figure>
-<p>函数被<mark class="hl-label red">重复调用了</mark> ，所以不能用<mark class="hl-label blue">define</mark> 实现Max,Min等函数，而且使用define也提高不了<mark class="hl-label blue">效率</mark> 。</p>
-<h3 id="用define代替变量"><a href="#用define代替变量" class="headerlink" title="用define代替变量"></a>用define代替变量</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> a 1+5</span></span><br><span class="line">cout&lt;&lt; a*<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
-<p>输出不会是<mark class="hl-label blue">12</mark> ,会是<mark class="hl-label red">11</mark> ,因为define是字符串替换。会替换成<mark class="hl-label pink">1+5*2=11</mark>  。</p>
-<blockquote>
-<p>This post was written on July 22, 2022 at 22:45</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI-Course</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>Course</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Course-Day-7-数据结构进阶</title>
     <url>/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/coures-day-7/</url>
     <content><![CDATA[<p>今天要学习数据结构进阶了！今天的课表有：</p>
@@ -382,6 +336,177 @@ O(n!)只能跑到10</script><blockquote>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(b==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">gcd</span>(b,a%b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>date: 2022-07-16 12:22:45</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI-Course</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>Course</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>时间复杂度的学习</title>
+    <url>/OI/OI-Course/course-day-1/</url>
+    <content><![CDATA[<p>今天是课程的第一天，众所周知上课不做笔记等于没上。</p>
+<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>时间复杂度：算法需要跑的时间（单位是操作数）。</p>
+<p>一般会省略常数项，所以</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for(int i=1;i&lt;2^32-1;i++)&#123;</span><br><span class="line">	printf(&quot;%d\n&quot;,i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>的时间复杂度是O(1);</p>
+<p>所以在时间复杂度中 log的底数可以省略.</p>
+<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><p> 粗略定义：整个程序占用了多大的内存。</p>
+<h2 id="各种变量类型占用的空间"><a href="#各种变量类型占用的空间" class="headerlink" title="各种变量类型占用的空间"></a>各种变量类型占用的空间</h2><h2 id="C-结构体占用空间（内存）"><a href="#C-结构体占用空间（内存）" class="headerlink" title="C 结构体占用空间（内存）"></a>C 结构体占用空间（内存）</h2><blockquote>
+<p><mark class="hl-label red">struct</mark>  的空间占用不要目测，要用 <mark class="hl-label red">siezeof</mark>  查看</p>
+<p>sizeof是个假函数，在编译器就已经跑了.</p>
+</blockquote>
+<p>一个类型占用的空间和操作系统平台也息息相关。</p>
+<h1 id="C-坑点"><a href="#C-坑点" class="headerlink" title="C++ 坑点"></a>C++ 坑点</h1><blockquote>
+<p>不要在局部变量开大数组（虽然我开数组从来开全局）</p>
+</blockquote>
+<h2 id="给大数组直接赋值"><a href="#给大数组直接赋值" class="headerlink" title="给大数组直接赋值"></a>给大数组直接赋值</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
+<p>会直接给你的可执行文件中中写1e10个0，然而在CSP中你的代码不得超过512KB（和可执行文件没有关系），但是这样会编译超时。</p>
+<p>所以应该:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	a[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	a[<span class="number">1</span>]=<span class="number">2</span>;</span><br><span class="line">	a[<span class="number">2</span>]=<span class="number">3</span>;</span><br><span class="line">	a[<span class="number">3</span>]=<span class="number">4</span>;</span><br><span class="line">	a[<span class="number">4</span>]=<span class="number">5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Define"><a href="#Define" class="headerlink" title="Define"></a>Define</h2><p>define的本质是<mark class="hl-label red">字符串替换</mark> </p>
+<h3 id="不要使用define实现Max，Min等函数"><a href="#不要使用define实现Max，Min等函数" class="headerlink" title="不要使用define实现Max，Min等函数"></a>不要使用define实现Max，Min等函数</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX(a,b) a&gt;b?a:b</span></span><br></pre></td></tr></table></figure>
+<p>这样写看起来没有什么问题，但是如果a和b是函数呢？</p>
+<p>那么a，b会被重复调用</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">a</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;A\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;B\b&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">MAX</span>(<span class="built_in">a</span>(),<span class="built_in">b</span>());</span><br></pre></td></tr></table></figure>
+<p>那么输出会</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A</span><br><span class="line">B</span><br><span class="line">B</span><br></pre></td></tr></table></figure>
+<p>函数被<mark class="hl-label red">重复调用了</mark> ，所以不能用<mark class="hl-label blue">define</mark> 实现Max,Min等函数，而且使用define也提高不了<mark class="hl-label blue">效率</mark> 。</p>
+<h3 id="用define代替变量"><a href="#用define代替变量" class="headerlink" title="用define代替变量"></a>用define代替变量</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> a 1+5</span></span><br><span class="line">cout&lt;&lt; a*<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<p>输出不会是<mark class="hl-label blue">12</mark> ,会是<mark class="hl-label red">11</mark> ,因为define是字符串替换。会替换成<mark class="hl-label pink">1+5*2=11</mark>  。</p>
+<blockquote>
+<p>This post was written on July 22, 2022 at 22:45</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI-Course</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>Course</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>线段树实现求区间和、RMQ的学习</title>
+    <url>/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-7-2/</url>
+    <content><![CDATA[<p>虽然说：“一般普及组集训不会讲线段树，所以即便听不懂，也没有什么关系。”</p>
+<p>但是我们也必须学好。</p>
+<p>线段树是快速的查找某一个节点在若干条线段中出现的次数，RMQ也常常使用线段树来实现。</p>
+<blockquote>
+<p>线段树是一种<a href="https://baike.baidu.com/item/二叉搜索树/7077855">二叉搜索树</a>，与<a href="https://baike.baidu.com/item/区间树/5772433">区间树</a>相似，它将一个区间划分成一些单元区间，每个单元区间对应线段树中的一个叶结点。</p>
+<p>使用线段树可以快速的查找某一个节点在若干条线段中出现的次数，时间复杂度为O(logN)。而未优化的<a href="https://baike.baidu.com/item/空间复杂度/9664257">空间复杂度</a>为2N，实际应用时一般还要开4N的数组以免越界，因此有时需要离散化让空间压缩。</p>
+<p>—— 百度百科</p>
+</blockquote>
+<h1 id="eg1-《动态成绩查询》"><a href="#eg1-《动态成绩查询》" class="headerlink" title="eg1:《动态成绩查询》"></a>eg1:《动态成绩查询》</h1><p>一个班里有<em>n</em>名学生，他们的学号是<em>1~n</em></p>
+<p>起初，所有人的成绩都是0，有m次操作。</p>
+<ul>
+<li>给x加分或者减分</li>
+<li>给定l,r求区间和</li>
+</ul>
+<p>数据范围是很经典的$10^{5}$。</p>
+<p>建立一个树，根是1~n的区间和，左孩子和有孩子是<em>1 ~ mid</em>和<em>mid</em> ~ <em>n</em>，叶子节点为单个学生。</p>
+<p>给x加分即给x的所有父节点加分，这就是线段树。</p>
+<p>我们使用堆式存储存下整个树。</p>
+<p>虽然说是有10w个节点，但是我们不能只开10w，我们要开2的整次幂，且接近10w。而$2^{17}$可以满足条件。</p>
+<p>我们定义w[]存储一个节点的值。</p>
+<h2 id="单点加"><a href="#单点加" class="headerlink" title="单点加"></a>单点加</h2><p>我们单点加可以从叶子节点开始加，叶子节点加完后直接/2来到父节点。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">pointAdd</span><span class="params">(<span class="type">int</span> pos, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 找到 pos 在 w[] 位于什么位置</span></span><br><span class="line">    <span class="type">int</span> cur = SIZE + pos - <span class="number">1</span>;   <span class="comment">// 例如，1号同学位于 w[131072]</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(cur != <span class="number">0</span>) &#123;</span><br><span class="line">        w[cur] += k;</span><br><span class="line">        cur = cur / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="区间求和"><a href="#区间求和" class="headerlink" title="区间求和"></a>区间求和</h2><p>如果要查询的区间就在自己的管辖范围之内，直接返回即可。如果不在就交给自己的孩子节点去做。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 查询 [queryLe, queryRt] 的区间和</span></span><br><span class="line"><span class="comment">// querySum 要返回所查的那些元素，落在 node 管辖区间里面的这部分的 sum</span></span><br><span class="line"><span class="comment">// querySum 只管 「node 管辖区间」与「查询区间」的交集元素，其余的不管</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">querySum</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> queryLe, <span class="type">int</span> queryRt)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(queryRt &lt; fieldLe || fieldRt &lt; queryLe)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;       <span class="comment">// 查询区间的右端点比管辖区间的 l 还小，显然本次查询不关这个 node 的事</span></span><br><span class="line">    <span class="keyword">if</span>(queryLe &lt;= fieldLe &amp;&amp; fieldRt &lt;= queryRt)</span><br><span class="line">        <span class="keyword">return</span> w[node]; <span class="comment">// 查询区间完全覆盖掉了 node 的管辖区间，返回 w[node]，即管辖区间的 sum</span></span><br><span class="line">    <span class="comment">// 例如，查询 [1, 100]，而管辖区间是 [9, 16]</span></span><br><span class="line">    <span class="comment">// 那我显然直接返回 sum(9, 16)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在，查询区间和管辖区间有交集，需要细化处理</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 由左儿子查询、右儿子查询，返回它们的和</span></span><br><span class="line">    <span class="comment">// 左儿子会处理自己管辖区域内的 sum，右儿子同理</span></span><br><span class="line">    <span class="type">int</span> sumLe = <span class="built_in">querySum</span>(node*<span class="number">2</span>, fieldLe, mid, queryLe, queryRt);</span><br><span class="line">    <span class="type">int</span> sumRt = <span class="built_in">querySum</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, queryLe, queryRt);</span><br><span class="line">    <span class="keyword">return</span> sumLe + sumRt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="eg2RMQ：洛谷P1816《忠诚》"><a href="#eg2RMQ：洛谷P1816《忠诚》" class="headerlink" title="eg2RMQ：洛谷P1816《忠诚》"></a>eg2RMQ：洛谷P1816《忠诚》</h1><p>我们在给区间加的时候顺手统计最小值即可。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;       <span class="comment">// n 个学生，m 次操作</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">input</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 维护一个长度为 131072（i.e. 2^17）长度的序列</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SIZE 131072</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> w[SIZE * <span class="number">2</span> + <span class="number">5</span>];    <span class="comment">// w[x]: x结点所管辖区间的 sum</span></span><br><span class="line"><span class="comment">// w[1] 的管辖区间是 [1, 131072]</span></span><br><span class="line"><span class="comment">// w[2]: [1, 65536], w[3]: [65537, 131072]</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="comment">// w[131072]: [1, 1], ....</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 给 pos 同学加 k 分</span></span><br><span class="line"><span class="comment">// 目前正在处理 node 结点，它的管辖区间是 [fieldLe, fieldRt]</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pointAdd</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> pos, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 更新 node 管辖区域的 sum </span></span><br><span class="line">    w[node] += k;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果已经处理到底层，则更新 w 之后直接返回</span></span><br><span class="line">    <span class="keyword">if</span>(fieldLe == fieldRt) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 还需要递归处理</span></span><br><span class="line">    <span class="comment">// 左半块：编号是 node*2, 管辖区间 [fieldLe, mid]</span></span><br><span class="line">    <span class="comment">// 右半块：编号是 node*2+1, 管辖区间 [mid+1, fieldRt]</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 例如：node 管辖区间是 [8, 16]</span></span><br><span class="line">    <span class="comment">// mid = (8+16)/2 = 12，左半块的管辖区间是 [8, 12]；右半块 [13, 16]</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(pos &lt;= mid)      <span class="comment">// 如果 pos 落在左半块，则递归给左边半块</span></span><br><span class="line">        <span class="built_in">pointAdd</span>(node*<span class="number">2</span>, fieldLe, mid, pos, k);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">pointAdd</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, pos, k);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询 [queryLe, queryRt] 的区间和</span></span><br><span class="line"><span class="comment">// querySum 要返回所查的那些元素，落在 node 管辖区间里面的这部分的 sum</span></span><br><span class="line"><span class="comment">// querySum 只管 「node 管辖区间」与「查询区间」的交集元素，其余的不管</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">querySum</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> queryLe, <span class="type">int</span> queryRt)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(queryRt &lt; fieldLe || fieldRt &lt; queryLe)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;       <span class="comment">// 查询区间的右端点比管辖区间的 l 还小，显然本次查询不关这个 node 的事</span></span><br><span class="line">    <span class="keyword">if</span>(queryLe &lt;= fieldLe &amp;&amp; fieldRt &lt;= queryRt)</span><br><span class="line">        <span class="keyword">return</span> w[node]; <span class="comment">// 查询区间完全覆盖掉了 node 的管辖区间，返回 w[node]，即管辖区间的 sum</span></span><br><span class="line">    <span class="comment">// 例如，查询 [1, 100]，而管辖区间是 [9, 16]</span></span><br><span class="line">    <span class="comment">// 那我显然直接返回 sum(9, 16)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在，查询区间和管辖区间有交集，需要细化处理</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 由左儿子查询、右儿子查询，返回它们的和</span></span><br><span class="line">    <span class="comment">// 左儿子会处理自己管辖区域内的 sum，右儿子同理</span></span><br><span class="line">    <span class="type">int</span> sumLe = <span class="built_in">querySum</span>(node*<span class="number">2</span>, fieldLe, mid, queryLe, queryRt);</span><br><span class="line">    <span class="type">int</span> sumRt = <span class="built_in">querySum</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, queryLe, queryRt);</span><br><span class="line">    <span class="keyword">return</span> sumLe + sumRt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(m--) &#123;</span><br><span class="line">        <span class="type">int</span> cmd, x, y;</span><br><span class="line">        cin &gt;&gt; cmd &gt;&gt; x &gt;&gt; y;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(cmd == <span class="number">1</span>)</span><br><span class="line">            <span class="built_in">pointAdd</span>(<span class="number">1</span>, <span class="number">1</span>, SIZE, x, y);     <span class="comment">// 交给 1 号结点，其管辖区间是 [1, SIZE]</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            cout &lt;&lt; <span class="built_in">querySum</span>(<span class="number">1</span>, <span class="number">1</span>, SIZE, x, y) &lt;&lt; endl;     <span class="comment">// 交给 1 号点，1 号的管辖区间是全集</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">input</span>();</span><br><span class="line">    <span class="built_in">work</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>This post was written on July 27, 2022</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI-Course</category>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>Course</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>排序,分治思想的学习</title>
+    <url>/OI/OI-Course/course-day-3/</url>
+    <content><![CDATA[<blockquote>
+<p>本文实际上是我23日补写的。</p>
+</blockquote>
+<p>排序(<em>sort</em>)是有个非常有意思的算法，今天我们学习了：插入排序、冒泡排序，选择排序。以及可以在做题中使用的：归并排序和快速排序。所有基于比较的排序最低时间复杂度是<em>O(</em>nlogn)*.</p>
+<p>有的时候排序并不直接解决问题，但可以起到加速作用；有些算法依赖于 排序。</p>
+<h1 id="Note："><a href="#Note：" class="headerlink" title="Note："></a>Note：</h1><h2 id="简单排序"><a href="#简单排序" class="headerlink" title="简单排序"></a>简单排序</h2><h3 id="插入排序："><a href="#插入排序：" class="headerlink" title="插入排序："></a>插入排序：</h3><p>有的时候排序并不直接解决问题，但可以起到加速作用；有些算法依赖于 排序。</p>
+<p>插入排序是在一个已经有序的序列中插入数据，插入后序列依然是一个有序的序列。</p>
+<p>即维护一个有序的序列，不断插入元素。</p>
+<p>所以我们只要写一个<em>insert()</em>函数，插入序列即可。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> pos=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(;pos&lt;tot;pos++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[pos]&gt;x)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> k=tot;k&gt;=pos,k--)&#123;</span><br><span class="line">				a[k+<span class="number">1</span>]=r[k];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	a[pos]=x;</span><br><span class="line">	tot++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="函数的接口比较"><a href="#函数的接口比较" class="headerlink" title="函数的接口比较"></a>函数的接口比较</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> x)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> x)</span></span></span><br></pre></td></tr></table></figure>
+<p>很明显，最后一种比前两种要好。</p>
+<p>因为有<em>DRY(Do not repeat yourself)</em>原则，所以最后一种要更好，可以应对不同的需求。当然，如果你只需要排序一个数组，且第二种更方便，那么第二种也是可行的。</p>
+<h5 id="复用性"><a href="#复用性" class="headerlink" title="复用性"></a>复用性</h5><p>如果需要第三种接口支持从大到小排序，甚至按自定义的顺序？ 如果不仅要排序 int，还要排 float、字符串、甚至自定义的结构体？<br>如果不知道数组长度，但数组有一个结束标识符？</p>
+<blockquote>
+<p>越抽象越容易复用，越具体越不容易复用。<br>良好的代码风格会使你付出 1.2 倍的编码时间，但会减少一半的调试时间。<br>抽象要有个度，如果泛化的收益抵不上代码复杂程度增加带来的坏处，果断停手</p>
+</blockquote>
+<p>总结：在OI中无需工业级别的服用，但是也需要注意复用性。</p>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>将每个元素比较n次，如果遇到比它大或小的元素就交换，在每个元素都比较一遍过后，整个序列就都是有序的。整个过程如冒泡一样，故人们称它为冒泡排序。只是时间复杂度有亿点大：<script type="math/tex">O(n^2)</script> 这是一个很大的时间复杂度，但是他的思想是值得我们学习的。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">bubble</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">0</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">			<span class="keyword">if</span>(a[j]&gt;a[i])</span><br><span class="line">				<span class="built_in">swap</span>(a[j],a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第一次冒泡会把最大的放到最后，第二次是次大，所以在执行第<em>i</em>次排序时，<em>n-i</em>以后的元素已经有序，所以我们可以优化（虽然依然是 <script type="math/tex">O(n^2)</script> 但是优化了一半的常数)。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">bubble</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">0</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;n-i<span class="number">-1</span>;j++)</span><br><span class="line">			<span class="keyword">if</span>(a[j]&gt;a[i])</span><br><span class="line">				<span class="built_in">swap</span>(a[j],a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>选择排序的思路是找到最小值，然后与<em>a[1]</em>交换，找到次小值，与<em>a[2]</em>交换。因为是选择元素交换，故称之为选择排序。他的优化与冒泡类似，在排序<em>i</em>次后<em>a[i]</em>前就已经有序了，所以无需排序。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">select</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="type">int</span> cur=i;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=i;j&lt;=n;i++)</span><br><span class="line">			<span class="keyword">if</span>(a[j]&lt;a[i])</span><br><span class="line">				cur=i;</span><br><span class="line">		<span class="built_in">swap</span>(a[i],a[cur]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="O-nlogn-的实用算法"><a href="#O-nlogn-的实用算法" class="headerlink" title="O(nlogn)的实用算法"></a><em>O(nlogn)</em>的实用算法</h2><p>归并排序是基于分治思想的排序，做到了比较算法的极限，达到了<script type="math/tex">O(nlogn)</script>的时间复杂度，且十分稳定，非常的优秀。</p>
+<p>将<em>a[l,r]</em>排序：</p>
+<ol>
+<li>将<em>a[l,r]</em>拆成<em>a[l,mid]</em>和<em>a[mid+1,r]</em>分别递归排序，这样递归到序列只剩一个的时候就是一个有序的序列。</li>
+<li>调用<em>sort(l,mid)</em>和<em>sort(mid+1,r)</em>递归排序</li>
+<li>将两个有序数组，合并成一个大的有序数组，覆盖 a[l,r]</li>
+</ol>
+<p>难点就在于合并。</p>
+<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><p>现在有2个序列<em>a[1,2,3]</em>和<em>b[4,5,6]</em>，他们都是有序的，建第三个序列<em>tmp</em>。</p>
+<p>现在定义<em>pa</em>,<em>pb</em>两个指针，初始值为<em>pa=1</em>，<em>pb=1</em>。</p>
+<p>如果<em>a[pa]&gt;a[pb]</em>那么将<em>a[pa]</em>放入<em>tmp[pos++]</em>然后<em>pa++</em>反之将<em>a[pb]</em>放入<em>tmp[pos++]</em>然后<em>pb++</em>。</p>
+<p>这样就完成了2个有序序列的合并。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Sort</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l == r - <span class="number">1</span>) <span class="keyword">return</span>;      <span class="comment">// 现在区间里面只有一个元素，直接返回即可</span></span><br><span class="line">    <span class="type">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">Sort</span>(l, mid);  <span class="comment">// 递归左边</span></span><br><span class="line">    <span class="built_in">Sort</span>(mid, r);  <span class="comment">// 递归右边</span></span><br><span class="line">	<span class="comment">// 递归后[l,mid],[mid,r]已经有序，合并即可</span></span><br><span class="line">    <span class="type">int</span> p=l, q=mid, cur=l;</span><br><span class="line">    <span class="comment">// 左边现在可以使用的是 a[p, mid)</span></span><br><span class="line">    <span class="comment">// 右边现在可以使用的是 a[q, r)</span></span><br><span class="line">    <span class="comment">// 答案数组目前要填写 tmp[cur]</span></span><br><span class="line">    <span class="keyword">while</span>(p &lt; mid &amp;&amp; q &lt; r) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[p] &lt; a[q])</span><br><span class="line">            tmp[cur++] = a[p++];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            tmp[cur++] = a[q++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(p &lt; mid)               <span class="comment">// 若左边还没有取干净</span></span><br><span class="line">        tmp[cur++] = a[p++];</span><br><span class="line">    <span class="keyword">while</span>(q &lt; r)                 <span class="comment">// 若右边还没有取干净</span></span><br><span class="line">        tmp[cur++] = a[q++];</span><br><span class="line">	<span class="comment">//合并完成，直接填入tmp</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=l; i&lt;r; i++)</span><br><span class="line">        a[i] = tmp[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>因为每次都是<em>(l+r)/2</em>分开，所以需要递归<em>logn</em>层，每次<em>n</em>的代价，所以时间复杂度为<em>O(nlogn)</em>。</p>
+<p>这样的排序是非常稳定的！</p>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>叫做快速排序自然有过人之处，他的思想非常的有意思：</p>
+<p>随便选一个人做哨兵，比它小的人站在左边，大的人站在右边，然后递归排序左边和右边，这样就是有序的了。</p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p>我们需要排序序列：<em>[3,2,5,4,8,7,6,1]</em></p>
+<ol>
+<li>随便选了个人，身高为 4 </li>
+<li>站队，序列变成 [3,2,1] 4 [5,8,7,6]</li>
+<li>分别排序，序列变成 [1,2,3] 4 [5,6,7,8]</li>
+</ol>
+<p>递归到底层就只有3个元素了，站队完成就是排序好的序列。</p>
+<p>这样就完成排序了！</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">quickSort</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l &gt;= r - <span class="number">1</span>) <span class="keyword">return</span>;      <span class="comment">// 现在区间是空集，或只有一个元素</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> flag = a[l + <span class="built_in">rand</span>() % (r - l)];     <span class="comment">// 随机选个哨兵</span></span><br><span class="line">    <span class="comment">// 假设永远选 a[l] 做哨兵</span></span><br><span class="line">    <span class="comment">// 出题人：a=[10,9,8,7,6,5,4,3,2,1]</span></span><br><span class="line">    <span class="comment">// 第一次调用：哨兵10 [9 8 7 6 5 4 3 2 1] [10]</span></span><br><span class="line">    <span class="comment">// 第二次调用：哨兵9  [8 7 6 5 4 3 2] [9]</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="comment">// 总共复杂度是 O(n^2)</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> p = l, q = r;</span><br><span class="line">    <span class="comment">// tmp[l, p) 存放比 flag 小的人</span></span><br><span class="line">    <span class="comment">// tmp[q, r) 存放比 flag 大的人</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=l; i&lt;r; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] &lt; flag)</span><br><span class="line">            tmp[p++] = a[i];    <span class="comment">// 等价于 tmp[p]=a[i], p++</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a[i] &gt; flag)</span><br><span class="line">            tmp[--q] = a[i];    <span class="comment">// 等价于 q--, tmp[q]=a[i]</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=p; i&lt;q; i++)      <span class="comment">// [p, q) 应当填充恰等于哨兵的人</span></span><br><span class="line">        tmp[i] = flag;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在局面：tmp[l, p) &lt; flag; tmp[p, q) == flag; tmp[q, r) &gt; flag</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=l; i&lt;r; i++)</span><br><span class="line">        a[i] = tmp[i];          <span class="comment">// 回填进a</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 站队已经完成，递归排序左边、右边</span></span><br><span class="line">    <span class="built_in">quickSort</span>(l, p);</span><br><span class="line">    <span class="built_in">quickSort</span>(q, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Leaned"><a href="#Leaned" class="headerlink" title="Leaned:"></a>Leaned:</h1><p>简单排序：复杂度 <em>O(n2)</em><br>归并排序：复杂度 <em>O(nlogn)</em> (有保障)<br>快速排序：平均复杂度 <em>O(nlogn)</em></p>
+<h2 id="Master-定理"><a href="#Master-定理" class="headerlink" title="Master 定理"></a>Master 定理</h2><p>主定理，可以用于算递归函数复杂度：</p>
+<script type="math/tex; mode=display">
+T(n) = aT(n/b) +O(n^d)</script><p>有:</p>
+<script type="math/tex; mode=display">
+T(n)=\left\{
+\begin{aligned}
+O(n^d) && d>log_{b}a\newline
+O(n^dlogn) && d=log_{b}a\newline
+O(n^{log_ba}) && d<log_{b}a\newline
+\end{aligned}
+\right.</script><blockquote>
+<p>This post was written on July 23, 2022.</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -632,36 +757,32 @@ T(n) = 2T(n/2) +O(n) = O(nlog n)</script><h2 id="快速幂"><a href="#快速幂"
       </tags>
   </entry>
   <entry>
-    <title>线段树实现求区间和、RMQ的学习</title>
-    <url>/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-7-2/</url>
-    <content><![CDATA[<p>虽然说：“一般普及组集训不会讲线段树，所以即便听不懂，也没有什么关系。”</p>
-<p>但是我们也必须学好。</p>
-<p>线段树是快速的查找某一个节点在若干条线段中出现的次数，RMQ也常常使用线段树来实现。</p>
-<blockquote>
-<p>线段树是一种<a href="https://baike.baidu.com/item/二叉搜索树/7077855">二叉搜索树</a>，与<a href="https://baike.baidu.com/item/区间树/5772433">区间树</a>相似，它将一个区间划分成一些单元区间，每个单元区间对应线段树中的一个叶结点。</p>
-<p>使用线段树可以快速的查找某一个节点在若干条线段中出现的次数，时间复杂度为O(logN)。而未优化的<a href="https://baike.baidu.com/item/空间复杂度/9664257">空间复杂度</a>为2N，实际应用时一般还要开4N的数组以免越界，因此有时需要离散化让空间压缩。</p>
-<p>—— 百度百科</p>
+    <title>图的学习 - luogu - Course - OI - 数据结构</title>
+    <url>/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-8/</url>
+    <content><![CDATA[<h1 id="什么是图"><a href="#什么是图" class="headerlink" title="什么是图"></a>什么是图</h1><blockquote>
+<p>图是描述物件之间的关系。<br>物件就是结点，物件之间的关系即是边。</p>
 </blockquote>
-<h1 id="eg1-《动态成绩查询》"><a href="#eg1-《动态成绩查询》" class="headerlink" title="eg1:《动态成绩查询》"></a>eg1:《动态成绩查询》</h1><p>一个班里有<em>n</em>名学生，他们的学号是<em>1~n</em></p>
-<p>起初，所有人的成绩都是0，有m次操作。</p>
-<ul>
-<li>给x加分或者减分</li>
-<li>给定l,r求区间和</li>
-</ul>
-<p>数据范围是很经典的$10^{5}$。</p>
-<p>建立一个树，根是1~n的区间和，左孩子和有孩子是<em>1 ~ mid</em>和<em>mid</em> ~ <em>n</em>，叶子节点为单个学生。</p>
-<p>给x加分即给x的所有父节点加分，这就是线段树。</p>
-<p>我们使用堆式存储存下整个树。</p>
-<p>虽然说是有10w个节点，但是我们不能只开10w，我们要开2的整次幂，且接近10w。而$2^{17}$可以满足条件。</p>
-<p>我们定义w[]存储一个节点的值。</p>
-<h2 id="单点加"><a href="#单点加" class="headerlink" title="单点加"></a>单点加</h2><p>我们单点加可以从叶子节点开始加，叶子节点加完后直接/2来到父节点。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">pointAdd</span><span class="params">(<span class="type">int</span> pos, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 找到 pos 在 w[] 位于什么位置</span></span><br><span class="line">    <span class="type">int</span> cur = SIZE + pos - <span class="number">1</span>;   <span class="comment">// 例如，1号同学位于 w[131072]</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(cur != <span class="number">0</span>) &#123;</span><br><span class="line">        w[cur] += k;</span><br><span class="line">        cur = cur / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="区间求和"><a href="#区间求和" class="headerlink" title="区间求和"></a>区间求和</h2><p>如果要查询的区间就在自己的管辖范围之内，直接返回即可。如果不在就交给自己的孩子节点去做。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 查询 [queryLe, queryRt] 的区间和</span></span><br><span class="line"><span class="comment">// querySum 要返回所查的那些元素，落在 node 管辖区间里面的这部分的 sum</span></span><br><span class="line"><span class="comment">// querySum 只管 「node 管辖区间」与「查询区间」的交集元素，其余的不管</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">querySum</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> queryLe, <span class="type">int</span> queryRt)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(queryRt &lt; fieldLe || fieldRt &lt; queryLe)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;       <span class="comment">// 查询区间的右端点比管辖区间的 l 还小，显然本次查询不关这个 node 的事</span></span><br><span class="line">    <span class="keyword">if</span>(queryLe &lt;= fieldLe &amp;&amp; fieldRt &lt;= queryRt)</span><br><span class="line">        <span class="keyword">return</span> w[node]; <span class="comment">// 查询区间完全覆盖掉了 node 的管辖区间，返回 w[node]，即管辖区间的 sum</span></span><br><span class="line">    <span class="comment">// 例如，查询 [1, 100]，而管辖区间是 [9, 16]</span></span><br><span class="line">    <span class="comment">// 那我显然直接返回 sum(9, 16)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在，查询区间和管辖区间有交集，需要细化处理</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 由左儿子查询、右儿子查询，返回它们的和</span></span><br><span class="line">    <span class="comment">// 左儿子会处理自己管辖区域内的 sum，右儿子同理</span></span><br><span class="line">    <span class="type">int</span> sumLe = <span class="built_in">querySum</span>(node*<span class="number">2</span>, fieldLe, mid, queryLe, queryRt);</span><br><span class="line">    <span class="type">int</span> sumRt = <span class="built_in">querySum</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, queryLe, queryRt);</span><br><span class="line">    <span class="keyword">return</span> sumLe + sumRt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="eg2RMQ：洛谷P1816《忠诚》"><a href="#eg2RMQ：洛谷P1816《忠诚》" class="headerlink" title="eg2RMQ：洛谷P1816《忠诚》"></a>eg2RMQ：洛谷P1816《忠诚》</h1><p>我们在给区间加的时候顺手统计最小值即可。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;       <span class="comment">// n 个学生，m 次操作</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">input</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 维护一个长度为 131072（i.e. 2^17）长度的序列</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SIZE 131072</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> w[SIZE * <span class="number">2</span> + <span class="number">5</span>];    <span class="comment">// w[x]: x结点所管辖区间的 sum</span></span><br><span class="line"><span class="comment">// w[1] 的管辖区间是 [1, 131072]</span></span><br><span class="line"><span class="comment">// w[2]: [1, 65536], w[3]: [65537, 131072]</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="comment">// w[131072]: [1, 1], ....</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 给 pos 同学加 k 分</span></span><br><span class="line"><span class="comment">// 目前正在处理 node 结点，它的管辖区间是 [fieldLe, fieldRt]</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pointAdd</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> pos, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 更新 node 管辖区域的 sum </span></span><br><span class="line">    w[node] += k;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果已经处理到底层，则更新 w 之后直接返回</span></span><br><span class="line">    <span class="keyword">if</span>(fieldLe == fieldRt) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 还需要递归处理</span></span><br><span class="line">    <span class="comment">// 左半块：编号是 node*2, 管辖区间 [fieldLe, mid]</span></span><br><span class="line">    <span class="comment">// 右半块：编号是 node*2+1, 管辖区间 [mid+1, fieldRt]</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 例如：node 管辖区间是 [8, 16]</span></span><br><span class="line">    <span class="comment">// mid = (8+16)/2 = 12，左半块的管辖区间是 [8, 12]；右半块 [13, 16]</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(pos &lt;= mid)      <span class="comment">// 如果 pos 落在左半块，则递归给左边半块</span></span><br><span class="line">        <span class="built_in">pointAdd</span>(node*<span class="number">2</span>, fieldLe, mid, pos, k);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">pointAdd</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, pos, k);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询 [queryLe, queryRt] 的区间和</span></span><br><span class="line"><span class="comment">// querySum 要返回所查的那些元素，落在 node 管辖区间里面的这部分的 sum</span></span><br><span class="line"><span class="comment">// querySum 只管 「node 管辖区间」与「查询区间」的交集元素，其余的不管</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">querySum</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> fieldLe, <span class="type">int</span> fieldRt, <span class="type">int</span> queryLe, <span class="type">int</span> queryRt)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(queryRt &lt; fieldLe || fieldRt &lt; queryLe)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;       <span class="comment">// 查询区间的右端点比管辖区间的 l 还小，显然本次查询不关这个 node 的事</span></span><br><span class="line">    <span class="keyword">if</span>(queryLe &lt;= fieldLe &amp;&amp; fieldRt &lt;= queryRt)</span><br><span class="line">        <span class="keyword">return</span> w[node]; <span class="comment">// 查询区间完全覆盖掉了 node 的管辖区间，返回 w[node]，即管辖区间的 sum</span></span><br><span class="line">    <span class="comment">// 例如，查询 [1, 100]，而管辖区间是 [9, 16]</span></span><br><span class="line">    <span class="comment">// 那我显然直接返回 sum(9, 16)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在，查询区间和管辖区间有交集，需要细化处理</span></span><br><span class="line">    <span class="type">int</span> mid = (fieldLe + fieldRt) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 由左儿子查询、右儿子查询，返回它们的和</span></span><br><span class="line">    <span class="comment">// 左儿子会处理自己管辖区域内的 sum，右儿子同理</span></span><br><span class="line">    <span class="type">int</span> sumLe = <span class="built_in">querySum</span>(node*<span class="number">2</span>, fieldLe, mid, queryLe, queryRt);</span><br><span class="line">    <span class="type">int</span> sumRt = <span class="built_in">querySum</span>(node*<span class="number">2</span>+<span class="number">1</span>, mid+<span class="number">1</span>, fieldRt, queryLe, queryRt);</span><br><span class="line">    <span class="keyword">return</span> sumLe + sumRt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(m--) &#123;</span><br><span class="line">        <span class="type">int</span> cmd, x, y;</span><br><span class="line">        cin &gt;&gt; cmd &gt;&gt; x &gt;&gt; y;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(cmd == <span class="number">1</span>)</span><br><span class="line">            <span class="built_in">pointAdd</span>(<span class="number">1</span>, <span class="number">1</span>, SIZE, x, y);     <span class="comment">// 交给 1 号结点，其管辖区间是 [1, SIZE]</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            cout &lt;&lt; <span class="built_in">querySum</span>(<span class="number">1</span>, <span class="number">1</span>, SIZE, x, y) &lt;&lt; endl;     <span class="comment">// 交给 1 号点，1 号的管辖区间是全集</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">input</span>();</span><br><span class="line">    <span class="built_in">work</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>所以我们可以发现几乎所有的关系都可以表示成图，dp可以表示成DAG(有向无环图)，搜索本质上是图的遍历算法，树也是特殊的图……</p>
+<p>且图的存在也是非常重要的，很多问题都需要图的解决，比如导航就可以用图实现。</p>
+<h1 id="图的储存方式"><a href="#图的储存方式" class="headerlink" title="图的储存方式"></a>图的储存方式</h1><p>图有多种储存方式，比如邻接矩阵，比如用vector。</p>
+<h2 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h2><p>定义 $map[u][v]$ (map是c++关键字)表示u和v节点直接有一条边。</p>
+<p>空间复杂度为$O(n^{2})$，在$n&lt;=10^3$的时候适用。</p>
+<p>举个例子，现在输入2个人，他们是朋友，最后统计每个人有多少个朋友。</p>
+<p>我们可以定义$w[1e3+5$][1e3+5]来存储2个人是否为朋友，遍历$w[i][1~n]$即可判断是否为朋友。</p>
+<p>这样我们就用实现了$O(n)$输入，$O(n)$查询。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> w[<span class="number">1005</span>][<span class="number">1005</span>];  <span class="comment">// w[x][y]: x 与 y 是否为朋友</span></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">input</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=m; i++) &#123;</span><br><span class="line">        <span class="type">int</span> u, v;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// u, v 是朋友</span></span><br><span class="line">        w[u][v] = <span class="number">1</span>;        <span class="comment">// v 是 u 的朋友</span></span><br><span class="line">        w[v][u] = <span class="number">1</span>;        <span class="comment">// u 是 v 的朋友</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 统计 x 有多少个朋友</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">getCnt</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 枚举每一个人，判断他是否为 x 的朋友</span></span><br><span class="line">    <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">        <span class="keyword">if</span>(w[x][i]) res++;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">        cout &lt;&lt; <span class="built_in">getCnt</span>(i) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">input</span>();</span><br><span class="line">    <span class="built_in">work</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="vector存图"><a href="#vector存图" class="headerlink" title="vector存图"></a>vector存图</h2><p>vector存图可能是用的最多的了，有的人喜欢用链式前向星来存图，但实际上vector就是在做链式前向星做的事。</p>
+<p>对于每一个点，开一个vector存下他的边，空间复杂度：$O(m)$，查询时间复杂度:$O(m)$是不是比邻接矩阵好多了？</p>
+<p>当然当节点较少时还是邻接矩阵方便。</p>
+<p>再将刚刚的问题用vector表示一下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; e[<span class="number">100005</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> u, v;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line">        e[u].<span class="built_in">push_back</span>(v);</span><br><span class="line">        e[v].<span class="built_in">push_back</span>(u);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        cout &lt;&lt; e[i].<span class="built_in">size</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>邻接矩阵：用$w[u][v]$存边权即可。<br>vector：需要写个结构体，来把邻居编号和边权打包起来;</p>
+<h2 id="邻接矩阵和vector存图的选择"><a href="#邻接矩阵和vector存图的选择" class="headerlink" title="邻接矩阵和vector存图的选择"></a>邻接矩阵和vector存图的选择</h2><p>图分为稀疏图和稠密图，当节点非常多，而边非常少的时候，他为稀疏图，反之则为稠密图。</p>
+<p>因为vector没东西的时候几乎不用空间，所以我们可以选择vector，而当节点非常少，边非常多的时候我们就可以选择邻接矩阵存图。</p>
+<h1 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h1><p>刚刚我们为什么要把u和v都存一下对方呢？因为刚刚我们存储的是无向图，即两边都通，所以我们就需要把u和v都存一条通向对方的边。</p>
+<p>有向图只需要只存一条边即可。</p>
 <blockquote>
-<p>This post was written on July 27, 2022</p>
+<p>This post was written on Aug 16, 2022.</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -669,92 +790,35 @@ T(n) = 2T(n/2) +O(n) = O(nlog n)</script><h2 id="快速幂"><a href="#快速幂"
         <category>OI-Course</category>
         <category>数据结构</category>
       </categories>
+  </entry>
+  <entry>
+    <title>挥之不去的身影</title>
+    <url>/Article/haunting/</url>
+    <content><![CDATA[<h1 id="挥之不去的身影"><a href="#挥之不去的身影" class="headerlink" title="挥之不去的身影"></a>挥之不去的身影</h1><p>—— 献给另一个我</p>
+<p>我终究还是成为了他<br>那个我记忆中<br>挥之不去的<br>身影</p>
+<p>我忘不了他那<br>接受一切<br>释然的眼神<br>那带着<br>不去，从容<br>的眼神</p>
+<p>我更忘不了他那<br>萧瑟的身影<br>明明带着理想<br>明明充满年轻的有力<br>明明一步步都有着希望</p>
+<p>可那身影是那样的萧瑟，凄凉<br>快速而有力的脚步却显得<br>如此蹒跚</p>
+<p>我忘不了那个身影<br>我曾无数次尝试将他忘去<br>可我忘不了<br>我曾不知道这是为什么<br>可现在我明白了<br>我在害怕<br>我害怕我成为他</p>
+<p>可我终究还是成为了他<br>与记忆中那个<br>挥之不去的身影<br>重叠在了一起</p>
+<p>2022/9/17 午</p>
+]]></content>
+      <categories>
+        <category>Article</category>
+      </categories>
       <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>Course</tag>
-        <tag>数据结构</tag>
+        <tag>Article</tag>
       </tags>
   </entry>
   <entry>
-    <title>排序,分治思想的学习</title>
-    <url>/OI/OI-Course/course-day-3/</url>
-    <content><![CDATA[<blockquote>
-<p>本文实际上是我23日补写的。</p>
-</blockquote>
-<p>排序(<em>sort</em>)是有个非常有意思的算法，今天我们学习了：插入排序、冒泡排序，选择排序。以及可以在做题中使用的：归并排序和快速排序。所有基于比较的排序最低时间复杂度是<em>O(</em>nlogn)*.</p>
-<p>有的时候排序并不直接解决问题，但可以起到加速作用；有些算法依赖于 排序。</p>
-<h1 id="Note："><a href="#Note：" class="headerlink" title="Note："></a>Note：</h1><h2 id="简单排序"><a href="#简单排序" class="headerlink" title="简单排序"></a>简单排序</h2><h3 id="插入排序："><a href="#插入排序：" class="headerlink" title="插入排序："></a>插入排序：</h3><p>有的时候排序并不直接解决问题，但可以起到加速作用；有些算法依赖于 排序。</p>
-<p>插入排序是在一个已经有序的序列中插入数据，插入后序列依然是一个有序的序列。</p>
-<p>即维护一个有序的序列，不断插入元素。</p>
-<p>所以我们只要写一个<em>insert()</em>函数，插入序列即可。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> pos=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(;pos&lt;tot;pos++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[pos]&gt;x)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> k=tot;k&gt;=pos,k--)&#123;</span><br><span class="line">				a[k+<span class="number">1</span>]=r[k];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	a[pos]=x;</span><br><span class="line">	tot++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="函数的接口比较"><a href="#函数的接口比较" class="headerlink" title="函数的接口比较"></a>函数的接口比较</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> x)</span></span></span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> x)</span></span></span><br></pre></td></tr></table></figure>
-<p>很明显，最后一种比前两种要好。</p>
-<p>因为有<em>DRY(Do not repeat yourself)</em>原则，所以最后一种要更好，可以应对不同的需求。当然，如果你只需要排序一个数组，且第二种更方便，那么第二种也是可行的。</p>
-<h5 id="复用性"><a href="#复用性" class="headerlink" title="复用性"></a>复用性</h5><p>如果需要第三种接口支持从大到小排序，甚至按自定义的顺序？ 如果不仅要排序 int，还要排 float、字符串、甚至自定义的结构体？<br>如果不知道数组长度，但数组有一个结束标识符？</p>
-<blockquote>
-<p>越抽象越容易复用，越具体越不容易复用。<br>良好的代码风格会使你付出 1.2 倍的编码时间，但会减少一半的调试时间。<br>抽象要有个度，如果泛化的收益抵不上代码复杂程度增加带来的坏处，果断停手</p>
-</blockquote>
-<p>总结：在OI中无需工业级别的服用，但是也需要注意复用性。</p>
-<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>将每个元素比较n次，如果遇到比它大或小的元素就交换，在每个元素都比较一遍过后，整个序列就都是有序的。整个过程如冒泡一样，故人们称它为冒泡排序。只是时间复杂度有亿点大：<script type="math/tex">O(n^2)</script> 这是一个很大的时间复杂度，但是他的思想是值得我们学习的。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">bubble</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">0</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">			<span class="keyword">if</span>(a[j]&gt;a[i])</span><br><span class="line">				<span class="built_in">swap</span>(a[j],a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>第一次冒泡会把最大的放到最后，第二次是次大，所以在执行第<em>i</em>次排序时，<em>n-i</em>以后的元素已经有序，所以我们可以优化（虽然依然是 <script type="math/tex">O(n^2)</script> 但是优化了一半的常数)。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">bubble</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">0</span>;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;n-i<span class="number">-1</span>;j++)</span><br><span class="line">			<span class="keyword">if</span>(a[j]&gt;a[i])</span><br><span class="line">				<span class="built_in">swap</span>(a[j],a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>选择排序的思路是找到最小值，然后与<em>a[1]</em>交换，找到次小值，与<em>a[2]</em>交换。因为是选择元素交换，故称之为选择排序。他的优化与冒泡类似，在排序<em>i</em>次后<em>a[i]</em>前就已经有序了，所以无需排序。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">select</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="type">int</span> cur=i;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=i;j&lt;=n;i++)</span><br><span class="line">			<span class="keyword">if</span>(a[j]&lt;a[i])</span><br><span class="line">				cur=i;</span><br><span class="line">		<span class="built_in">swap</span>(a[i],a[cur]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="O-nlogn-的实用算法"><a href="#O-nlogn-的实用算法" class="headerlink" title="O(nlogn)的实用算法"></a><em>O(nlogn)</em>的实用算法</h2><p>归并排序是基于分治思想的排序，做到了比较算法的极限，达到了<script type="math/tex">O(nlogn)</script>的时间复杂度，且十分稳定，非常的优秀。</p>
-<p>将<em>a[l,r]</em>排序：</p>
-<ol>
-<li>将<em>a[l,r]</em>拆成<em>a[l,mid]</em>和<em>a[mid+1,r]</em>分别递归排序，这样递归到序列只剩一个的时候就是一个有序的序列。</li>
-<li>调用<em>sort(l,mid)</em>和<em>sort(mid+1,r)</em>递归排序</li>
-<li>将两个有序数组，合并成一个大的有序数组，覆盖 a[l,r]</li>
-</ol>
-<p>难点就在于合并。</p>
-<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><p>现在有2个序列<em>a[1,2,3]</em>和<em>b[4,5,6]</em>，他们都是有序的，建第三个序列<em>tmp</em>。</p>
-<p>现在定义<em>pa</em>,<em>pb</em>两个指针，初始值为<em>pa=1</em>，<em>pb=1</em>。</p>
-<p>如果<em>a[pa]&gt;a[pb]</em>那么将<em>a[pa]</em>放入<em>tmp[pos++]</em>然后<em>pa++</em>反之将<em>a[pb]</em>放入<em>tmp[pos++]</em>然后<em>pb++</em>。</p>
-<p>这样就完成了2个有序序列的合并。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Sort</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l == r - <span class="number">1</span>) <span class="keyword">return</span>;      <span class="comment">// 现在区间里面只有一个元素，直接返回即可</span></span><br><span class="line">    <span class="type">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">Sort</span>(l, mid);  <span class="comment">// 递归左边</span></span><br><span class="line">    <span class="built_in">Sort</span>(mid, r);  <span class="comment">// 递归右边</span></span><br><span class="line">	<span class="comment">// 递归后[l,mid],[mid,r]已经有序，合并即可</span></span><br><span class="line">    <span class="type">int</span> p=l, q=mid, cur=l;</span><br><span class="line">    <span class="comment">// 左边现在可以使用的是 a[p, mid)</span></span><br><span class="line">    <span class="comment">// 右边现在可以使用的是 a[q, r)</span></span><br><span class="line">    <span class="comment">// 答案数组目前要填写 tmp[cur]</span></span><br><span class="line">    <span class="keyword">while</span>(p &lt; mid &amp;&amp; q &lt; r) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[p] &lt; a[q])</span><br><span class="line">            tmp[cur++] = a[p++];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            tmp[cur++] = a[q++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(p &lt; mid)               <span class="comment">// 若左边还没有取干净</span></span><br><span class="line">        tmp[cur++] = a[p++];</span><br><span class="line">    <span class="keyword">while</span>(q &lt; r)                 <span class="comment">// 若右边还没有取干净</span></span><br><span class="line">        tmp[cur++] = a[q++];</span><br><span class="line">	<span class="comment">//合并完成，直接填入tmp</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=l; i&lt;r; i++)</span><br><span class="line">        a[i] = tmp[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>因为每次都是<em>(l+r)/2</em>分开，所以需要递归<em>logn</em>层，每次<em>n</em>的代价，所以时间复杂度为<em>O(nlogn)</em>。</p>
-<p>这样的排序是非常稳定的！</p>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>叫做快速排序自然有过人之处，他的思想非常的有意思：</p>
-<p>随便选一个人做哨兵，比它小的人站在左边，大的人站在右边，然后递归排序左边和右边，这样就是有序的了。</p>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p>我们需要排序序列：<em>[3,2,5,4,8,7,6,1]</em></p>
-<ol>
-<li>随便选了个人，身高为 4 </li>
-<li>站队，序列变成 [3,2,1] 4 [5,8,7,6]</li>
-<li>分别排序，序列变成 [1,2,3] 4 [5,6,7,8]</li>
-</ol>
-<p>递归到底层就只有3个元素了，站队完成就是排序好的序列。</p>
-<p>这样就完成排序了！</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">quickSort</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l &gt;= r - <span class="number">1</span>) <span class="keyword">return</span>;      <span class="comment">// 现在区间是空集，或只有一个元素</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> flag = a[l + <span class="built_in">rand</span>() % (r - l)];     <span class="comment">// 随机选个哨兵</span></span><br><span class="line">    <span class="comment">// 假设永远选 a[l] 做哨兵</span></span><br><span class="line">    <span class="comment">// 出题人：a=[10,9,8,7,6,5,4,3,2,1]</span></span><br><span class="line">    <span class="comment">// 第一次调用：哨兵10 [9 8 7 6 5 4 3 2 1] [10]</span></span><br><span class="line">    <span class="comment">// 第二次调用：哨兵9  [8 7 6 5 4 3 2] [9]</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="comment">// 总共复杂度是 O(n^2)</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> p = l, q = r;</span><br><span class="line">    <span class="comment">// tmp[l, p) 存放比 flag 小的人</span></span><br><span class="line">    <span class="comment">// tmp[q, r) 存放比 flag 大的人</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=l; i&lt;r; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] &lt; flag)</span><br><span class="line">            tmp[p++] = a[i];    <span class="comment">// 等价于 tmp[p]=a[i], p++</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a[i] &gt; flag)</span><br><span class="line">            tmp[--q] = a[i];    <span class="comment">// 等价于 q--, tmp[q]=a[i]</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=p; i&lt;q; i++)      <span class="comment">// [p, q) 应当填充恰等于哨兵的人</span></span><br><span class="line">        tmp[i] = flag;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 现在局面：tmp[l, p) &lt; flag; tmp[p, q) == flag; tmp[q, r) &gt; flag</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=l; i&lt;r; i++)</span><br><span class="line">        a[i] = tmp[i];          <span class="comment">// 回填进a</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 站队已经完成，递归排序左边、右边</span></span><br><span class="line">    <span class="built_in">quickSort</span>(l, p);</span><br><span class="line">    <span class="built_in">quickSort</span>(q, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="Leaned"><a href="#Leaned" class="headerlink" title="Leaned:"></a>Leaned:</h1><p>简单排序：复杂度 <em>O(n2)</em><br>归并排序：复杂度 <em>O(nlogn)</em> (有保障)<br>快速排序：平均复杂度 <em>O(nlogn)</em></p>
-<h2 id="Master-定理"><a href="#Master-定理" class="headerlink" title="Master 定理"></a>Master 定理</h2><p>主定理，可以用于算递归函数复杂度：</p>
-<script type="math/tex; mode=display">
-T(n) = aT(n/b) +O(n^d)</script><p>有:</p>
-<script type="math/tex; mode=display">
-T(n)=\left\{
-\begin{aligned}
-O(n^d) && d>log_{b}a\newline
-O(n^dlogn) && d=log_{b}a\newline
-O(n^{log_ba}) && d<log_{b}a\newline
-\end{aligned}
-\right.</script><blockquote>
-<p>This post was written on July 23, 2022.</p>
-</blockquote>
-]]></content>
+    <title>course-day-9 - luogu - Course - OI - 数据结构</title>
+    <url>/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-9/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>OI</category>
         <category>OI-Course</category>
+        <category>数据结构</category>
       </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>Course</tag>
-      </tags>
   </entry>
   <entry>
     <title>DP(动态规划)的初步学习-第一部分</title>
@@ -878,51 +942,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>图的学习 - luogu - Course - OI - 数据结构</title>
-    <url>/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-8/</url>
-    <content><![CDATA[<h1 id="什么是图"><a href="#什么是图" class="headerlink" title="什么是图"></a>什么是图</h1><blockquote>
-<p>图是描述物件之间的关系。<br>物件就是结点，物件之间的关系即是边。</p>
-</blockquote>
-<p>所以我们可以发现几乎所有的关系都可以表示成图，dp可以表示成DAG(有向无环图)，搜索本质上是图的遍历算法，树也是特殊的图……</p>
-<p>且图的存在也是非常重要的，很多问题都需要图的解决，比如导航就可以用图实现。</p>
-<h1 id="图的储存方式"><a href="#图的储存方式" class="headerlink" title="图的储存方式"></a>图的储存方式</h1><p>图有多种储存方式，比如邻接矩阵，比如用vector。</p>
-<h2 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h2><p>定义 $map[u][v]$ (map是c++关键字)表示u和v节点直接有一条边。</p>
-<p>空间复杂度为$O(n^{2})$，在$n&lt;=10^3$的时候适用。</p>
-<p>举个例子，现在输入2个人，他们是朋友，最后统计每个人有多少个朋友。</p>
-<p>我们可以定义$w[1e3+5$][1e3+5]来存储2个人是否为朋友，遍历$w[i][1~n]$即可判断是否为朋友。</p>
-<p>这样我们就用实现了$O(n)$输入，$O(n)$查询。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> w[<span class="number">1005</span>][<span class="number">1005</span>];  <span class="comment">// w[x][y]: x 与 y 是否为朋友</span></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">input</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=m; i++) &#123;</span><br><span class="line">        <span class="type">int</span> u, v;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// u, v 是朋友</span></span><br><span class="line">        w[u][v] = <span class="number">1</span>;        <span class="comment">// v 是 u 的朋友</span></span><br><span class="line">        w[v][u] = <span class="number">1</span>;        <span class="comment">// u 是 v 的朋友</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 统计 x 有多少个朋友</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">getCnt</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 枚举每一个人，判断他是否为 x 的朋友</span></span><br><span class="line">    <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">        <span class="keyword">if</span>(w[x][i]) res++;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">        cout &lt;&lt; <span class="built_in">getCnt</span>(i) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">input</span>();</span><br><span class="line">    <span class="built_in">work</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="vector存图"><a href="#vector存图" class="headerlink" title="vector存图"></a>vector存图</h2><p>vector存图可能是用的最多的了，有的人喜欢用链式前向星来存图，但实际上vector就是在做链式前向星做的事。</p>
-<p>对于每一个点，开一个vector存下他的边，空间复杂度：$O(m)$，查询时间复杂度:$O(m)$是不是比邻接矩阵好多了？</p>
-<p>当然当节点较少时还是邻接矩阵方便。</p>
-<p>再将刚刚的问题用vector表示一下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; e[<span class="number">100005</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> u, v;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line">        e[u].<span class="built_in">push_back</span>(v);</span><br><span class="line">        e[v].<span class="built_in">push_back</span>(u);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        cout &lt;&lt; e[i].<span class="built_in">size</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>邻接矩阵：用$w[u][v]$存边权即可。<br>vector：需要写个结构体，来把邻居编号和边权打包起来;</p>
-<h2 id="邻接矩阵和vector存图的选择"><a href="#邻接矩阵和vector存图的选择" class="headerlink" title="邻接矩阵和vector存图的选择"></a>邻接矩阵和vector存图的选择</h2><p>图分为稀疏图和稠密图，当节点非常多，而边非常少的时候，他为稀疏图，反之则为稠密图。</p>
-<p>因为vector没东西的时候几乎不用空间，所以我们可以选择vector，而当节点非常少，边非常多的时候我们就可以选择邻接矩阵存图。</p>
-<h1 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h1><p>刚刚我们为什么要把u和v都存一下对方呢？因为刚刚我们存储的是无向图，即两边都通，所以我们就需要把u和v都存一条通向对方的边。</p>
-<p>有向图只需要只存一条边即可。</p>
-<blockquote>
-<p>This post was written on Aug 16, 2022.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI-Course</category>
-        <category>数据结构</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>course-day-9 - luogu - Course - OI - 数据结构</title>
-    <url>/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/course-day-9/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI-Course</category>
-        <category>数据结构</category>
-      </categories>
-  </entry>
-  <entry>
     <title>[模板]进制转换(10 to 2)</title>
     <url>/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</url>
     <content><![CDATA[<p>code:<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int decToBin(int dec)</span><br><span class="line">&#123;</span><br><span class="line">    int result = 0, temp = dec, j = 1;</span><br><span class="line">    while (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % 2);</span><br><span class="line">        temp = temp / 2;</span><br><span class="line">        j = j * 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -941,30 +960,16 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>挥之不去的身影</title>
-    <url>/Article/haunting/</url>
-    <content><![CDATA[<h1 id="挥之不去的身影"><a href="#挥之不去的身影" class="headerlink" title="挥之不去的身影"></a>挥之不去的身影</h1><p>—— 献给另一个我</p>
-<p>我终究还是成为了他<br>那个我记忆中<br>挥之不去的<br>身影</p>
-<p>我忘不了他那<br>接受一切<br>释然的眼神<br>那带着<br>不去，从容<br>的眼神</p>
-<p>我更忘不了他那<br>萧瑟的身影<br>明明带着理想<br>明明充满年轻的有力<br>明明一步步都有着希望</p>
-<p>可那身影是那样的萧瑟，凄凉<br>快速而有力的脚步却显得<br>如此蹒跚</p>
-<p>我忘不了那个身影<br>我曾无数次尝试将他忘去<br>可我忘不了<br>我曾不知道这是为什么<br>可现在我明白了<br>我在害怕<br>我害怕我成为他</p>
-<p>可我终究还是成为了他<br>与记忆中那个<br>挥之不去的身影<br>重叠在了一起</p>
-<p>2022/9/17 午</p>
-]]></content>
-      <categories>
-        <category>Article</category>
-      </categories>
-      <tags>
-        <tag>Article</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[折腾]hexo修改模板</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[<p>hexo新建的文章不会自带标签和分类，所以就修改了hexo安装目录下的scaffolds中的post.md文件来解决.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [luogu,oi,刷题记]</span><br><span class="line">categories: </span><br><span class="line">  - oi</span><br><span class="line">  - 刷题记</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>因为我写的文章大部分都刷题记，所以就这样配置了。</p>
+    <title>[折腾]hexo折腾waline评论</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BEwaline%E8%AF%84%E8%AE%BA/</url>
+    <content><![CDATA[<p>按照之前的文章（hexo配置评论），是折腾的valine，但是没有后端，改评论需要去leancloud修改。</p>
+<p>waline：<a href="https://waline.js.org/guide/get-started.html">waline官网</a> 按照官方文档</p>
+<p>当然是国内的最好了，一开始以为只能Vercel 部署，后来发现可以阿里云函数部署<a href="https://waline.js.org/guide/server/aliyun-fc.html/">官方文档</a></p>
+<p>但是官方文档似乎不太靠谱，只需要去github下载<a href="https://github.com/walinejs/aliyun-fc-starter/">github</a>然后去阿里云函数上传zip压缩包即可。</p>
+<p><img src="https://img.oier.xin/img/image-20220629191827608.png" alt="注意需要把外层的文件夹，不然无法调用"></p>
+<p>注意需要把外层的文件夹中的文件移到根目录，不然无法调用！</p>
+<p><img src="https://img.oier.xin/img/image-20220629192000699.png" alt="有一层文件夹"></p>
+<p>2022/6/29</p>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -983,27 +988,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
 <blockquote>
 <p>This post was written on July 21, 2022</p>
 </blockquote>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[折腾]hexo折腾waline评论</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BEwaline%E8%AF%84%E8%AE%BA/</url>
-    <content><![CDATA[<p>按照之前的文章（hexo配置评论），是折腾的valine，但是没有后端，改评论需要去leancloud修改。</p>
-<p>waline：<a href="https://waline.js.org/guide/get-started.html">waline官网</a> 按照官方文档</p>
-<p>当然是国内的最好了，一开始以为只能Vercel 部署，后来发现可以阿里云函数部署<a href="https://waline.js.org/guide/server/aliyun-fc.html/">官方文档</a></p>
-<p>但是官方文档似乎不太靠谱，只需要去github下载<a href="https://github.com/walinejs/aliyun-fc-starter/">github</a>然后去阿里云函数上传zip压缩包即可。</p>
-<p><img src="https://img.oier.xin/img/image-20220629191827608.png" alt="注意需要把外层的文件夹，不然无法调用"></p>
-<p>注意需要把外层的文件夹中的文件移到根目录，不然无法调用！</p>
-<p><img src="https://img.oier.xin/img/image-20220629192000699.png" alt="有一层文件夹"></p>
-<p>2022/6/29</p>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -1112,16 +1096,11 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>hexo设置自定义字体粗细</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/</url>
-    <content><![CDATA[<p>用F12搞了2天终于配置好了自定义字体，这时候就有人要问了，为什么不直接在Butterfly 里设置字体呢？那是因为我设置font-family后找不到我的font-family。只能用 !important 提高优先级来替换字体了。可以参考我的font.css</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:<span class="string">&#x27;arzhu&#x27;</span>;</span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">&#x27;/fonts/FZQiGXKJW.woff2&#x27;</span>); <span class="comment">/* 修改成你的字体 */</span></span><br><span class="line">    <span class="attribute">font-display</span>:swap</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: firacode;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/firacoder.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/yuanhua.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-id">#site-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-class">.post-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-id">#subtitle</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-id">#site-name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-class">.title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.item-headline</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.author-info__name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">30px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#menus</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#page</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#tag</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#archive</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.recent-post-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bolder;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.prev_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.next_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post-meta</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.pagination</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.aside-list-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-categories</span> &#123; <span class="comment">/*侧边栏分类*/</span></span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-tag-cloud</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.webinfo-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.search-dialog</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-class">.line</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:firacode<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span><span class="selector-class">.card-archive-list</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>如果不知道对应的是什么可以直接去开发者工具（F12）搜。</p>
-<p>如果不想弄可以直接改body</p>
-<p>有很多这种包含几乎所有页面的标签，这个时候直接在css里覆盖字体就好了，即可全局改字体，但是因为我用了2中字体，只能挨个改了。</p>
-<blockquote>
-<p>This article was written on July 11, 2022.</p>
-</blockquote>
+    <title>[折腾]hexo修改模板</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<p>hexo新建的文章不会自带标签和分类，所以就修改了hexo安装目录下的scaffolds中的post.md文件来解决.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [luogu,oi,刷题记]</span><br><span class="line">categories: </span><br><span class="line">  - oi</span><br><span class="line">  - 刷题记</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>因为我写的文章大部分都刷题记，所以就这样配置了。</p>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -1133,18 +1112,16 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>[折腾]hexo配置评论</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E9%85%8D%E7%BD%AE%E8%AF%84%E8%AE%BA/</url>
-    <content><![CDATA[<p>之前一直用的来必力(livere)，但是发现速度有时不太理想，于是打算换成valine，这是就有人要问了：嗯？valine有时不是比来必力还慢吗？那得看你用的LeanCloud是什么了，我用的是LeanCloud.cn，备案了就是可以为所欲为（似乎需要接入）。</p>
-<p><img src="https://img.oier.xin/img/image-20220629124822884.png" alt="参考Waline官方说明"></p>
-<p>因为waline是基于valine，所以他的文档我也看了一下，虽然说是需要接入，但是我在配置后没有接入依然可以使用。</p>
-<p>打开<a href="https://www.leancloud.cn/">LeanCloud</a>,注册登录实名跟着来就行了，只需要获取key</p>
-<p><img src="https://img.oier.xin/img/image-20220629124042608.png" alt="key页面"></p>
-<p><img src="https://img.oier.xin/img/image-20220629124135322.png" alt="添加域名"></p>
-<p>即可完成配置，再去butterfly配置文件配置一下</p>
-<p><img src="https://img.oier.xin/img/image-20220629124217149.png" alt="配置文件"></p>
-<p>官方文档:<a href="https://butterfly.js.org/posts/ceeb73f/#評論">Butterfly 安裝文檔(四) 主題配置-2 | Butterfly</a></p>
-<p>2022/6/29</p>
+    <title>hexo设置自定义字体粗细</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/</url>
+    <content><![CDATA[<p>用F12搞了2天终于配置好了自定义字体，这时候就有人要问了，为什么不直接在Butterfly 里设置字体呢？那是因为我设置font-family后找不到我的font-family。只能用 !important 提高优先级来替换字体了。可以参考我的font.css</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:<span class="string">&#x27;arzhu&#x27;</span>;</span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">&#x27;/fonts/FZQiGXKJW.woff2&#x27;</span>); <span class="comment">/* 修改成你的字体 */</span></span><br><span class="line">    <span class="attribute">font-display</span>:swap</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: firacode;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/firacoder.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/yuanhua.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-id">#site-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-class">.post-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-id">#subtitle</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-id">#site-name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-class">.title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.item-headline</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.author-info__name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">30px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#menus</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#page</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#tag</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#archive</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.recent-post-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bolder;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.prev_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.next_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post-meta</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.pagination</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.aside-list-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-categories</span> &#123; <span class="comment">/*侧边栏分类*/</span></span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-tag-cloud</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.webinfo-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.search-dialog</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-class">.line</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:firacode<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span><span class="selector-class">.card-archive-list</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>如果不知道对应的是什么可以直接去开发者工具（F12）搜。</p>
+<p>如果不想弄可以直接改body</p>
+<p>有很多这种包含几乎所有页面的标签，这个时候直接在css里覆盖字体就好了，即可全局改字体，但是因为我用了2中字体，只能挨个改了。</p>
+<blockquote>
+<p>This article was written on July 11, 2022.</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -1207,6 +1184,43 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
+    <title>[折腾]hexo配置评论</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E9%85%8D%E7%BD%AE%E8%AF%84%E8%AE%BA/</url>
+    <content><![CDATA[<p>之前一直用的来必力(livere)，但是发现速度有时不太理想，于是打算换成valine，这是就有人要问了：嗯？valine有时不是比来必力还慢吗？那得看你用的LeanCloud是什么了，我用的是LeanCloud.cn，备案了就是可以为所欲为（似乎需要接入）。</p>
+<p><img src="https://img.oier.xin/img/image-20220629124822884.png" alt="参考Waline官方说明"></p>
+<p>因为waline是基于valine，所以他的文档我也看了一下，虽然说是需要接入，但是我在配置后没有接入依然可以使用。</p>
+<p>打开<a href="https://www.leancloud.cn/">LeanCloud</a>,注册登录实名跟着来就行了，只需要获取key</p>
+<p><img src="https://img.oier.xin/img/image-20220629124042608.png" alt="key页面"></p>
+<p><img src="https://img.oier.xin/img/image-20220629124135322.png" alt="添加域名"></p>
+<p>即可完成配置，再去butterfly配置文件配置一下</p>
+<p><img src="https://img.oier.xin/img/image-20220629124217149.png" alt="配置文件"></p>
+<p>官方文档:<a href="https://butterfly.js.org/posts/ceeb73f/#評論">Butterfly 安裝文檔(四) 主題配置-2 | Butterfly</a></p>
+<p>2022/6/29</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[模板]判断回文数</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI模板</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>OI模板</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>myoilean</title>
     <url>/%E8%87%AA%E5%86%99/myoilean/</url>
     <content><![CDATA[<p>余幼学便知$oi$。初学之时，因余居于五线，故余之学甚难。尝费重金学之，但余之师仅教余何为$C++$,$STL$等余之师仅知，不知怎用。<br>此后，余两载未学$oi$。</p>
@@ -1226,6 +1240,23 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
+    <title>[模板]快读&amp;快写</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&amp;quick-out/</url>
+    <content><![CDATA[<p>快读：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">            f = <span class="number">-1</span>;</span><br><span class="line">        c = <span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">        x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>, c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>快写：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">write</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>), x = -x;</span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">9</span>)</span><br><span class="line">        <span class="built_in">write</span>(x / <span class="number">10</span>);</span><br><span class="line">    <span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI模板</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>OI模板</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用魔改ohmyposh配置</title>
     <url>/%E6%8A%98%E8%85%BE/ohmyposh/</url>
     <content><![CDATA[<p>在把自带主题几乎都用了一次后，感觉还是自己魔改方便和适合我。</p>
@@ -1241,23 +1272,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </categories>
       <tags>
         <tag>折腾</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[模板]快读&amp;快写</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&amp;quick-out/</url>
-    <content><![CDATA[<p>快读：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">            f = <span class="number">-1</span>;</span><br><span class="line">        c = <span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">        x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>, c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>快写：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">write</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>), x = -x;</span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">9</span>)</span><br><span class="line">        <span class="built_in">write</span>(x / <span class="number">10</span>);</span><br><span class="line">    <span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI模板</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>OI模板</tag>
       </tags>
   </entry>
   <entry>
@@ -1297,17 +1311,80 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>[模板]判断回文数</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>vscode配置firacode字体</title>
+    <url>/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/</url>
+    <content><![CDATA[<p>之前一直不知道怎么在vsc配置firacode导致一直在用别的ide。是的，就是我们的CP Editor和code::blocks。</p>
+<p>但是最近发现code::blocks不是很舒服，cp editor不支持调试，gdb调试更麻烦，愉快的回到到vsc，只是配置字体有点“麻烦”而已。</p>
+<p>打开firacode github发行版页面: <a href="https://github.com/tonsky/FiraCode/releases/">firacode github发行版页面</a></p>
+<p>下载最新版安装即可。</p>
+<p><img src="https://img.oier.xin/img/image-20220710211906247.png" alt="设置"></p>
+<p>打开设置，搜索font，点击字体，当然你直接展开“文本编辑器”选择字体也可以.</p>
+<p><img src="https://img.oier.xin/img/image-20220710212027931.png" alt="选择字体"></p>
+<p>填入Fira Code，一个字母都不能错！</p>
+<p><img src="https://img.oier.xin/img/image-20220710212206800.png" alt="image-20220710212206800"></p>
+<p>就配置完了，不需要重启vscode。</p>
+<blockquote>
+<p>This article was written on 2022/7/10</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>OI</category>
-        <category>OI模板</category>
+        <category>CS</category>
       </categories>
       <tags>
-        <tag>OI</tag>
-        <tag>OI模板</tag>
+        <tag>CS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[随笔]2022.10.5</title>
+    <url>/%E9%9A%8F%E7%AC%94/2022/suibi-2022-10-5/</url>
+    <content><![CDATA[<p>有的人的青春是拼搏的红色，有的人的青春是虚度的灰白，而我的颜色却在不同人的眼中，有着不同的颜色。</p>
+<p>不知道什么时候开始，我爱上了OI，不知道从什么时候开始，我爱上了折腾计算机。从一开始的学习算法，到后来搭建网站，学习前后端。</p>
+<p>他们看到我初中就报了算法课，他们说：“哦，这真的是未来啊！”</p>
+<p>我自嘲的笑着：有的人小学就学完提高内容了。</p>
+<p>可能有人会说我在虚度我的青春，不去拼搏，去学现一些没用的东西。</p>
+<p>可是真的没用吗？即使现在没用，以后会有用的。至少，在学习OI的过程中，我在学习，没有让心“散”了。</p>
+<p>我不知道我的青春到底是什么颜色的，但是有一点我很清楚，我没有虚度我的青春！</p>
+<p>2022.10.5 00:23</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+        <category>2022</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>2022</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用vercel部署blog</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/vercel-blog/</url>
+    <content><![CDATA[<p>上次去某个日本注册商撸了几个域名，然后直呼：“啊！我这无处安放的域名！”就打算用vercel部署几个镜像站。</p>
+<p>镜像站是个好东西，主站炸了也不至于人没了。</p>
+<p>去github新建一个仓库，用于存放hexo生成的静态文件。注意：是静态文件，可以使用hexo d直接上传。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">-   type: git</span><br><span class="line">    repo:	你的github仓库地址</span><br><span class="line">    branch: master</span><br><span class="line">    message: blog_update</span><br></pre></td></tr></table></figure>
+<p>github 仓库自然不必多说。</p>
+<p>进入vercel官网：<a href="https://vercel.app">https://vercel.app</a></p>
+<p><img src="https://img.oier.xin/img/image-20220815133323285.png" alt="image-20220815133323285"></p>
+<p>点击new project创建新项目。</p>
+<p>选择你刚刚新建的github仓库：</p>
+<p><img src="https://img.oier.xin/img/image-20220815133514471.png" alt="image-20220815133514471"></p>
+<p>部署即可。</p>
+<p>记得选择香港节点！！！！</p>
+<p>如果没选择，可以到：</p>
+<p><img src="https://img.oier.xin/img/image-20220815133657476.png" alt="image-20220815133657476"></p>
+<p>更换节点，更换后记得重新部署。</p>
+<p>还可以到侧边栏的domain绑定域名。</p>
+<blockquote>
+<p>This post was written on Aug 15, 2022.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -1350,104 +1427,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[随笔]2022.10.5</title>
-    <url>/%E9%9A%8F%E7%AC%94/2022/suibi-2022-10-5/</url>
-    <content><![CDATA[<p>有的人的青春是拼搏的红色，有的人的青春是虚度的灰白，而我的颜色却在不同人的眼中，有着不同的颜色。</p>
-<p>不知道什么时候开始，我爱上了OI，不知道从什么时候开始，我爱上了折腾计算机。从一开始的学习算法，到后来搭建网站，学习前后端。</p>
-<p>他们看到我初中就报了算法课，他们说：“哦，这真的是未来啊！”</p>
-<p>我自嘲的笑着：有的人小学就学完提高内容了。</p>
-<p>可能有人会说我在虚度我的青春，不去拼搏，去学现一些没用的东西。</p>
-<p>可是真的没用吗？即使现在没用，以后会有用的。至少，在学习OI的过程中，我在学习，没有让心“散”了。</p>
-<p>我不知道我的青春到底是什么颜色的，但是有一点我很清楚，我没有虚度我的青春！</p>
-<p>2022.10.5 00:23</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-        <category>2022</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>2022</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vscode配置firacode字体</title>
-    <url>/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/</url>
-    <content><![CDATA[<p>之前一直不知道怎么在vsc配置firacode导致一直在用别的ide。是的，就是我们的CP Editor和code::blocks。</p>
-<p>但是最近发现code::blocks不是很舒服，cp editor不支持调试，gdb调试更麻烦，愉快的回到到vsc，只是配置字体有点“麻烦”而已。</p>
-<p>打开firacode github发行版页面: <a href="https://github.com/tonsky/FiraCode/releases/">firacode github发行版页面</a></p>
-<p>下载最新版安装即可。</p>
-<p><img src="https://img.oier.xin/img/image-20220710211906247.png" alt="设置"></p>
-<p>打开设置，搜索font，点击字体，当然你直接展开“文本编辑器”选择字体也可以.</p>
-<p><img src="https://img.oier.xin/img/image-20220710212027931.png" alt="选择字体"></p>
-<p>填入Fira Code，一个字母都不能错！</p>
-<p><img src="https://img.oier.xin/img/image-20220710212206800.png" alt="image-20220710212206800"></p>
-<p>就配置完了，不需要重启vscode。</p>
-<blockquote>
-<p>This article was written on 2022/7/10</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>CS</category>
-      </categories>
-      <tags>
-        <tag>CS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>waline-reply</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/waline-reply/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>OI</category>
-        <category>刷题记</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>刷题记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>wsl安装ohmyposh-ubuntu</title>
-    <url>/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/</url>
-    <content><![CDATA[<p>发现在wls中无法使用ohmyposh的主题，于是打算安装官网的linux教程配置，但是发现国内用homedrew和下载有亿点慢。所以使用了官网的手动安装教程：<a href="https://ohmyposh.dev/docs/installation/linux">Linux | Oh My Posh</a></p>
-<h1 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h1><p>把手动安装脚本改成：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo wget https://download.fastgit.org/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.1/posh-linux-amd64 -O /usr/local/bin/oh-my-posh</span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/oh-my-posh</span><br></pre></td></tr></table></figure>
-<p>然后执行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ~/.poshthemes</span><br><span class="line">wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip</span><br><span class="line">unzip ~/.poshthemes/themes.zip -d ~/.poshthemes</span><br><span class="line"><span class="built_in">chmod</span> u+rw ~/.poshthemes/*.omp.*</span><br><span class="line"><span class="built_in">rm</span> ~/.poshthemes/themes.zip</span><br></pre></td></tr></table></figure>
-<p>安装主题.</p>
-<h1 id="启用"><a href="#启用" class="headerlink" title="启用"></a>启用</h1><p><a href="https://ohmyposh.dev/docs/installation/customize">Customize | Oh My Posh</a></p>
-<p>官方教程说输入那个命令即可启用，启用了是启用了，但是没法打开bash就启用啊。</p>
-<p>安装了之后怎么启用呢？powershell可以配置启动脚本，bash怎么办？</p>
-<p>找了好久发现需要在用户目录下的bash配置中加入命令。</p>
-<p><a href="https://ohmyposh.dev/docs/installation/prompt">Change your prompt | Oh My Posh</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/.bashrc``~/.profile``~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>你的目录中可能会是这些文件中的一个。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(oh-my-posh init bash --config 主题目录)</span>&quot;</span></span><br></pre></td></tr></table></figure>
-<p>在文件中加入即可。</p>
-<p>就可以愉快的使用了ohmyposh美化过的终端了。</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>吾欲达此三境</title>
-    <url>/Article/wuyudacisanjing/</url>
-    <content><![CDATA[<h1 id="求知三境"><a href="#求知三境" class="headerlink" title="求知三境"></a>求知三境</h1><h2 id="一日偶得三境言，欲达三境为我愿。"><a href="#一日偶得三境言，欲达三境为我愿。" class="headerlink" title="一日偶得三境言，欲达三境为我愿。"></a>一日偶得三境言，欲达三境为我愿。</h2><h2 id="虽吾未会解此题，自此吾便得解法。"><a href="#虽吾未会解此题，自此吾便得解法。" class="headerlink" title="虽吾未会解此题，自此吾便得解法。"></a>虽吾未会解此题，自此吾便得解法。</h2><h2 id="此题难如登九天，给吾三日有何难？"><a href="#此题难如登九天，给吾三日有何难？" class="headerlink" title="此题难如登九天，给吾三日有何难？"></a>此题难如登九天，给吾三日有何难？</h2><h2 id="此题并非吾所做，我手自答无人知。"><a href="#此题并非吾所做，我手自答无人知。" class="headerlink" title="此题并非吾所做，我手自答无人知。"></a>此题并非吾所做，我手自答无人知。</h2><h2 id="达此三境看似难，实则仅需一坚持。"><a href="#达此三境看似难，实则仅需一坚持。" class="headerlink" title="达此三境看似难，实则仅需一坚持。"></a>达此三境看似难，实则仅需一坚持。</h2><h2 id="一境并无特殊求，人人皆从此境起。"><a href="#一境并无特殊求，人人皆从此境起。" class="headerlink" title="一境并无特殊求，人人皆从此境起。"></a>一境并无特殊求，人人皆从此境起。</h2><h2 id="二境特需有恒心，不断刷题固所学。"><a href="#二境特需有恒心，不断刷题固所学。" class="headerlink" title="二境特需有恒心，不断刷题固所学。"></a>二境特需有恒心，不断刷题固所学。</h2><h2 id="三境若达则成神，此点有关皆一瞬。"><a href="#三境若达则成神，此点有关皆一瞬。" class="headerlink" title="三境若达则成神，此点有关皆一瞬。"></a>三境若达则成神，此点有关皆一瞬。</h2><p><img src="https://img.oier.xin/img/1663599480080-29abbea9-3a48-4d89-9ff9-8bfb114f6c84.jpeg" alt=""></p>
-]]></content>
-      <categories>
-        <category>Article</category>
-      </categories>
-      <tags>
-        <tag>Article</tag>
       </tags>
   </entry>
   <entry>
@@ -1518,42 +1497,66 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>幡然醒悟</title>
-    <url>/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</url>
-    <content><![CDATA[<h1 id="幡然醒悟"><a href="#幡然醒悟" class="headerlink" title="幡然醒悟"></a>幡然醒悟</h1><p>​    余自幼豪于亲戚大抵为师。家父,家母,一数学。一语文,乃二基础科。每遇其诲,余曰:“家父、家母皆教于高中,余读于小学、初中。余何从之?”故余不从其教,教如过耳之风,未尝释然。今者,余幡然悟曰:“父母教诲何重,如何不听此箴?”良之习,静之心,韧之性,成之基本。余不用父母之教,其由非教于高中也,徒以余之惰,余之躁,余自幼之陋。若无良习,静之心,韧之性,将一事无成!</p>
-<p>​    读书而静,习为良,性为柔。读书不宜于通非之际。读书当透当全,当读之所学,如与生俱来,立于场中不败之地!</p>
-<mark class="hl-label red">自种之果当自食</mark> 
-<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
-]]></content>
+    <title>waline-reply</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/waline-reply/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>自写</category>
+        <category>OI</category>
+        <category>刷题记</category>
       </categories>
       <tags>
-        <tag>自写</tag>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>刷题记</tag>
       </tags>
   </entry>
   <entry>
-    <title>用vercel部署blog</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/vercel-blog/</url>
-    <content><![CDATA[<p>上次去某个日本注册商撸了几个域名，然后直呼：“啊！我这无处安放的域名！”就打算用vercel部署几个镜像站。</p>
-<p>镜像站是个好东西，主站炸了也不至于人没了。</p>
-<p>去github新建一个仓库，用于存放hexo生成的静态文件。注意：是静态文件，可以使用hexo d直接上传。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">-   type: git</span><br><span class="line">    repo:	你的github仓库地址</span><br><span class="line">    branch: master</span><br><span class="line">    message: blog_update</span><br></pre></td></tr></table></figure>
-<p>github 仓库自然不必多说。</p>
-<p>进入vercel官网：<a href="https://vercel.app">https://vercel.app</a></p>
-<p><img src="https://img.oier.xin/img/image-20220815133323285.png" alt="image-20220815133323285"></p>
-<p>点击new project创建新项目。</p>
-<p>选择你刚刚新建的github仓库：</p>
-<p><img src="https://img.oier.xin/img/image-20220815133514471.png" alt="image-20220815133514471"></p>
-<p>部署即可。</p>
-<p>记得选择香港节点！！！！</p>
-<p>如果没选择，可以到：</p>
-<p><img src="https://img.oier.xin/img/image-20220815133657476.png" alt="image-20220815133657476"></p>
-<p>更换节点，更换后记得重新部署。</p>
-<p>还可以到侧边栏的domain绑定域名。</p>
-<blockquote>
-<p>This post was written on Aug 15, 2022.</p>
-</blockquote>
+    <title>吾欲达此三境</title>
+    <url>/Article/wuyudacisanjing/</url>
+    <content><![CDATA[<h1 id="求知三境"><a href="#求知三境" class="headerlink" title="求知三境"></a>求知三境</h1><h2 id="一日偶得三境言，欲达三境为我愿。"><a href="#一日偶得三境言，欲达三境为我愿。" class="headerlink" title="一日偶得三境言，欲达三境为我愿。"></a>一日偶得三境言，欲达三境为我愿。</h2><h2 id="虽吾未会解此题，自此吾便得解法。"><a href="#虽吾未会解此题，自此吾便得解法。" class="headerlink" title="虽吾未会解此题，自此吾便得解法。"></a>虽吾未会解此题，自此吾便得解法。</h2><h2 id="此题难如登九天，给吾三日有何难？"><a href="#此题难如登九天，给吾三日有何难？" class="headerlink" title="此题难如登九天，给吾三日有何难？"></a>此题难如登九天，给吾三日有何难？</h2><h2 id="此题并非吾所做，我手自答无人知。"><a href="#此题并非吾所做，我手自答无人知。" class="headerlink" title="此题并非吾所做，我手自答无人知。"></a>此题并非吾所做，我手自答无人知。</h2><h2 id="达此三境看似难，实则仅需一坚持。"><a href="#达此三境看似难，实则仅需一坚持。" class="headerlink" title="达此三境看似难，实则仅需一坚持。"></a>达此三境看似难，实则仅需一坚持。</h2><h2 id="一境并无特殊求，人人皆从此境起。"><a href="#一境并无特殊求，人人皆从此境起。" class="headerlink" title="一境并无特殊求，人人皆从此境起。"></a>一境并无特殊求，人人皆从此境起。</h2><h2 id="二境特需有恒心，不断刷题固所学。"><a href="#二境特需有恒心，不断刷题固所学。" class="headerlink" title="二境特需有恒心，不断刷题固所学。"></a>二境特需有恒心，不断刷题固所学。</h2><h2 id="三境若达则成神，此点有关皆一瞬。"><a href="#三境若达则成神，此点有关皆一瞬。" class="headerlink" title="三境若达则成神，此点有关皆一瞬。"></a>三境若达则成神，此点有关皆一瞬。</h2><p><img src="https://img.oier.xin/img/1663599480080-29abbea9-3a48-4d89-9ff9-8bfb114f6c84.jpeg" alt=""></p>
+]]></content>
+      <categories>
+        <category>Article</category>
+      </categories>
+      <tags>
+        <tag>Article</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>wsl安装ohmyposh-ubuntu</title>
+    <url>/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/</url>
+    <content><![CDATA[<p>发现在wls中无法使用ohmyposh的主题，于是打算安装官网的linux教程配置，但是发现国内用homedrew和下载有亿点慢。所以使用了官网的手动安装教程：<a href="https://ohmyposh.dev/docs/installation/linux">Linux | Oh My Posh</a></p>
+<h1 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h1><p>把手动安装脚本改成：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo wget https://download.fastgit.org/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.1/posh-linux-amd64 -O /usr/local/bin/oh-my-posh</span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/oh-my-posh</span><br></pre></td></tr></table></figure>
+<p>然后执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ~/.poshthemes</span><br><span class="line">wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip</span><br><span class="line">unzip ~/.poshthemes/themes.zip -d ~/.poshthemes</span><br><span class="line"><span class="built_in">chmod</span> u+rw ~/.poshthemes/*.omp.*</span><br><span class="line"><span class="built_in">rm</span> ~/.poshthemes/themes.zip</span><br></pre></td></tr></table></figure>
+<p>安装主题.</p>
+<h1 id="启用"><a href="#启用" class="headerlink" title="启用"></a>启用</h1><p><a href="https://ohmyposh.dev/docs/installation/customize">Customize | Oh My Posh</a></p>
+<p>官方教程说输入那个命令即可启用，启用了是启用了，但是没法打开bash就启用啊。</p>
+<p>安装了之后怎么启用呢？powershell可以配置启动脚本，bash怎么办？</p>
+<p>找了好久发现需要在用户目录下的bash配置中加入命令。</p>
+<p><a href="https://ohmyposh.dev/docs/installation/prompt">Change your prompt | Oh My Posh</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/.bashrc``~/.profile``~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>你的目录中可能会是这些文件中的一个。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(oh-my-posh init bash --config 主题目录)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+<p>在文件中加入即可。</p>
+<p>就可以愉快的使用了ohmyposh美化过的终端了。</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[折腾]使用阿里云函数和微博图床搭建高速随机图片api</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8C%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E9%AB%98%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/</url>
+    <content><![CDATA[<h1 id="使用阿里云函数和微博图床搭建高速随机图片api"><a href="#使用阿里云函数和微博图床搭建高速随机图片api" class="headerlink" title="使用阿里云函数和微博图床搭建高速随机图片api"></a>使用阿里云函数和微博图床搭建高速随机图片api</h1><p>之前用的也是阿里云函数，图片放到阿里oss+阿里cdn，然而速度总是那么不尽人意。<br>然后看到别人（ &lt; api.vinua.cn/tuapi &gt; )放在美国1h1g但是速度秒杀我时，我自闭了。</p>
+<p>仔细分析了原因后我明白了，美国服务器产生随机图片重定向不需要很久的时间，大约100~200ms（算上延迟）</p>
+<p>那我放在阿里云函数那速度不是比他美国还快？所以我把图片从阿里oss+cdn搬到了微博图片上，微博那cdn叫一个快啊！</p>
+<p>适用于阿里云函数的随机图片源码我找了很久都找不到，希望我自己写的可以帮到你。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">RingCentral</span>\<span class="title">Psr7</span>\<span class="title">Response</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"><span class="variable">$request</span>, <span class="variable">$context</span></span>): <span class="title">Response</span></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="variable">$filename</span> = <span class="string">&quot;imgurl.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//从文本获取链接</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pics</span> = [];</span><br><span class="line"></span><br><span class="line">  <span class="variable">$fs</span> = <span class="title function_ invoke__">fopen</span>(<span class="variable">$filename</span>, <span class="string">&quot;r&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(!<span class="title function_ invoke__">feof</span>(<span class="variable">$fs</span>))&#123;</span><br><span class="line"></span><br><span class="line">    <span class="variable">$line</span>=<span class="title function_ invoke__">trim</span>(<span class="title function_ invoke__">fgets</span>(<span class="variable">$fs</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$line</span>!=<span class="string">&#x27;&#x27;</span>)&#123;</span><br><span class="line"></span><br><span class="line">      <span class="title function_ invoke__">array_push</span>(<span class="variable">$pics</span>, <span class="variable">$line</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;  </span><br><span class="line"></span><br><span class="line">  <span class="comment">//从数组随机获取链接</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pic</span> = <span class="variable">$pics</span>[<span class="title function_ invoke__">array_rand</span>(<span class="variable">$pics</span>)];</span><br><span class="line"></span><br><span class="line">  <span class="variable">$num</span>=<span class="title function_ invoke__">rand</span>(<span class="number">1</span>,<span class="number">4</span>);<span class="comment">//随机变量</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pic</span> = <span class="title function_ invoke__">str_replace</span>(<span class="string">&quot;https://tva4&quot;</span>,<span class="string">&quot;https://tva&quot;</span>.<span class="variable">$num</span>,<span class="variable">$pic</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Response</span>(</span><br><span class="line"></span><br><span class="line">    <span class="number">302</span>,</span><br><span class="line"></span><br><span class="line">    <span class="keyword">array</span>(</span><br><span class="line"></span><br><span class="line">      <span class="string">&#x27;Location&#x27;</span> =&gt; <span class="variable">$pic</span></span><br><span class="line"></span><br><span class="line">    ),</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -1581,21 +1584,18 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>[折腾]使用阿里云函数和微博图床搭建高速随机图片api</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8C%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E9%AB%98%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/</url>
-    <content><![CDATA[<h1 id="使用阿里云函数和微博图床搭建高速随机图片api"><a href="#使用阿里云函数和微博图床搭建高速随机图片api" class="headerlink" title="使用阿里云函数和微博图床搭建高速随机图片api"></a>使用阿里云函数和微博图床搭建高速随机图片api</h1><p>之前用的也是阿里云函数，图片放到阿里oss+阿里cdn，然而速度总是那么不尽人意。<br>然后看到别人（ &lt; api.vinua.cn/tuapi &gt; )放在美国1h1g但是速度秒杀我时，我自闭了。</p>
-<p>仔细分析了原因后我明白了，美国服务器产生随机图片重定向不需要很久的时间，大约100~200ms（算上延迟）</p>
-<p>那我放在阿里云函数那速度不是比他美国还快？所以我把图片从阿里oss+cdn搬到了微博图片上，微博那cdn叫一个快啊！</p>
-<p>适用于阿里云函数的随机图片源码我找了很久都找不到，希望我自己写的可以帮到你。</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">RingCentral</span>\<span class="title">Psr7</span>\<span class="title">Response</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"><span class="variable">$request</span>, <span class="variable">$context</span></span>): <span class="title">Response</span></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="variable">$filename</span> = <span class="string">&quot;imgurl.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//从文本获取链接</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pics</span> = [];</span><br><span class="line"></span><br><span class="line">  <span class="variable">$fs</span> = <span class="title function_ invoke__">fopen</span>(<span class="variable">$filename</span>, <span class="string">&quot;r&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(!<span class="title function_ invoke__">feof</span>(<span class="variable">$fs</span>))&#123;</span><br><span class="line"></span><br><span class="line">    <span class="variable">$line</span>=<span class="title function_ invoke__">trim</span>(<span class="title function_ invoke__">fgets</span>(<span class="variable">$fs</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$line</span>!=<span class="string">&#x27;&#x27;</span>)&#123;</span><br><span class="line"></span><br><span class="line">      <span class="title function_ invoke__">array_push</span>(<span class="variable">$pics</span>, <span class="variable">$line</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;  </span><br><span class="line"></span><br><span class="line">  <span class="comment">//从数组随机获取链接</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pic</span> = <span class="variable">$pics</span>[<span class="title function_ invoke__">array_rand</span>(<span class="variable">$pics</span>)];</span><br><span class="line"></span><br><span class="line">  <span class="variable">$num</span>=<span class="title function_ invoke__">rand</span>(<span class="number">1</span>,<span class="number">4</span>);<span class="comment">//随机变量</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pic</span> = <span class="title function_ invoke__">str_replace</span>(<span class="string">&quot;https://tva4&quot;</span>,<span class="string">&quot;https://tva&quot;</span>.<span class="variable">$num</span>,<span class="variable">$pic</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Response</span>(</span><br><span class="line"></span><br><span class="line">    <span class="number">302</span>,</span><br><span class="line"></span><br><span class="line">    <span class="keyword">array</span>(</span><br><span class="line"></span><br><span class="line">      <span class="string">&#x27;Location&#x27;</span> =&gt; <span class="variable">$pic</span></span><br><span class="line"></span><br><span class="line">    ),</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>幡然醒悟</title>
+    <url>/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</url>
+    <content><![CDATA[<h1 id="幡然醒悟"><a href="#幡然醒悟" class="headerlink" title="幡然醒悟"></a>幡然醒悟</h1><p>​    余自幼豪于亲戚大抵为师。家父,家母,一数学。一语文,乃二基础科。每遇其诲,余曰:“家父、家母皆教于高中,余读于小学、初中。余何从之?”故余不从其教,教如过耳之风,未尝释然。今者,余幡然悟曰:“父母教诲何重,如何不听此箴?”良之习,静之心,韧之性,成之基本。余不用父母之教,其由非教于高中也,徒以余之惰,余之躁,余自幼之陋。若无良习,静之心,韧之性,将一事无成!</p>
+<p>​    读书而静,习为良,性为柔。读书不宜于通非之际。读书当透当全,当读之所学,如与生俱来,立于场中不败之地!</p>
+<mark class="hl-label red">自种之果当自食</mark> 
+<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
 ]]></content>
       <categories>
-        <category>折腾</category>
-        <category>Web</category>
+        <category>自写</category>
       </categories>
       <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
+        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
@@ -1627,6 +1627,60 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       <tags>
         <tag>OI</tag>
         <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>折腾ohmyposh</title>
+    <url>/%E6%8A%98%E8%85%BE/%E6%8A%98%E8%85%BEohmyposh/</url>
+    <content><![CDATA[<p>一直觉得powershell和windows 终端不好看，今天就去美化了一下，我的最终效果：</p>
+<p><img src="https://img.oier.xin/img/image-20220723150848053.png" alt="image-20220723150848053"></p>
+<p>当然我们要折腾的ohmyposh的主题非常多，还可以自己设计，可以在这里查看自带的主题：<a href="https://ohmyposh.dev/docs/themes">官方文档</a></p>
+<p>参考官方文档进行配置：<a href="https://ohmyposh.dev/docs/installation/windows">Windows | Oh My Posh</a></p>
+<p>在你即将安装ohmyposh的终端输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winget install JanDeDobbeleer.OhMyPosh -s winget</span><br></pre></td></tr></table></figure>
+<p>一条命令就解决了，是不是很简单呢？</p>
+<p>如果嫌麻烦的话可以直接去微软应用商店搜索ohmyposh下载:<a href="ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK">点我 !</a></p>
+<p>更新可以使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winget upgrade JanDeDobbeleer.OhMyPosh -s winget</span><br></pre></td></tr></table></figure>
+<p>安装好了ohmyposh自然需要配置了，在powershell中输入：</p>
+<p>安装了vscode的可以使用:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">code <span class="variable">$profile</span></span><br></pre></td></tr></table></figure>
+<p>没有安装的或者不想用vscode配置的可以使用：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">notepad <span class="variable">$profile</span></span><br></pre></td></tr></table></figure>
+<p>在配置文件中加入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Import-Module PSReadLine  ## 这个工具主要做命令提示管理等操作，默认集成在了 PowerShell 中，不需要安装</span><br><span class="line">Set-PSReadlineKeyHandler -Key Tab -Function Complete  ## 设置 Tab 键补全</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+d&quot; -Function MenuComplete  ## 设置 Ctrl+D 为菜单补全和 Intellisense</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+z&quot; -Function Undo  ## 设置 Ctrl+Z 为撤销</span><br><span class="line">Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward  ## 设置向上键为后向搜索历史记录</span><br><span class="line">Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward  ## 设置向下键为前向搜索历史记录</span><br><span class="line">oh-my-posh init pwsh --config ~/Documents/PowerShell/themes/tonybaloney.omp.json | Invoke-Expression   主题路径 ## 设置主题，可以去https://ohmyposh.dev/docs/themes找</span><br></pre></td></tr></table></figure>
+<p>选主题可以直接在终端中输入：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Get-PoshThemes</span><br></pre></td></tr></table></figure>
+<p>来查看每个主题在该目录下的表现.</p>
+<p>这样powershell就美化成功了！</p>
+<blockquote>
+<p>This article was written on July 23, 2022.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>挥之不去的身影</title>
+    <url>/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</url>
+    <content><![CDATA[<p>依稀记得，2020的11月，那是我第一次参加csp，也是2场都参加，试卷是什么样，中间尽力的那些波折？早已记不清了。唯有那个身影，那个眼神，在我的脑海里挥之不去，犹如昨日一般。</p>
+<p>进入考场，找到位置，那时还是个懵懂少年的我四处张望，在离我的不远处，有一个位置，是空的。我正思索着为什么是空的，不远处的谈话声打断了我的思绪：“老师，个人报名的坐哪里？”监考老师指了指那个空位，一个身高180，比我稍大的男孩走向了那个位置。</p>
+<p>在看到他的背影的瞬间，我心中的某个地方似乎被触动了，感到无尽的萧瑟与沧桑。仿佛他不是一个比我稍大的男孩，是一个尝尽天下疾苦的老人，是一个经历无数大起大落但仍不放弃的奋斗者。</p>
+<p>他坐下了，从身后的背包中找出身份证递给监考老师，老师验完后他收起身份证的那个眼神让我终生难忘。那是一个怎样的眼神？有着对未来的迷茫与期望，同时也有着坚定与执着。</p>
+<p>我十分好奇这样的眼神与背影为何会出现在一个比我稍大的男孩身上，以及为什么我能看的如此透彻。我甩了甩头，丢弃这些杂念，开始做题。</p>
+<p>那一场考试的结果是注定的——分数甚至低于瞎蒙。</p>
+<p>2年没有学习的我自然不会得到好结果。可惜当时的我过于懵懂无知，没有真正明白努力与收获的关系，直至今日我才真正明白这个三岁小孩都是明白的道理。</p>
+<p>2021的csp出发前，我照了照镜子，与记忆中的那个身影是如此的相似，一瞬间我明白了为何我能看懂他的眼神。因为，他就是现在的我啊。</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
@@ -1671,16 +1725,10 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>挥之不去的身影</title>
-    <url>/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</url>
-    <content><![CDATA[<p>依稀记得，2020的11月，那是我第一次参加csp，也是2场都参加，试卷是什么样，中间尽力的那些波折？早已记不清了。唯有那个身影，那个眼神，在我的脑海里挥之不去，犹如昨日一般。</p>
-<p>进入考场，找到位置，那时还是个懵懂少年的我四处张望，在离我的不远处，有一个位置，是空的。我正思索着为什么是空的，不远处的谈话声打断了我的思绪：“老师，个人报名的坐哪里？”监考老师指了指那个空位，一个身高180，比我稍大的男孩走向了那个位置。</p>
-<p>在看到他的背影的瞬间，我心中的某个地方似乎被触动了，感到无尽的萧瑟与沧桑。仿佛他不是一个比我稍大的男孩，是一个尝尽天下疾苦的老人，是一个经历无数大起大落但仍不放弃的奋斗者。</p>
-<p>他坐下了，从身后的背包中找出身份证递给监考老师，老师验完后他收起身份证的那个眼神让我终生难忘。那是一个怎样的眼神？有着对未来的迷茫与期望，同时也有着坚定与执着。</p>
-<p>我十分好奇这样的眼神与背影为何会出现在一个比我稍大的男孩身上，以及为什么我能看的如此透彻。我甩了甩头，丢弃这些杂念，开始做题。</p>
-<p>那一场考试的结果是注定的——分数甚至低于瞎蒙。</p>
-<p>2年没有学习的我自然不会得到好结果。可惜当时的我过于懵懂无知，没有真正明白努力与收获的关系，直至今日我才真正明白这个三岁小孩都是明白的道理。</p>
-<p>2021的csp出发前，我照了照镜子，与记忆中的那个身影是如此的相似，一瞬间我明白了为何我能看懂他的眼神。因为，他就是现在的我啊。</p>
+    <title>自重之果当自食</title>
+    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
+    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
+<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
 ]]></content>
       <categories>
         <category>自写</category>
@@ -1711,54 +1759,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>折腾ohmyposh</title>
-    <url>/%E6%8A%98%E8%85%BE/%E6%8A%98%E8%85%BEohmyposh/</url>
-    <content><![CDATA[<p>一直觉得powershell和windows 终端不好看，今天就去美化了一下，我的最终效果：</p>
-<p><img src="https://img.oier.xin/img/image-20220723150848053.png" alt="image-20220723150848053"></p>
-<p>当然我们要折腾的ohmyposh的主题非常多，还可以自己设计，可以在这里查看自带的主题：<a href="https://ohmyposh.dev/docs/themes">官方文档</a></p>
-<p>参考官方文档进行配置：<a href="https://ohmyposh.dev/docs/installation/windows">Windows | Oh My Posh</a></p>
-<p>在你即将安装ohmyposh的终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winget install JanDeDobbeleer.OhMyPosh -s winget</span><br></pre></td></tr></table></figure>
-<p>一条命令就解决了，是不是很简单呢？</p>
-<p>如果嫌麻烦的话可以直接去微软应用商店搜索ohmyposh下载:<a href="ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK">点我 !</a></p>
-<p>更新可以使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">winget upgrade JanDeDobbeleer.OhMyPosh -s winget</span><br></pre></td></tr></table></figure>
-<p>安装好了ohmyposh自然需要配置了，在powershell中输入：</p>
-<p>安装了vscode的可以使用:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">code <span class="variable">$profile</span></span><br></pre></td></tr></table></figure>
-<p>没有安装的或者不想用vscode配置的可以使用：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">notepad <span class="variable">$profile</span></span><br></pre></td></tr></table></figure>
-<p>在配置文件中加入：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Import-Module PSReadLine  ## 这个工具主要做命令提示管理等操作，默认集成在了 PowerShell 中，不需要安装</span><br><span class="line">Set-PSReadlineKeyHandler -Key Tab -Function Complete  ## 设置 Tab 键补全</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+d&quot; -Function MenuComplete  ## 设置 Ctrl+D 为菜单补全和 Intellisense</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+z&quot; -Function Undo  ## 设置 Ctrl+Z 为撤销</span><br><span class="line">Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward  ## 设置向上键为后向搜索历史记录</span><br><span class="line">Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward  ## 设置向下键为前向搜索历史记录</span><br><span class="line">oh-my-posh init pwsh --config ~/Documents/PowerShell/themes/tonybaloney.omp.json | Invoke-Expression   主题路径 ## 设置主题，可以去https://ohmyposh.dev/docs/themes找</span><br></pre></td></tr></table></figure>
-<p>选主题可以直接在终端中输入：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Get-PoshThemes</span><br></pre></td></tr></table></figure>
-<p>来查看每个主题在该目录下的表现.</p>
-<p>这样powershell就美化成功了！</p>
-<blockquote>
-<p>This article was written on July 23, 2022.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自重之果当自食</title>
-    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
-    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
-<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
