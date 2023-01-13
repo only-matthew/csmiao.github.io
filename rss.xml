@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2023-01-13T13:16:04.147Z</updated>
+  <updated>2023-01-13T13:37:00.000Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -17,15 +17,101 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://blog.loveoi.net/article/Ep1/"/>
-    <id>https://blog.loveoi.net/article/Ep1/</id>
-    <published>2023-01-13T13:16:04.147Z</published>
-    <updated>2023-01-13T13:16:04.147Z</updated>
+    <title>断墨寻径笔记EP2</title>
+    <link href="https://blog.loveoi.net/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/Ep3/"/>
+    <id>https://blog.loveoi.net/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/Ep3/</id>
+    <published>2023-01-12T16:00:00.000Z</published>
+    <updated>2023-01-13T13:37:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;记忆有时也可以被理解为&lt;strong&gt;过拟合程度最大的学习&lt;/strong&gt;。&lt;/p&gt;
+&lt;h1 id=&quot;双例对比法&quot;&gt;&lt;a href=&quot;#双例对比法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
+    <category term="断墨寻径" scheme="https://blog.loveoi.net/categories/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/"/>
     
+    
+    <category term="断墨寻径" scheme="https://blog.loveoi.net/tags/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>断墨寻径笔记EP1</title>
+    <link href="https://blog.loveoi.net/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/Ep1/"/>
+    <id>https://blog.loveoi.net/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/Ep1/</id>
+    <published>2023-01-12T16:00:00.000Z</published>
+    <updated>2023-01-13T13:25:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在学校，学生需要掌握的内容可分为两种：一种是信息，一种是知识。&lt;/p&gt;
+&lt;p&gt;信息是相对具象的，因为它只描述一个情况。&lt;/p&gt;
+&lt;p&gt;但知识所描述的却不是一个情况，而是同一类问题的所有情况，最关键的是，包括老师从未提及的新情况，就不得不用概括性词语来描述各种情况的共同特征，因此必然是抽象的。&lt;/p&gt;
+&lt;p&gt;掌握信息时，我们的目标是「重现旧信息」，用于达成这一目标的行为叫做记忆。&lt;/p&gt;
+&lt;p&gt;而掌握知识时，我们的目标是「生成新信息」，「解决从未记忆过的新情况」，用于达成这一目标的行为叫做学习。&lt;/p&gt;
+&lt;p&gt;泛化才是我们为什么要学习的真正原因，如果可以提前见到所有情况，那么采取记忆就可以了。因此判断一个行为是学习还是记忆，就看该行为是否可以解决从未记忆过的新情况。假如这个有三个情况，若某一行为能让学生解决这三个情况之外的新情况，那这一行为就称为学习，若某一行为只能让学生重现这三个情况，那这一行为就称为记忆。&lt;/p&gt;
+&lt;p&gt;但这并不意味着学习比记忆更高级，如先前所说，二者有着不同的目标，记忆的目标是重现，学习的目标是泛化，二者也因此有着不同的方法，应根据实际目标来选择对应的行为。&lt;/p&gt;
+&lt;p&gt;泛化与记忆不分高级与否，只是对应的场景不同。&lt;/p&gt;
+&lt;p&gt;什么是机械记忆？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在学习范畴中，机械记忆是与&lt;/strong&gt; &lt;strong&gt;有意义学习&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="断墨寻径" scheme="https://blog.loveoi.net/categories/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/"/>
+    
+    
+    <category term="断墨寻径" scheme="https://blog.loveoi.net/tags/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>断墨寻径笔记EP2</title>
+    <link href="https://blog.loveoi.net/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/Ep2/"/>
+    <id>https://blog.loveoi.net/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/Ep2/</id>
+    <published>2023-01-12T16:00:00.000Z</published>
+    <updated>2023-01-13T13:25:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;指令学习与归纳学习&quot;&gt;&lt;a href=&quot;#指令学习与归纳学习&quot; class=&quot;headerlink&quot; title=&quot;指令学习与归纳学习&quot;&gt;&lt;/a&gt;指令学习与归纳学习&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;通过语言，对概念、规律、共性进行描述，从而建构规律的方式，也被称为&lt;code&gt;指令学习&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;通过观察多个实际案例，让大脑自动找到不同实例之间的共性，用共性来推测从未见过的情况该如何处理。这种方式，叫做&lt;code&gt;归纳学习&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从演化上来看，归纳学习出现的时间非常古老，也是人类和其他动物都共有的学习方式，指令学习必须依赖人类语言，而归纳学习则可以不需要语言，仅通过对实例的观察和操作就可以增加泛化能力。&lt;/p&gt;
+&lt;p&gt;学习的方法不止一种，但我们最常使用的是指令学习。&lt;/p&gt;
+&lt;p&gt;实际上，多数情况下，归纳的过程并不是由我们的意识直接控制的，而是大脑在特定条件下自动执行的，就如同我们不能控制大脑去记住东西一样，也不能用意识直接控制免疫系统来杀死新冠一样。。&lt;/p&gt;
+&lt;p&gt;所以，不必刻意的去归纳。&lt;/p&gt;
+&lt;h2 id=&quot;比较&quot;&gt;&lt;a href=&quot;#比较&quot; class=&quot;headerlink&quot; title=&quot;比较&quot;&gt;&lt;/a&gt;比较&lt;/h2&gt;&lt;p&gt;既然归纳学习效率如此高，我们为什么还要用指令学习呢？&lt;/p&gt;
+&lt;p&gt;因为每个人的大脑所自动归纳到的规律并不一定都正确，很容易以偏概全，无法泛化。而教科书上的知识点描述是专家总结好的指令，更为精准，也容易传播，只不过不易被大脑所理解。&lt;/p&gt;
+&lt;p&gt;因此，应试生需要将指令学习和归纳学习结合在一起使用。先用定义和概念等描述性词语（指令）来&lt;strong&gt;大致&lt;/strong&gt;确定规律，再用&lt;strong&gt;实例&lt;/strong&gt;来帮助大脑构建规律。对于较难的知识，最好「以归纳学习为主，以指令学习为辅」。&lt;/p&gt;
+&lt;p&gt;一看，很像老师常说的：做题、理解定义、再做题，再理解定义。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要去背材料或者背示例&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因为不论是指令学习的描述，还是归纳学习的实例，这些材料的作用都是用来建构规律，理解知识的，而不是用来记忆的。学生可以为了方便学习而先把材料记住，但未来一定要有吸收理解的过程。&lt;/p&gt;
+&lt;h3 id=&quot;迁移&quot;&gt;&lt;a href=&quot;#迁移&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="断墨寻径" scheme="https://blog.loveoi.net/categories/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/"/>
+    
+    
+    <category term="断墨寻径" scheme="https://blog.loveoi.net/tags/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/"/>
     
   </entry>
   
