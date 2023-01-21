@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>笨鸟先飞</title>
+      <link href="/article/learn/"/>
+      <url>/article/learn/</url>
+      
+        <content type="html"><![CDATA[<p>看了一篇网站的笔记而已。</p><p><strong>天下之至拙，能胜天下之至巧</strong>。</p><p>我不仅不需要聪明，我还要主动承认，自己就是个笨鸟。</p><p>哪怕是学习，我也要故意用最蠢最笨的方法。越是想用聪明的方法，分数就越快完蛋。</p><h2 id="笨鸟思维"><a href="#笨鸟思维" class="headerlink" title="笨鸟思维"></a>笨鸟思维</h2><h3 id="笨一点不是坏事"><a href="#笨一点不是坏事" class="headerlink" title="笨一点不是坏事"></a>笨一点不是坏事</h3><p><strong>唯上贤和下愚才能成事。</strong></p><p><strong>知道自己笨，才是最大的聪明。一个人认命了，才能有机会改命。</strong></p><p>我们既然不蠢也不是天才，那么就认命改啊！</p><h3 id="慢也不是坏事"><a href="#慢也不是坏事" class="headerlink" title="慢也不是坏事"></a>慢也不是坏事</h3><p>很多时候我们去求快，中间的步骤很多就会跳过，就无法训练我们要拟合的思维模型，可能会造成过拟合或欠拟合。</p><blockquote><p>只有允许自己，做得慢了，你大脑中的链条，才是完整的。逻辑完备了，你才能从各色各样的题目中，找出不变的地方。这些不变的点，就是学科本质了，它对提分，是至关重要。</p></blockquote><p>每天错过的题目，当天就去重做一遍。写完之后，记下页码题号，第二天再做一遍。如果能写对，就直接丢掉，再也不用管了。</p><p>因为我们这种人根本不可能更新错题本啊！</p><p><strong>只有用最愚蠢的方法，我们才能练就出最拔尖的思维。</strong></p><p>笨鸟需要什么？</p><ol><li>先飞</li><li>慢慢飞，也就是实事求是</li><li>还得重复飞，弄懂每一个步骤！</li></ol><p><img src="https://i0.hdslb.com/bfs/album/54e682ddcc6a65be0f39d93b0ae6683eebe8a8b6.png" alt="思维导图"></p><p>我们既然是笨鸟，就不要和别人比了，每天和自己比，慢慢进步！</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Ep10串讲</title>
       <link href="/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/Ep10/"/>
       <url>/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/Ep10/</url>
@@ -759,31 +772,6 @@
     
     
     <entry>
-      <title>长知识了</title>
-      <link href="/Share/%E9%95%BF%E7%9F%A5%E8%AF%86%E4%BA%86/"/>
-      <url>/Share/%E9%95%BF%E7%9F%A5%E8%AF%86%E4%BA%86/</url>
-      
-        <content type="html"><![CDATA[<p>真就长知识了！如果这次有人干了这个事，就会一直包揽和这个东西有关的活甚至这类活，还没报酬。</p><iframe src="//player.bilibili.com/player.html?aid=598512784&bvid=BV1VB4y1Y7TD&cid=777168723&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p><a href="https://www.bilibili.com/video/BV1VB4y1Y7TD">把用户当成傻瓜还是太保守了 | 我真想跟甲方打一架_哔哩哔哩_bilibili</a></p><blockquote><p>This article was written on July 17, 2022 at 22:44</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Share </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Share </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>排序,分治思想的学习</title>
       <link href="/OI/OI-Course/course-day-3/"/>
       <url>/OI/OI-Course/course-day-3/</url>
@@ -1215,7 +1203,7 @@
       <link href="/%E6%8A%98%E8%85%BE/Web/%E7%BB%99blog%E5%8E%8B%E7%BC%A9%E5%AD%97%E4%BD%93/"/>
       <url>/%E6%8A%98%E8%85%BE/Web/%E7%BB%99blog%E5%8E%8B%E7%BC%A9%E5%AD%97%E4%BD%93/</url>
       
-        <content type="html"><![CDATA[<p>因为最近发现blog有亿点慢，就去控制台分析了一下，发现在加载自定义字体时候花费了很多时间：</p><p><img src="https://img.oier.xin/img/image-20220629000437587.png" alt="使用字体的效果"></p><p>于是就去压缩了一下，使用知名的压缩项目：<a href="https://github.com/ecomfe/fontmin">ecomfe/fontmin: Minify font seamlessly (github.com)</a></p><p>不想折腾代码了，就去下载了客户端，虽然稍微有那么亿点大：</p><p><img src="https://img.oier.xin/img/image-20220629000721930.png" alt="也不是特别大"></p><p><img src="https://img.oier.xin/img/image-20220629000827571.png" alt="Fontmin"></p><p>只需要把需要的文字填入即可将其他的字体去除达到压缩的目的。</p><p>可以看到，原本3m的字体压缩成了23kb。</p><p><img src="https://img.oier.xin/img/image-20220629001517270.png" alt="压缩前"></p><p><img src="https://img.oier.xin/img/image-20220629001450403.png" alt="压缩后"></p><p>2022/6/29</p>]]></content>
+        <content type="html"><![CDATA[<p>因为最近发现blog有亿点慢，就去控制台分析了一下，发现在加载自定义字体时候花费了很多时间：</p><p><img src="https://img.oier.xin/img/image-20220629000437587.png" alt="使用字体的效果"></p><p>于是就去压缩了一下，使用知名的压缩项目：<a href="https://github.com/ecomfe/fontmin">ecomfe/fontmin: Minify font seamlessly (github.com)</a></p><p>不想折腾代码了，就去下载了客户端，虽然稍微有那么亿点大：</p><p>xxxxxxxxxx53 1​2&lt;?php3​4use RingCentral\Psr7\Response;5​6​7​8function handler($request, $context): Response{9​10  $filename = “imgurl.txt”;11​12  //从文本获取链接13​14  $pics = [];15​16  $fs = fopen($filename, “r”);17​18  while(!feof($fs)){19​20    $line=trim(fgets($fs));21​22    if($line!=’’){23​24      array_push($pics, $line);25​26    }27​28  }  29​30  //从数组随机获取链接31​32  $pic = $pics[array_rand($pics)];33​34  $num=rand(1,4);//随机变量35​36  $pic = str_replace(“<a href="https://tva4&quot;,&quot;https://tva&quot;.$num,$pic);37​38">https://tva4&quot;,&quot;https://tva&quot;.$num,$pic);37​38</a>  return new Response(39​40    302,41​42    array(43​44      ‘Location’ =&gt; $pic45​46    ),47​48    “”49​50  );51​52}53​php</p><p><img src="https://img.oier.xin/img/image-20220629000827571.png" alt="Fontmin"></p><p>只需要把需要的文字填入即可将其他的字体去除达到压缩的目的。</p><p>可以看到，原本3m的字体压缩成了23kb。</p><p><img src="https://img.oier.xin/img/image-20220629001517270.png" alt="压缩前"></p><p><img src="https://img.oier.xin/img/image-20220629001450403.png" alt="压缩后"></p><p>2022/6/29</p>]]></content>
       
       
       <categories>
