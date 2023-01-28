@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2023-01-26T04:34:02.000Z</updated>
+  <updated>2023-01-28T01:22:44.000Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>断墨寻径笔记Ep7:储存</title>
+    <link href="https://blog.loveoi.net/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/Ep7/"/>
+    <id>https://blog.loveoi.net/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/Ep7/</id>
+    <published>2023-01-28T01:22:44.000Z</published>
+    <updated>2023-01-28T01:22:44.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;常见问题：&quot;&gt;&lt;a href=&quot;#常见问题：&quot; class=&quot;headerlink&quot; title=&quot;常见问题：&quot;&gt;&lt;/a&gt;常见问题：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;为了有更多的时间学习而过分压缩睡眠时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;对任何知识，都要求自己当场学会，忘了就会自责。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;前六节课：&quot;&gt;&lt;a href=&quot;#前六节课：&quot; class=&quot;headerlink&quot; title=&quot;前六节课：&quot;&gt;&lt;/a&gt;前六节课：&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;学习与记忆的区别，重现旧信息叫记忆，解决从未见过的新情况（生成新信息叫学习）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;学习有两种方式：指令学习与归纳学习，应采用归纳学习为主，指令学习为辅。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可能会出现过（欠）拟合的情况，欠拟合应该通过多训练实例才解决；而过拟合可以通过搜集更多经验（做题时做不同类型的题），或者通过增加规律的通用性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;知识的有效范围&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;什么是有效实例：有输入和结果的实例，已经掌握了描述中所有旧概念的描述性材料。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;瓶颈：材料瓶颈通过搜集新材料来解决，模型瓶颈通过实例性材料才告诉大脑目前的模型是错误的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;知识的本体不是名字&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;存储&quot;&gt;&lt;a href=&quot;#存储&quot; class=&quot;headerlink&quot; title=&quot;存储&quot;&gt;&lt;/a&gt;存储&lt;/h1&gt;&lt;h2 id=&quot;储存的位置&quot;&gt;&lt;a href=&quot;#储存的位置&quot; class=&quot;headerlink&quot; title=&quot;储存的位置&quot;&gt;&lt;/a&gt;储存的位置&lt;/h2&gt;&lt;p&gt;存储在大脑的神经细胞的突出中，在细胞层面，学习就变成了让神经细胞之间形成合适结构的过程。我们的知识就是存储在这种结构当中。&lt;/p&gt;
+&lt;h2 id=&quot;如何存储&quot;&gt;&lt;a href=&quot;#如何存储&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="断墨寻径" scheme="https://blog.loveoi.net/categories/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/"/>
+    
+    
+    <category term="断墨寻径" scheme="https://blog.loveoi.net/tags/%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84/"/>
+    
+  </entry>
   
   <entry>
     <title>How to learn?</title>
@@ -271,6 +318,7 @@
     <summary type="html">&lt;h3 id=&quot;什么是拟合&quot;&gt;&lt;a href=&quot;#什么是拟合&quot; class=&quot;headerlink&quot; title=&quot;什么是拟合&quot;&gt;&lt;/a&gt;什么是拟合&lt;/h3&gt;&lt;p&gt;我们知道这个客观规律一定也可以满足所有已见过的旧情况。归纳学习正是利用这一点，去建构一个可以满足所有已见过的旧情况，并希望该规律恰好就是客观规律。建构可以满足所有旧情况的规律的过程也叫做&lt;code&gt;拟合&lt;/code&gt;，这些旧情况也叫做&lt;code&gt;经验&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;比如，给你前三个数 1、3、7，让你猜第四个数是什么时，我们会建构一个同时满足 1、3、7 的通用规律，该过程就叫拟合，而 1、3、7 这三个实例就相当于经验。&lt;/p&gt;
 &lt;p&gt;记忆有时也可以被理解为&lt;strong&gt;过拟合程度最大的学习&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&quot;如何解决过拟合和欠拟合&quot;&gt;&lt;a href=&quot;#如何解决过拟合和欠拟合&quot; class=&quot;headerlink&quot; title=&quot;如何解决过拟合和欠拟合&quot;&gt;&lt;/a&gt;如何解决过拟合和欠拟合&lt;/h2&gt;&lt;p&gt;欠拟合应该通过多训练实例才解决；而过拟合可以通过搜集更多经验（做题时做不同类型的题），或者通过增加规律的通用性。&lt;/p&gt;
 &lt;h1 id=&quot;双例对比法&quot;&gt;&lt;a href=&quot;#双例对比法&quot; class=&quot;headerlink&quot;</summary>
         
       
